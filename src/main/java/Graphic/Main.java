@@ -48,9 +48,20 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         Image tiger = new Image(stream6);
 //        ///////////////////////////////////////////////////////////////////////////
 //        //Creating the image view
-        ImageView imageView = new ImageView();
+        ImageView imageView6 = new ImageView();
        // Setting image to the image view
-        imageView.setImage(tiger);
+        imageView6.setImage(tiger);
+        //Setting the image view parameters
+        imageView6.setX(10);
+        imageView6.setY(10);
+        imageView6.setFitWidth(150);
+        imageView6.setFitHeight(150);
+        imageView6.setPreserveRatio(true);
+        imageView6.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(bear);
         //Setting the image view parameters
         imageView.setX(10);
         imageView.setY(10);
@@ -59,6 +70,72 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         imageView.setPreserveRatio(true);
         imageView.setPickOnBounds(true);//it i important to click on images
 
+        ImageView imageView7 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(chicken);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView1 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(dog2);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView2 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(lion);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView3 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(ostrich);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView4 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(ox);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView5 = new ImageView();
+        // Setting image to the image view
+        imageView.setImage(sheep);
+        //Setting the image view parameters
+        imageView.setX(10);
+        imageView.setY(10);
+        imageView.setFitWidth(150);
+        imageView.setFitHeight(150);
+        imageView.setPreserveRatio(true);
+        imageView.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
 
         
 
