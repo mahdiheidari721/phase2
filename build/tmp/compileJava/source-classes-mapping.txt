@@ -14,8 +14,8 @@ Logic/WareHouse.java
  Logic.WareHouse
 Logic/Truck.java
  Logic.Truck
-Graphic/Main.java
- Graphic.Main
+Logic/Tiger.java
+ Logic.Tiger
 Logic/IceCream.java
  Logic.IceCream
 Logic/Product.java
@@ -44,8 +44,8 @@ Logic/MilkPackagingFactory.java
  Logic.MilkPackagingFactory
 Logic/Lion.java
  Logic.Lion
-Graphic/MainView.java
- Graphic.MainView
+Logic/Flour.java
+ Logic.Flour
 Logic/Grass.java
  Logic.Grass
 Logic/DefenderAnimal.java
@@ -92,7 +92,7 @@ Logic/Motor.java
  Logic.Motor
 Logic/WeavingFactory.java
  Logic.WeavingFactory
-Logic/Flour.java
- Logic.Flour
-Logic/Tiger.java
- Logic.Tiger
+Graphic/Main.java
+ Graphic.Main
+Graphic/MainView.java
+ Graphic.MainView

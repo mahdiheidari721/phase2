@@ -29,6 +29,12 @@ public class Manager {
     Truck truck = new Truck();
     WaterWell well = new WaterWell();
     Level level=new Level(CurrentLevel);
+    private static Manager MANAGER;
+    private Manager(){ }
+    public static Manager getManager(){
+        if(MANAGER == null)MANAGER = new Manager();
+        return MANAGER;
+    }
     public void Fill() {
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
