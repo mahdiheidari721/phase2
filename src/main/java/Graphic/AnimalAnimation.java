@@ -1,6 +1,7 @@
 package Graphic;
 
 import Logic.Animal;
+import Logic.Manager;
 import Logic.Product;
 import javafx.animation.Transition;
 import javafx.scene.image.ImageView;
@@ -15,13 +16,18 @@ public class AnimalAnimation extends Transition {
     public AnimalAnimation(Animal animal, ImageView imageview,int t) {
 this.imageview=imageview;
         this.animal = animal;
-        this.setCycleDuration(Duration.millis(100000*t));
+        this.setCycleDuration(Duration.millis(200000*t));
         this.setCycleCount(-1);
     }
 
     @Override
     protected void interpolate(double frac) {
-        this.imageview.setX(this.imageview.getX()+1);
-        this.imageview.setY(this.imageview.getY()+1);
+      if(frac>0.5)this.imageview.setVisible(false);
+//        AnimalAn.remove(this);
+//        Manager.getManager().allDomestics.remove(this.animal);
+boolean s=Manager.getManager().Walk1(this.animal,frac);
+if(s) this.imageview.setVisible(false);
+        this.imageview.setX(this.animal.getX_position());
+        this.imageview.setY(this.animal.getY_position());
     }
 }

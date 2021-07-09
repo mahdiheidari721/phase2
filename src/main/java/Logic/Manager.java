@@ -17,6 +17,7 @@ public class Manager {
     public ArrayList<DefenderAnimal> allDefenders = new ArrayList<>();
     public ArrayList<Cage> cages = new ArrayList<>();
     Bank bank = new Bank(100000000);
+    ArrayList<Grass> grasses=new ArrayList<>();
     ArrayList<String> Logger = new ArrayList<>();
     public ArrayList<Labratory> labratories = new ArrayList<>();
     //fill this list by labratories;
@@ -42,6 +43,18 @@ public class Manager {
             }
         }
         Grass[3][3]=10;
+        Grass grass=new Grass(100,200,10);
+        Grass grass2=new Grass(100,200,10);
+        Grass grass3=new Grass(100,200,10);
+        Grass grass4=new Grass(100,200,10);
+        Grass grass5=new Grass(100,200,10);
+        Grass grass6=new Grass(100,200,10);
+        grasses.add(grass);
+        grasses.add(grass2);
+        grasses.add(grass3);
+        grasses.add(grass4);
+        grasses.add(grass5);
+        grasses.add(grass6);
         Ostrich ostrich = new Ostrich();
         Sheep sheep = new Sheep();
         Hen hen = new Hen();
@@ -944,4 +957,106 @@ turn++;
             e.printStackTrace();
         }
     }
+    public boolean Walk1(Animal animal,double t) {
+
+        if(animal.getNameOfAnimal().equalsIgnoreCase("bear")||animal.getNameOfAnimal().equalsIgnoreCase("lion")||animal.getNameOfAnimal().equalsIgnoreCase("tiger")){
+            if ( t<1 && animal.getX_position() < 1350&&animal.getY_position() < 600) {
+                if (animal.getNameOfAnimal().equalsIgnoreCase("tiger")) {
+                    animal.setX_position(animal.getX_position() + 2);
+                    animal.setY_position(animal.getY_position() + 2);
+                } else {
+                    animal.setX_position(animal.getX_position() + 1);
+                    animal.setY_position(animal.getY_position() + 1);
+                }
+            } else {
+
+                allWilds.remove(animal);
+                return true;
+            }
+        }
+
+
+
+            if (animal.getNameOfAnimal().equalsIgnoreCase("cat")) {
+                int r = 0, x = 0, y = 0;
+                for (int j = 0; j < products.size(); j++) {
+                    if (products.get(j).getNameOfProduct().equalsIgnoreCase("egg") || products.get(j).getNameOfProduct().equalsIgnoreCase("milk") || products.get(j).getNameOfProduct().equalsIgnoreCase("feather")) {
+                        if (r <= Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position())) {
+                            r = Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position());
+                            x = products.get(j).getX_position();
+                            y = products.get(j).getY_position();
+                        }
+                    }
+                }
+                if (x == animal.getX_position()) {
+                    if (y >= animal.getY_position())
+                        animal.setY_position(animal.getY_position() + 1);
+                    else animal.setY_position(animal.getY_position() - 1);
+                } else if (y ==animal.getY_position()) {
+                    if (x >=animal.getX_position())
+                        animal.setX_position(animal.getX_position() + 1);
+                    else animal.setX_position(animal.getX_position() - 1);
+                } else if (y >= animal.getY_position())
+                    animal.setY_position(animal.getY_position() + 1);
+                else if (y < animal.getY_position())
+                    animal.setY_position(animal.getY_position() - 1);
+            }
+            if (animal.getNameOfAnimal().equalsIgnoreCase("dog")) {
+                int r = 0, x = 0, y = 0;
+                for (int j = 0; j < allWilds.size(); j++) {
+                    if (r <= Math.abs(allWilds.get(j).getX_position() + allWilds.get(j).getY_position() - animal.getX_position() - animal.getX_position())) {
+                        r = Math.abs(allWilds.get(j).getX_position() + allWilds.get(j).getY_position() - animal.getX_position() - animal.getX_position());
+                        x = allWilds.get(j).getX_position();
+                        y = allWilds.get(j).getY_position();
+                    }
+                }
+                if (x == animal.getX_position()) {
+                    if (y >= animal.getY_position())
+                        animal.setY_position(animal.getY_position() + 1);
+                    else animal.setY_position(animal.getY_position() - 1);
+                } else if (y == animal.getY_position()) {
+                    if (x >= animal.getX_position())
+                        animal.setX_position(animal.getX_position() + 1);
+                    else animal.setX_position(animal.getX_position() - 1);
+                } else if (y >= animal.getY_position())
+                    animal.setY_position(animal.getY_position() + 1);
+                else if (y < animal.getY_position())
+                    animal.setY_position(animal.getY_position() - 1);
+            }
+
+        if(animal.getNameOfAnimal().equalsIgnoreCase("sheep")||animal.getNameOfAnimal().equalsIgnoreCase("hen")||animal.getNameOfAnimal().equalsIgnoreCase("ostrich")){
+            int r = 0, x = 0, y = 0;
+            for(int i=0;i<grasses.size();i++){
+                if (grasses.get(i).MaxPower > 0) {
+                    if (r <= Math.abs(grasses.get(i).X_position + grasses.get(i).Y_position - animal.getX_position() - animal.getX_position())) {
+                        r = Math.abs(grasses.get(i).X_position  +grasses.get(i).Y_position - animal.getX_position() - animal.getX_position());
+                        x = grasses.get(i).X_position ;
+                        y =grasses.get(i).Y_position ;
+                    }
+                }
+            }
+
+
+            if (x == animal.getX_position()) {
+                if (y >=animal.getY_position())
+                    animal.setY_position(animal.getY_position() + 1);
+                else animal.setY_position(animal.getY_position() - 1);
+            } else if (y == animal.getY_position()) {
+                if (x >= animal.getX_position())
+                    animal.setX_position(animal.getX_position() + 1);
+                else animal.setX_position(animal.getX_position() - 1);
+            } else if (y >= animal.getY_position())
+                animal.setY_position(animal.getY_position() + 1);
+            else if (y < animal.getY_position())
+                animal.setY_position(animal.getY_position() - 1);
+        }
+
+
+        for(int i=0;i<cages.size();i++){
+            cages.get(i).setX(cages.get(i).getWildanimal().getX_position());
+            cages.get(i).setY(cages.get(i).getWildanimal().getY_position());
+        }
+        return false;
+    }
+
 }

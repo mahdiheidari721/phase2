@@ -28,6 +28,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
+        Manager.getManager().Fill();
         //  creating the image object
         InputStream stream = new FileInputStream("D:\\images\\bear.png");
         Image bear = new Image(stream);
@@ -45,8 +46,34 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         Image sheep = new Image(stream5);
         InputStream stream6 = new FileInputStream("D:\\images\\tiger.png");
         Image tiger = new Image(stream6);
+        InputStream stream8 = new FileInputStream("D:\\images\\background.jpg");
+        Image background = new Image(stream8);
+        InputStream stream9 = new FileInputStream("D:\\images\\grass.jpg");
+        Image grass = new Image(stream9);
 //        ///////////////////////////////////////////////////////////////////////////
 //        //Creating the image view
+        ImageView imageView9 = new ImageView();
+        // Setting image to the image view
+        imageView9.setImage(grass);
+        //Setting the image view parameters
+        imageView9.setX(0);
+        imageView9.setY(0);
+        imageView9.setFitWidth(10);
+        imageView9.setFitHeight(10);
+        imageView9.setPreserveRatio(true);
+        imageView9.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
+        ImageView imageView8 = new ImageView();
+        // Setting image to the image view
+        imageView8.setImage(background);
+        //Setting the image view parameters
+        imageView8.setX(0);
+        imageView8.setY(0);
+        imageView8.setFitWidth(1900);
+        imageView8.setFitHeight(750);
+        imageView8.setPreserveRatio(true);
+        imageView8.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
         ImageView imageView6 = new ImageView();
        // Setting image to the image view
         imageView6.setImage(tiger);
@@ -68,7 +95,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         imageView.setFitHeight(50);
         imageView.setPreserveRatio(true);
         imageView.setPickOnBounds(true);//it i important to click on images
-
+//////////////////////////////////////////////////////////////////////////////////
         ImageView imageView7 = new ImageView();
         // Setting image to the image view
         imageView7.setImage(chicken);
@@ -145,6 +172,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
             @Override
             public void handle(Event event) {
 Tiger tigers =new Tiger();
+                Manager.getManager().allWilds.add(tigers);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(tiger);
@@ -157,7 +185,10 @@ Tiger tigers =new Tiger();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
 AnimalAnimation a=new AnimalAnimation(tigers,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
 //click in images
@@ -165,6 +196,7 @@ a.play();
             @Override
             public void handle(Event event) {
                 Bear bears=new Bear();
+                Manager.getManager().allWilds.add(bears);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(bear);
@@ -177,7 +209,10 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(bears,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
 //click in images
@@ -185,6 +220,7 @@ a.play();
             @Override
             public void handle(Event event) {
                Dog dog=new Dog();
+                Manager.getManager().allDefenders.add(dog);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(dog2);
@@ -197,7 +233,10 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(dog,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
 //click in images
@@ -205,6 +244,7 @@ a.play();
             @Override
             public void handle(Event event) {
                 Sheep sheeps=new Sheep();
+                Manager.getManager().allDomestics.add(sheeps);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(sheep);
@@ -217,13 +257,17 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
         imageView3.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
                Ostrich ostrichs=new Ostrich();
+                Manager.getManager().allDomestics.add(ostrichs);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(ostrich);
@@ -236,13 +280,16 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
             }
         });
         imageView2.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
               Lion lions=new Lion();
+              Manager.getManager().allWilds.add(lions);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(lion);
@@ -255,13 +302,17 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(lions,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
         imageView7.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
   Hen hen=new Hen();
+                Manager.getManager().allDomestics.add(hen);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(chicken);
@@ -274,12 +325,52 @@ a.play();
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
                 AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
             }
         });
-
+//        Hen hen=new Hen();
+//        ImageView imageViews = new ImageView();
+//        // Setting image to the image view
+//        imageViews.setImage(chicken);
+//        //Setting the image view parameters
+//        imageViews.setX(200);
+//        imageViews.setY(200);
+//        imageViews.setFitWidth(150);
+//        imageViews.setFitHeight(150);
+//        imageViews.setPreserveRatio(true);
+//        imageViews.setPickOnBounds(true);//it i important to click on images
+//        MainView.pane.getChildren().add(imageViews);
+//        AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+//        AnimalAnimation.AnimalAn.add(a);
+//        a.play();
+//for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
+//    AnimalAnimation.AnimalAn.get(i).imageview.setOnMouseClicked(new EventHandler() {
+//        @Override
+//        public void handle(Event event) {
+//            Hen hen=new Hen();
+//            ImageView imageViews = new ImageView();
+//            // Setting image to the image view
+//            imageViews.setImage(chicken);
+//            //Setting the image view parameters
+//            imageViews.setX(200);
+//            imageViews.setY(200);
+//            imageViews.setFitWidth(150);
+//            imageViews.setFitHeight(150);
+//            imageViews.setPreserveRatio(true);
+//            imageViews.setPickOnBounds(true);//it i important to click on images
+//            MainView.pane.getChildren().add(imageViews);
+//            AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+//            AnimalAnimation.AnimalAn.add(a);
+//            a.play();
+//        }
+//    });
+//}
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////
+        MainView.pane.getChildren().add(imageView8);
         MainView.pane.getChildren().add(imageView);
         MainView.pane.getChildren().add(imageView1);
         MainView.pane.getChildren().add(imageView2);
