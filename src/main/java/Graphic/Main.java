@@ -1,6 +1,5 @@
 package Graphic;
-import Logic.Egg;
-import Logic.Manager;
+import Logic.*;
 import com.sun.javafx.fxml.builder.JavaFXSceneBuilder;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -54,8 +53,8 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         //Setting the image view parameters
         imageView6.setX(10);
         imageView6.setY(10);
-        imageView6.setFitWidth(150);
-        imageView6.setFitHeight(150);
+        imageView6.setFitWidth(50);
+        imageView6.setFitHeight(50);
         imageView6.setPreserveRatio(true);
         imageView6.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
@@ -64,105 +63,232 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         imageView.setImage(bear);
         //Setting the image view parameters
         imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
+        imageView.setY(550);
+        imageView.setFitWidth(50);
+        imageView.setFitHeight(50);
         imageView.setPreserveRatio(true);
         imageView.setPickOnBounds(true);//it i important to click on images
 
         ImageView imageView7 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(chicken);
+        imageView7.setImage(chicken);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView7.setX(10);
+        imageView7.setY(100);
+        imageView7.setFitWidth(50);
+        imageView7.setFitHeight(50);
+        imageView7.setPreserveRatio(true);
+        imageView7.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         ImageView imageView1 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(dog2);
+        imageView1.setImage(dog2);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView1.setX(400);
+        imageView1.setY(150);
+        imageView1.setFitWidth(50);
+        imageView1.setFitHeight(50);
+        imageView1.setPreserveRatio(true);
+        imageView1.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         ImageView imageView2 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(lion);
+        imageView2.setImage(lion);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView2.setX(10);
+        imageView2.setY(200);
+        imageView2.setFitWidth(50);
+        imageView2.setFitHeight(50);
+        imageView2.setPreserveRatio(true);
+        imageView2.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         ImageView imageView3 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(ostrich);
+        imageView3.setImage(ostrich);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView3.setX(10);
+        imageView3.setY(250);
+        imageView3.setFitWidth(50);
+        imageView3.setFitHeight(50);
+        imageView3.setPreserveRatio(true);
+        imageView3.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         ImageView imageView4 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(ox);
+        imageView4.setImage(ox);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView4.setX(10);
+        imageView4.setY(300);
+        imageView4.setFitWidth(50);
+        imageView4.setFitHeight(50);
+        imageView4.setPreserveRatio(true);
+        imageView4.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         ImageView imageView5 = new ImageView();
         // Setting image to the image view
-        imageView.setImage(sheep);
+        imageView5.setImage(sheep);
         //Setting the image view parameters
-        imageView.setX(10);
-        imageView.setY(10);
-        imageView.setFitWidth(150);
-        imageView.setFitHeight(150);
-        imageView.setPreserveRatio(true);
-        imageView.setPickOnBounds(true);//it i important to click on images
+        imageView5.setX(10);
+        imageView5.setY(350);
+        imageView5.setFitWidth(50);
+        imageView5.setFitHeight(50);
+        imageView5.setPreserveRatio(true);
+        imageView5.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
-
-        
-
-
-
-
-
-
-
-
-
 //        ///////////////////////////////////////////////////////////////////////////////////////
        MainView.getMV().setMainStage(primaryStage);
-//        /////////////////////////////////////////////////////////////////////////////////////////
-
-//
-
-
-
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
         primaryStage.setResizable(false);
         MainView.getMV().setScene("Start.fxml");
+//        /////////////////////////////////////////////////////////////////////////////////////////
+//click in images
+        imageView6.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+Tiger tigers =new Tiger();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(tiger);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+AnimalAnimation a=new AnimalAnimation(tigers,imageViews,1);
+a.play();
+            }
+        });
+//click in images
+        imageView.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                Bear bears=new Bear();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(bear);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(bears,imageViews,1);
+                a.play();
+            }
+        });
+//click in images
+        imageView1.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+               Dog dog=new Dog();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(dog2);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(dog,imageViews,1);
+                a.play();
+            }
+        });
+//click in images
+        imageView5.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                Sheep sheeps=new Sheep();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(sheep);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
+                a.play();
+            }
+        });
+        imageView3.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+               Ostrich ostrichs=new Ostrich();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(ostrich);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
+                a.play();
+            }
+        });
+        imageView2.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+              Lion lions=new Lion();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(lion);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(lions,imageViews,1);
+                a.play();
+            }
+        });
+        imageView7.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+  Hen hen=new Hen();
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                imageViews.setImage(chicken);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                a.play();
+            }
+        });
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////
         MainView.pane.getChildren().add(imageView);
+        MainView.pane.getChildren().add(imageView1);
+        MainView.pane.getChildren().add(imageView2);
+        MainView.pane.getChildren().add(imageView3);
+        MainView.pane.getChildren().add(imageView4);
+        MainView.pane.getChildren().add(imageView5);
+        MainView.pane.getChildren().add(imageView6);
+        MainView.pane.getChildren().add(imageView7);
+        /////////////////////////////////////////////
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
         primaryStage.show();
