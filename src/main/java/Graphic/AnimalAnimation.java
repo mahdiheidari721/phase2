@@ -22,10 +22,11 @@ this.imageview=imageview;
 
     @Override
     protected void interpolate(double frac) {
-      if(frac>0.5)this.imageview.setVisible(false);
+    //  if(frac>0.5)this.imageview.setVisible(false);
 //        AnimalAn.remove(this);
 //        Manager.getManager().allDomestics.remove(this.animal);
 boolean s=Manager.getManager().Walk1(this.animal,frac);
+int a=Manager.getManager().Intersection(this.imageview,this.animal,frac);
 if(s) this.imageview.setVisible(false);
         this.imageview.setX(this.animal.getX_position());
         this.imageview.setY(this.animal.getY_position());
