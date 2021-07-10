@@ -1,5 +1,7 @@
 package Logic;
 
+import javafx.scene.image.ImageView;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -957,7 +959,7 @@ turn++;
             e.printStackTrace();
         }
     }
-    public boolean Walk1(Animal animal,double t) {
+    public boolean Walk1( Animal animal, double t) {
 
         if(animal.getNameOfAnimal().equalsIgnoreCase("bear")||animal.getNameOfAnimal().equalsIgnoreCase("lion")||animal.getNameOfAnimal().equalsIgnoreCase("tiger")){
             if ( t<1 && animal.getX_position() < 1350&&animal.getY_position() < 600) {
@@ -1058,5 +1060,83 @@ turn++;
         }
         return false;
     }
+    public void Intersection( ImageView image,Animal animal,double t) {
+        LocalDateTime w = LocalDateTime.now();
+        Logger.add(w.toString() + "  " + "intersect");
+        if(animal.getNameOfAnimal().equalsIgnoreCase("sheep")||animal.getNameOfAnimal().equalsIgnoreCase("ostrich")||animal.getNameOfAnimal().equalsIgnoreCase("hen")) {
+            if (t >0.5) {
+                for(int i=0;i<grasses.size();i++){
+                    if(image.getBoundsInParent().intersects((double)grasses.get(i).getX_position(),(double)grasses.get(i).getY_position(),50,50)){
+                        grasses.get(i).setMaxPower(grasses.get(i).getMaxPower()-1);
+                        // set the duration time for transition
 
+                    }
+                }
+                }
+            }
+
+
+
+
+            if (animal.getNameOfAnimal().equalsIgnoreCase("cat")) {
+                for (int j = 0; j < products.size(); j++) {
+                    if (image.getBoundsInParent().intersects(products.get(j).getX_position(),products.get(j).getY_position(),20,20)) {
+                        boolean s = AddToWareHouse(products.get(j));
+                        if (s) {
+                            products.remove(j);
+                            j--;
+                            System.out.println(00000000);
+                            //return approprate allert
+                        }
+                    }
+                }
+            }
+if(animal.getNameOfAnimal().equalsIgnoreCase("bear")||animal.getNameOfAnimal().equalsIgnoreCase("tiger")||animal.getNameOfAnimal().equalsIgnoreCase("lion")){
+    for(int i=0;i<allDomestics.size();i++){
+        if(image.getBoundsInParent().intersects(allDomestics.get(i).X_position,allDomestics.get(i).Y_position,50,50)){
+            allDomestics.remove(allDomestics.get(i));
+            i--;
+            //make the image of ahli invisible
+        }
+    }
+    for(int i=0;i<products.size();i++){
+        if(image.getBoundsInParent().intersects(products.get(i).X_position,products.get(i).Y_position,20,20)){
+            products.remove(products.get(i));
+            i--;
+            //make the image of product invisible
+        }
+    }
+    for(int i=0;i<grasses.size();i++){
+        if(image.getBoundsInParent().intersects(grasses.get(i).X_position,grasses.get(i).Y_position,20,20)){
+            grasses.remove(grasses.get(i));
+            i--;
+            //make the image of grass invisible
+        }
+    }
+    for(int i=0;i<allDefenders.size();i++){
+       if(allDefenders.get(i).getNameOfAnimal().equalsIgnoreCase("cat")){
+           if(image.getBoundsInParent().intersects(allDefenders.get(i).X_position,allDefenders.get(i).Y_position,50,50)){
+               allDefenders.remove(allDefenders.get(i));
+               i--;
+               //make the image of cat invisible
+           }
+       }
+    }
+}
+////////////////
+ //check who should be die
+        ///////////////////
+ if(animal.getNameOfAnimal().equalsIgnoreCase("dog")){
+     for(int i=0;i<allWilds.size();i++){
+
+             if(image.getBoundsInParent().intersects(allWilds.get(i).X_position,allWilds.get(i).Y_position,50,50)){
+                 allWilds.remove(allWilds.get(i));
+                 i--;
+                 //make the image of dog and wild invisible
+             }
+
+     }
+ }
+
+    }
 }

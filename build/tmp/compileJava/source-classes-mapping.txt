@@ -60,8 +60,8 @@ Graphic/Start.java
  Graphic.Start
 Logic/Bank.java
  Logic.Bank
-Logic/InputProcessor.java
- Logic.InputProcessor
+Graphic/MainView.java
+ Graphic.MainView
 Logic/Lion.java
  Logic.Lion
 Logic/Bear.java
@@ -94,8 +94,6 @@ Logic/Cat.java
  Logic.Cat
 Graphic/AnimalAnimation.java
  Graphic.AnimalAnimation
-Logic/Manager.java
- Logic.Manager
 Graphic/Main.java
  Graphic.Main
  Graphic.Main$1
@@ -105,5 +103,7 @@ Graphic/Main.java
  Graphic.Main$5
  Graphic.Main$6
  Graphic.Main$7
-Graphic/MainView.java
- Graphic.MainView
+Logic/InputProcessor.java
+ Logic.InputProcessor
+Logic/Manager.java
+ Logic.Manager
