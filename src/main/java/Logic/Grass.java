@@ -1,6 +1,6 @@
 package Logic;
 
-public class Grass {
+public class Grass  {
     int X_position;
     int Y_position;
     int MaxPower;
@@ -35,5 +35,5 @@ public class Grass {
         return MaxPower;
     }
 
-    void Power(){};
+
 }

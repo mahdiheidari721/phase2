@@ -245,48 +245,53 @@ a.play();
         imageView5.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-
-                ImageView imageViews = new ImageView();
-                // Setting image to the image view
-                imageViews.setImage(sheep);
-                Sheep sheeps=new Sheep(imageViews);
-                Manager.getManager().allDomestics.add(sheeps);
-                //Setting the image view parameters
-                imageViews.setX(200);
-                imageViews.setY(200);
-                imageViews.setFitWidth(150);
-                imageViews.setFitHeight(150);
-                imageViews.setPreserveRatio(true);
-                imageViews.setPickOnBounds(true);//it i important to click on images
-                MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
-                AnimalAnimation.AnimalAn.add(a);
-                a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
-
+                if (Manager.getManager().bank.getCoin() >= 500) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 500);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    imageViews.setImage(sheep);
+                    Sheep sheeps=new Sheep(imageViews);
+                    Manager.getManager().allDomestics.add(sheeps);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
             }
         });
         imageView3.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-
-                ImageView imageViews = new ImageView();
-                // Setting image to the image view
-                imageViews.setImage(ostrich);
-                Ostrich ostrichs=new Ostrich(imageViews);
-                Manager.getManager().allDomestics.add(ostrichs);
-                //Setting the image view parameters
-                imageViews.setX(200);
-                imageViews.setY(200);
-                imageViews.setFitWidth(150);
-                imageViews.setFitHeight(150);
-                imageViews.setPreserveRatio(true);
-                imageViews.setPickOnBounds(true);//it i important to click on images
-                MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
-                AnimalAnimation.AnimalAn.add(a);
-                a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+                if (Manager.getManager().bank.getCoin() >= 200) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 200);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    imageViews.setImage(ostrich);
+                    Ostrich ostrichs=new Ostrich(imageViews);
+                    Manager.getManager().allDomestics.add(ostrichs);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
             }
         });
         imageView2.setOnMouseClicked(new EventHandler() {
@@ -316,25 +321,27 @@ a.play();
         imageView7.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-
-                ImageView imageViews = new ImageView();
-                // Setting image to the image view
-                imageViews.setImage(chicken);
-                Hen hen=new Hen(imageViews);
-                Manager.getManager().allDomestics.add(hen);
-                //Setting the image view parameters
-                imageViews.setX(200);
-                imageViews.setY(200);
-                imageViews.setFitWidth(150);
-                imageViews.setFitHeight(150);
-                imageViews.setPreserveRatio(true);
-                imageViews.setPickOnBounds(true);//it i important to click on images
-                MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                AnimalAnimation.AnimalAn.add(a);
-                a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
-
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    imageViews.setImage(chicken);
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
             }
         });
 //        Hen hen=new Hen();

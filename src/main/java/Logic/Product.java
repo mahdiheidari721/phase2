@@ -1,5 +1,7 @@
 package Logic;
 
+import javafx.scene.image.ImageView;
+
 public class Product {
     String nameOfProduct;
     int CurrentTime;
@@ -11,7 +13,7 @@ public class Product {
     void ToLive(){};
     int SizeInWarehouse;
     int Price;
-
+ImageView imageview;
     public int getPrice() {
         return Price;
     }
@@ -28,6 +30,24 @@ public class Product {
         PY_position = y_position;
         Harvested = harvested;
         this.nameOfProduct = nameOfProduct;
+    }
+    public Product(ImageView imageView,String nameOfProduct ,int currentTime, int x_position, int y_position, boolean harvested) {
+        CurrentTime = currentTime;
+        X_position = x_position;
+        Y_position = y_position;
+        PX_position = x_position;
+        PY_position = y_position;
+        Harvested = harvested;
+        this.nameOfProduct = nameOfProduct;
+        this.imageview=imageView;
+    }
+
+    public ImageView getImageview() {
+        return imageview;
+    }
+
+    public void setImageview(ImageView imageview) {
+        this.imageview = imageview;
     }
 
     public String getNameOfProduct() {

@@ -1,5 +1,7 @@
 package Logic;
 
+import javafx.scene.image.ImageView;
+
 public class Flour extends Product{
     static final String nameOfProduct = "Flour";
     static final int timeOfCorrupting = 5 ;
@@ -8,5 +10,9 @@ public class Flour extends Product{
     static final int Time = 4 ;
     public Flour(int currentTime, int x_position, int y_position, boolean harvested) {
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
+    }
+    public Flour( ImageView imageView,int currentTime, int x_position, int y_position, boolean harvested) {
+        super(nameOfProduct,currentTime, x_position, y_position, harvested);
+        this.imageview=imageView;
     }
 }

@@ -25,6 +25,7 @@ this.imageview=imageview;
     //  if(frac>0.5)this.imageview.setVisible(false);
 //        AnimalAn.remove(this);
 //        Manager.getManager().allDomestics.remove(this.animal);
+        Manager.getManager().RemoveDeadAnimals(this.imageview,this.animal,frac);
 boolean s=Manager.getManager().Walk1(this.animal,frac);
 int a=Manager.getManager().Intersection(this.imageview,this.animal,frac);
 if(s) this.imageview.setVisible(false);

@@ -18,7 +18,7 @@ public class Manager {
     public ArrayList<WildAnimal> allWilds = new ArrayList<>();
     public ArrayList<DefenderAnimal> allDefenders = new ArrayList<>();
     public ArrayList<Cage> cages = new ArrayList<>();
-    Bank bank = new Bank(100000000);
+  public  Bank bank = new Bank(100000000);
     ArrayList<Grass> grasses = new ArrayList<>();
     ArrayList<String> Logger = new ArrayList<>();
     public ArrayList<Labratory> labratories = new ArrayList<>();
@@ -1160,5 +1160,16 @@ public class Manager {
             }
         }
 return 0;
+    }
+    public void RemoveDeadAnimals(ImageView image, Animal animal, double t) {
+       if(animal.getNameOfAnimal().equalsIgnoreCase("sheep")||animal.getNameOfAnimal().equalsIgnoreCase("ostrich")||animal.getNameOfAnimal().equalsIgnoreCase("hen")) {
+
+           if (t == 0) {
+               animal.getImageview().setVisible(false);
+               allDomestics.remove(animal);
+           }
+       }
+        LocalDateTime w = LocalDateTime.now();
+        Logger.add(w.toString() + "  " + "the dead animal has been removed");
     }
 }
