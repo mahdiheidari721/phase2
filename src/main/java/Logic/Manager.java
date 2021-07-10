@@ -1102,10 +1102,9 @@ public class Manager {
         if (animal.getNameOfAnimal().equalsIgnoreCase("bear") || animal.getNameOfAnimal().equalsIgnoreCase("tiger") || animal.getNameOfAnimal().equalsIgnoreCase("lion")) {
             for (int i = 0; i < allDomestics.size(); i++) {
                 if (image.getBoundsInParent().intersects(allDomestics.get(i).X_position, allDomestics.get(i).Y_position, 50, 50)) {
+                    allDomestics.get(i).getImageview().setVisible(false);
                     allDomestics.remove(allDomestics.get(i));
                     i--;
-                    //make the image of ahli invisible
-
                 }
             }
             for (int i = 0; i < products.size(); i++) {
@@ -1125,6 +1124,7 @@ public class Manager {
             for (int i = 0; i < allDefenders.size(); i++) {
                 if (allDefenders.get(i).getNameOfAnimal().equalsIgnoreCase("cat")) {
                     if (image.getBoundsInParent().intersects(allDefenders.get(i).X_position, allDefenders.get(i).Y_position, 50, 50)) {
+                        allDefenders.get(i).getImageview().setVisible(false);
                         allDefenders.remove(allDefenders.get(i));
                         i--;
                         //make the image of cat invisible
@@ -1140,10 +1140,21 @@ public class Manager {
             for (int i = 0; i < allWilds.size(); i++) {
 
                 if (image.getBoundsInParent().intersects(allWilds.get(i).X_position, allWilds.get(i).Y_position, 50, 50)) {
+                    allWilds.get(i).getImageview().setVisible(false);
                     allWilds.remove(allWilds.get(i));
                     i--;
                     //make the image of dog and wild invisible
-                    image.setVisible(false);
+                    for(int j=0;j<allDefenders.size();j++){
+                        if(allDefenders.get(j).getNameOfAnimal().equalsIgnoreCase("dog")){
+                            if(allDefenders.get(j).getX_position()==animal.getX_position()&&allDefenders.get(j).getY_position()==animal.getY_position()){
+                              allDefenders.get(j).getImageview().setVisible(false);
+                              allDefenders.remove(allDefenders.get(j));
+                              j--;
+                              break;
+                            }
+                        }
+                    }
+
                 }
 
             }

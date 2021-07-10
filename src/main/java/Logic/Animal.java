@@ -1,5 +1,7 @@
 package Logic;
 
+import javafx.scene.image.ImageView;
+
 import java.util.Random;
 
 public class Animal {
@@ -17,7 +19,7 @@ public class Animal {
     int Producttime;
     int Productcurrenttime;
     int Price;
-
+ImageView imageview;
     public int getSort() {
         return sort;
     }
@@ -34,6 +36,14 @@ public class Animal {
         Price = price;
     }
 
+    public ImageView getImageview() {
+        return imageview;
+    }
+
+    public void setImageview(ImageView imageview) {
+        this.imageview = imageview;
+    }
+
     public  Animal() {
         Random rand=new Random();
         int a=0,b=1000;
@@ -45,7 +55,18 @@ public class Animal {
         this.isLive = true;
 this.CurrentTime=time;
     }
-
+    public  Animal(ImageView imageview) {
+        Random rand=new Random();
+        int a=0,b=1000;
+        int A=0,B=600;
+        int x=rand.nextInt((b-a)+1)+a;
+        int y=rand.nextInt((B-A)+1)+A;;
+        X_position =x;
+        Y_position = y;
+        this.isLive = true;
+        this.CurrentTime=time;
+        this.imageview=imageview;
+    }
     public int getTime() {
         return time;
     }

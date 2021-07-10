@@ -171,11 +171,11 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         imageView6.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-Tiger tigers =new Tiger();
-                Manager.getManager().allWilds.add(tigers);
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(tiger);
+                Tiger tigers =new Tiger(imageViews);
+                Manager.getManager().allWilds.add(tigers);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -195,11 +195,12 @@ a.play();
         imageView.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                Bear bears=new Bear();
-                Manager.getManager().allWilds.add(bears);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(bear);
+                Bear bears=new Bear(imageViews);
+                Manager.getManager().allWilds.add(bears);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -219,11 +220,12 @@ a.play();
         imageView1.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-               Dog dog=new Dog();
-                Manager.getManager().allDefenders.add(dog);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(dog2);
+                Dog dog=new Dog(imageViews);
+                Manager.getManager().allDefenders.add(dog);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -243,11 +245,12 @@ a.play();
         imageView5.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                Sheep sheeps=new Sheep();
-                Manager.getManager().allDomestics.add(sheeps);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(sheep);
+                Sheep sheeps=new Sheep(imageViews);
+                Manager.getManager().allDomestics.add(sheeps);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -266,11 +269,12 @@ a.play();
         imageView3.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-               Ostrich ostrichs=new Ostrich();
-                Manager.getManager().allDomestics.add(ostrichs);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(ostrich);
+                Ostrich ostrichs=new Ostrich(imageViews);
+                Manager.getManager().allDomestics.add(ostrichs);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -288,11 +292,12 @@ a.play();
         imageView2.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-              Lion lions=new Lion();
-              Manager.getManager().allWilds.add(lions);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(lion);
+                Lion lions=new Lion(imageViews);
+                Manager.getManager().allWilds.add(lions);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
@@ -311,11 +316,12 @@ a.play();
         imageView7.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-  Hen hen=new Hen();
-                Manager.getManager().allDomestics.add(hen);
+
                 ImageView imageViews = new ImageView();
                 // Setting image to the image view
                 imageViews.setImage(chicken);
+                Hen hen=new Hen(imageViews);
+                Manager.getManager().allDomestics.add(hen);
                 //Setting the image view parameters
                 imageViews.setX(200);
                 imageViews.setY(200);
