@@ -49,18 +49,18 @@ public class Manager {
             }
         }
         Grass[3][3] = 10;
-        Grass grass = new Grass(100, 200, 10);
-        Grass grass2 = new Grass(100, 200, 10);
-        Grass grass3 = new Grass(100, 200, 10);
-        Grass grass4 = new Grass(100, 200, 10);
-        Grass grass5 = new Grass(100, 200, 10);
-        Grass grass6 = new Grass(100, 200, 10);
-        grasses.add(grass);
-        grasses.add(grass2);
-        grasses.add(grass3);
-        grasses.add(grass4);
-        grasses.add(grass5);
-        grasses.add(grass6);
+//        Grass grass = new Grass(100, 200, 10);
+//        Grass grass2 = new Grass(100, 200, 10);
+//        Grass grass3 = new Grass(100, 200, 10);
+//        Grass grass4 = new Grass(100, 200, 10);
+//        Grass grass5 = new Grass(100, 200, 10);
+//        Grass grass6 = new Grass(100, 200, 10);
+//        grasses.add(grass);
+//        grasses.add(grass2);
+//        grasses.add(grass3);
+//        grasses.add(grass4);
+//        grasses.add(grass5);
+//        grasses.add(grass6);
         Ostrich ostrich = new Ostrich();
         Sheep sheep = new Sheep();
         Hen hen = new Hen();
