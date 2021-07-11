@@ -11,14 +11,17 @@ public class ProductAnimation extends Transition {
     static ArrayList<ProductAnimation> ProductAn=new ArrayList<>();
     Product product;
     ImageView imageview;
-    public ProductAnimation(Product product, ImageView imageview,int t) {
+    public ProductAnimation(Product product, ImageView imageview,int t,int w) {
         this.imageview=imageview;
         this.product = product;
         this.setCycleDuration(Duration.millis(1000*t));
-        this.setCycleCount(-1);
+        this.setCycleCount(w);
     }
     @Override
     protected void interpolate(double frac) {
-
+if(frac==1) {
+    this.imageview.setVisible(false);
+    ProductAn.remove(this);
+}
     }
 }

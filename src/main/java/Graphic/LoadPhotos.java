@@ -134,13 +134,13 @@ public  ImageView imageView = new ImageView();
     }
     public void Load() throws FileNotFoundException {
         imageView29.setImage(egg1);
-        imageView29.setX(150);
-        imageView29.setY(150);
+        imageView29.setX(400);
+        imageView29.setY(400);
         imageView29.setFitWidth(50);
         imageView29.setFitHeight(50);
         imageView29.setPreserveRatio(true);
-        imageView29.setVisible(false);
-        imageView29.setPickOnBounds(false);//it i important to click on images
+        imageView29.setVisible(true);
+        imageView29.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView10.setImage(weavingfactory);
         imageView10.setX(100);

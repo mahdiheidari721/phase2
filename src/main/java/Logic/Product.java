@@ -10,6 +10,11 @@ public class Product {
     int PX_position;
     int PY_position;
     boolean Harvested;
+
+    public Product() {
+
+    }
+
     void ToLive(){};
     int SizeInWarehouse;
     int Price;

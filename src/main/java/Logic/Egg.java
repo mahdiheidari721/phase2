@@ -11,8 +11,8 @@ public class Egg extends Product{
     public Egg(int currentTime, int x_position, int y_position, boolean harvested) {
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
-    public Egg(ImageView imageView, int currentTime, int x_position, int y_position, boolean harvested) {
-        super(nameOfProduct,currentTime, x_position, y_position, harvested);
+    public Egg(ImageView imageView) {
+        super();
         this.imageview=imageView;
     }
 }

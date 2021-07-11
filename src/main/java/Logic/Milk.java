@@ -12,8 +12,8 @@ public class Milk extends Product{
     public Milk(int currentTime, int x_position, int y_position, boolean harvested) {
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
-    public Milk(ImageView imageview, int currentTime, int x_position, int y_position, boolean harvested) {
-        super(nameOfProduct,currentTime, x_position, y_position, harvested);
+    public Milk(ImageView imageview) {
+        super();
         this.imageview=imageview;
     }
 

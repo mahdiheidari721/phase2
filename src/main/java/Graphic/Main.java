@@ -289,42 +289,14 @@ a.play();
         LoadPhotos.getLP().imageView11.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    LabratoryAnimation a=new LabratoryAnimation(1);
-                    a.play();
-                    a.setOnFinished(new EventHandler<ActionEvent>() {
-                        @Override
-                        public void handle(ActionEvent event) {
-                            try {
-                                LoadPhotos.getLP().imageView29.setVisible(true);
-                                LoadPhotos.getLP().imageView29.setPickOnBounds(true);
-                            } catch (FileNotFoundException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    });
-                    System.out.println( AnimalAnimation.AnimalAn.size());
-                }
-                else{
-                    //good allert
-                }
+               boolean a=Manager.getManager().Well1();
+               if(!a){
+                   //show a good allert
+                   //TODO
+               }
             }
         });
-        LoadPhotos.getLP().imageView29.setOnMouseClicked(new EventHandler() {
-            @Override
-            public void handle(Event event) {
 
-                try {
-                    LoadPhotos.getLP().imageView29.setVisible(false);
-                    LoadPhotos.getLP().imageView29.setPickOnBounds(false);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("brilliant");
-            }
-        });
         LoadPhotos.getLP().imageView12.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -634,27 +606,46 @@ a.play();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView29);
+
         /////////////////////////////////////////////
         Scene scene =new Scene(MainView.pane);
         MainView.pane.setOnMouseClicked(e -> {
-         if(e.getX()>200&&e.getY()>250){
-             ImageView imageViews = new ImageView();
-             try {
-                 imageViews.setImage(LoadPhotos.getLP().grass);
-             } catch (FileNotFoundException w) {
-                 w.printStackTrace();
-             }
-             Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
-             Manager.getManager().grasses.add(grasss);
-             imageViews.setX((int)Math.floor(e.getX()));
-             imageViews.setY((int)Math.floor(e.getY()));
-             imageViews.setFitWidth(150);
-             imageViews.setFitHeight(150);
-             imageViews.setPreserveRatio(true);
-             imageViews.setPickOnBounds(true);//it i important to click on images
-             MainView.pane.getChildren().add(imageViews);
-         }
+int t=0;
+                for(int i=0;i<ProductAnimation.ProductAn.size();i++){
+                    if(ProductAnimation.ProductAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){
+                       boolean s= Manager.getManager().AddToWareHouse(ProductAnimation.ProductAn.get(i).product);
+                       t=1;
+                       if(s){
+                           ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
+                           ProductAnimation.ProductAn.get(i).pause();
+                           ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
+                       }
+                    }
+                }
+                if(t==0){
+                    if(e.getX()>200&&e.getY()>250){
+                        ImageView imageViews = new ImageView();
+                        try {
+                            if(Manager.getManager().well.getCapacity()>0){
+                                imageViews.setImage(LoadPhotos.getLP().grass);
+                            }
+                            else{}  //play a good sound
+                            //TODO
+                        } catch (FileNotFoundException w) {
+                            w.printStackTrace();
+                        }
+                        Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
+                        Manager.getManager().grasses.add(grasss);
+                        imageViews.setX((int)Math.floor(e.getX()));
+                        imageViews.setY((int)Math.floor(e.getY()));
+                        imageViews.setFitWidth(150);
+                        imageViews.setFitHeight(150);
+                        imageViews.setPreserveRatio(true);
+                        imageViews.setPickOnBounds(true);//it i important to click on images
+                        MainView.pane.getChildren().add(imageViews);
+                    }
+                }
+
         } ); //for get the location of mouseclick
         MainView.getMV().getMainStage().setScene(scene);
         primaryStage.show();
