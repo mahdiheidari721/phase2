@@ -19,19 +19,19 @@ public class Manager {
     public ArrayList<DefenderAnimal> allDefenders = new ArrayList<>();
     public ArrayList<Cage> cages = new ArrayList<>();
   public  Bank bank = new Bank(100000000);
-    ArrayList<Grass> grasses = new ArrayList<>();
-    ArrayList<String> Logger = new ArrayList<>();
+    public  ArrayList<Grass> grasses = new ArrayList<>();
+    public ArrayList<String> Logger = new ArrayList<>();
     public ArrayList<Labratory> labratories = new ArrayList<>();
     //fill this list by labratories;
     public ArrayList<Product> products = new ArrayList<>();
-    WareHouse wareHouse = new WareHouse();
+    public  WareHouse wareHouse = new WareHouse();
     int Grass[][] = new int[6][6];
     public ArrayList<HameKare> CurrentCages = new ArrayList<>();
     int CurrentLevel = 0;
     static int turn = 1;
-    Truck truck = new Truck();
-    WaterWell well = new WaterWell();
-    Level level = new Level(CurrentLevel);
+    public  Truck truck = new Truck();
+    public  WaterWell well = new WaterWell();
+    public Level level = new Level(CurrentLevel);
     private static Manager MANAGER;
 
     private Manager() {
@@ -1035,8 +1035,8 @@ public class Manager {
             int r = 0, x = 0, y = 0;
             for (int i = 0; i < grasses.size(); i++) {
                 if (grasses.get(i).MaxPower > 0) {
-                    if (r <= Math.abs(grasses.get(i).X_position + grasses.get(i).Y_position - animal.getX_position() - animal.getX_position())) {
-                        r = Math.abs(grasses.get(i).X_position + grasses.get(i).Y_position - animal.getX_position() - animal.getX_position());
+                    if (r <= Math.abs(grasses.get(i).X_position + grasses.get(i).Y_position - animal.getX_position() - animal.getY_position())) {
+                        r = Math.abs(grasses.get(i).X_position + grasses.get(i).Y_position - animal.getX_position() - animal.getY_position());
                         x = grasses.get(i).X_position;
                         y = grasses.get(i).Y_position;
                     }
@@ -1075,11 +1075,19 @@ public class Manager {
         if (animal.getNameOfAnimal().equalsIgnoreCase("sheep") || animal.getNameOfAnimal().equalsIgnoreCase("ostrich") || animal.getNameOfAnimal().equalsIgnoreCase("hen")) {
             if (t > 0.5) {
                 for (int i = 0; i < grasses.size(); i++) {
-                    if (image.getBoundsInParent().intersects((double) grasses.get(i).getX_position(), (double) grasses.get(i).getY_position(), 50, 50)) {
+                    if(grasses.get(i).getMaxPower()>0){
+                        if (image.getBoundsInParent().intersects(grasses.get(i).getImageView().getBoundsInParent()) ){
+                            System.out.println("hello");
                         grasses.get(i).setMaxPower(grasses.get(i).getMaxPower() - 1);
                         return 1;
-
                     }
+                    }
+                    else{
+                      grasses.get(i).getImageView().setVisible(false);
+                      grasses.remove(grasses.get(i));
+                      i--;
+                    }
+
                 }
             }
         }

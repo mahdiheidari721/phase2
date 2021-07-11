@@ -310,6 +310,25 @@ a.play();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView7);
         /////////////////////////////////////////////
         Scene scene =new Scene(MainView.pane);
+        MainView.pane.setOnMouseClicked(e -> {
+         if(e.getX()>200&&e.getY()>250){
+             ImageView imageViews = new ImageView();
+             try {
+                 imageViews.setImage(LoadPhotos.getLP().grass);
+             } catch (FileNotFoundException w) {
+                 w.printStackTrace();
+             }
+             Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
+             Manager.getManager().grasses.add(grasss);
+             imageViews.setX((int)Math.floor(e.getX()));
+             imageViews.setY((int)Math.floor(e.getY()));
+             imageViews.setFitWidth(150);
+             imageViews.setFitHeight(150);
+             imageViews.setPreserveRatio(true);
+             imageViews.setPickOnBounds(true);//it i important to click on images
+             MainView.pane.getChildren().add(imageViews);
+         }
+        } ); //for get the location of mouseclick
         MainView.getMV().getMainStage().setScene(scene);
         primaryStage.show();
     }
