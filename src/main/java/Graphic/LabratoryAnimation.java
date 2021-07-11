@@ -8,11 +8,11 @@ import javafx.util.Duration;
 public class LabratoryAnimation extends Transition {
     Labratory labratory;
     ImageView imageview;
-    public LabratoryAnimation(Labratory labratory, ImageView imageview, int t) {
-        this.imageview=imageview;
-        this.labratory = labratory;
-        this.setCycleDuration(Duration.millis(200000*t));
-        this.setCycleCount(-1);
+    public LabratoryAnimation( int t) {
+//        this.imageview=imageview;
+//        this.labratory = labratory;
+        this.setCycleDuration(Duration.millis(1000*t));
+        this.setCycleCount(1);
     }
 
     @Override

@@ -81,18 +81,8 @@ InputStream stream7 = new FileInputStream("D:\\images\\hen.gif");
     Image bread = new Image(stream35);
     InputStream stream36 = new FileInputStream("D:\\images\\bakery.png");
     Image bakery = new Image(stream36);
-//    InputStream stream37 = new FileInputStream("D:\\images\\grass.png");
-//    Image grass = new Image(stream9);
-//    InputStream stream38 = new FileInputStream("D:\\images\\grass.png");
-//    Image grass = new Image(stream9);
-//    InputStream stream39 = new FileInputStream("D:\\images\\grass.png");
-//    Image grass = new Image(stream9);
-//    InputStream stream40 = new FileInputStream("D:\\images\\grass.png");
-//    Image grass = new Image(stream9);
-//    InputStream stream41 = new FileInputStream("D:\\images\\grass.png");
-//    Image grass = new Image(stream9);
     ////////////////////////////////////////////////////////////////////////
-  public  ImageView imageView8 = new ImageView();
+public  ImageView imageView = new ImageView();
     public  ImageView imageView1 = new ImageView();
     public  ImageView imageView2 = new ImageView();
     public  ImageView imageView3 = new ImageView();
@@ -100,8 +90,35 @@ InputStream stream7 = new FileInputStream("D:\\images\\hen.gif");
     public  ImageView imageView5 = new ImageView();
     public  ImageView imageView6 = new ImageView();
     public  ImageView imageView7 = new ImageView();
+    public  ImageView imageView8 = new ImageView();
     public  ImageView imageView9 = new ImageView();
-    public  ImageView imageView = new ImageView();
+    public  ImageView imageView10 = new ImageView();
+    public  ImageView imageView11 = new ImageView();
+    public  ImageView imageView12 = new ImageView();
+    public  ImageView imageView13 = new ImageView();
+    public  ImageView imageView14 = new ImageView();
+    public  ImageView imageView15 = new ImageView();
+    public  ImageView imageView16 = new ImageView();
+    public  ImageView imageView17 = new ImageView();
+    public  ImageView imageView18 = new ImageView();
+    public  ImageView imageView19 = new ImageView();
+    public  ImageView imageView20 = new ImageView();
+    public  ImageView imageView21 = new ImageView();
+    public  ImageView imageView22 = new ImageView();
+    public  ImageView imageView23 = new ImageView();
+    public  ImageView imageView24 = new ImageView();
+    public  ImageView imageView25 = new ImageView();
+    public  ImageView imageView26 = new ImageView();
+    public  ImageView imageView27 = new ImageView();
+    public  ImageView imageView28 = new ImageView();
+    public  ImageView imageView29 = new ImageView();
+    public  ImageView imageView30 = new ImageView();
+    public  ImageView imageView31 = new ImageView();
+    public  ImageView imageView32 = new ImageView();
+    public  ImageView imageView33 = new ImageView();
+    public  ImageView imageView34 = new ImageView();
+    public  ImageView imageView35 = new ImageView();
+    public  ImageView imageView36 = new ImageView();
     ////////////////////////////////////////////////////////////////////////
     private static LoadPhotos LP;
     public static Pane pane;
@@ -116,6 +133,135 @@ InputStream stream7 = new FileInputStream("D:\\images\\hen.gif");
         return LP;
     }
     public void Load() throws FileNotFoundException {
+        imageView29.setImage(egg1);
+        imageView29.setX(150);
+        imageView29.setY(150);
+        imageView29.setFitWidth(50);
+        imageView29.setFitHeight(50);
+        imageView29.setPreserveRatio(true);
+        imageView29.setVisible(false);
+        imageView29.setPickOnBounds(false);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView10.setImage(weavingfactory);
+        imageView10.setX(100);
+        imageView10.setY(100);
+        imageView10.setFitWidth(50);
+        imageView10.setFitHeight(50);
+        imageView10.setPreserveRatio(true);
+        imageView10.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView11.setImage(waterwell);
+        imageView11.setX(150);
+        imageView11.setY(100);
+        imageView11.setFitWidth(50);
+        imageView11.setFitHeight(50);
+        imageView11.setPreserveRatio(true);
+        imageView11.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView12.setImage(truck);
+        imageView12.setX(200);
+        imageView12.setY(0);
+        imageView12.setFitWidth(50);
+        imageView12.setFitHeight(50);
+        imageView12.setPreserveRatio(true);
+        imageView12.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView15.setImage(shirtstor);
+        imageView15.setX(250);
+        imageView15.setY(0);
+        imageView15.setFitWidth(50);
+        imageView15.setFitHeight(50);
+        imageView15.setPreserveRatio(true);
+        imageView15.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView18.setImage(ostrichitem);
+        imageView18.setX(300);
+        imageView18.setY(0);
+        imageView18.setFitWidth(50);
+        imageView18.setFitHeight(50);
+        imageView18.setPreserveRatio(true);
+        imageView18.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView20.setImage(milkfactory);
+        imageView20.setX(350);
+        imageView20.setY(0);
+        imageView20.setFitWidth(50);
+        imageView20.setFitHeight(50);
+        imageView20.setPreserveRatio(true);
+        imageView20.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView21.setImage(menu);
+        imageView21.setX(400);
+        imageView21.setY(0);
+        imageView21.setFitWidth(50);
+        imageView21.setFitHeight(50);
+        imageView21.setPreserveRatio(true);
+        imageView21.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView22.setImage(incubator);
+        imageView22.setX(450);
+        imageView22.setY(0);
+        imageView22.setFitWidth(50);
+        imageView22.setFitHeight(50);
+        imageView22.setPreserveRatio(true);
+        imageView22.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView23.setImage(IceCreamShop);
+        imageView23.setX(500);
+        imageView23.setY(0);
+        imageView23.setFitWidth(50);
+        imageView23.setFitHeight(50);
+        imageView23.setPreserveRatio(true);
+        imageView23.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView25.setImage(henitem);
+        imageView25.setX(550);
+        imageView25.setY(0);
+        imageView25.setFitWidth(50);
+        imageView25.setFitHeight(50);
+        imageView25.setPreserveRatio(true);
+        imageView25.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView27.setImage(flourfactory);
+        imageView27.setX(600);
+        imageView27.setY(0);
+        imageView27.setFitWidth(50);
+        imageView27.setFitHeight(50);
+        imageView27.setPreserveRatio(true);
+        imageView27.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView30.setImage(dogitem);
+        imageView30.setX(650);
+        imageView30.setY(0);
+        imageView30.setFitWidth(50);
+        imageView30.setFitHeight(50);
+        imageView30.setPreserveRatio(true);
+        imageView30.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView31.setImage(cowitem);
+        imageView31.setX(700);
+        imageView31.setY(0);
+        imageView31.setFitWidth(50);
+        imageView31.setFitHeight(50);
+        imageView31.setPreserveRatio(true);
+        imageView31.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView33.setImage(catitem);
+        imageView33.setX(750);
+        imageView33.setY(0);
+        imageView33.setFitWidth(50);
+        imageView33.setFitHeight(50);
+        imageView33.setPreserveRatio(true);
+        imageView33.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
+        imageView36.setImage(bakery);
+        imageView36.setX(800);
+        imageView36.setY(0);
+        imageView36.setFitWidth(50);
+        imageView36.setFitHeight(50);
+        imageView36.setPreserveRatio(true);
+        imageView36.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
         imageView8.setImage(background);
         imageView8.setX(0);
         imageView8.setY(0);
@@ -148,6 +294,14 @@ InputStream stream7 = new FileInputStream("D:\\images\\hen.gif");
         imageView.setPreserveRatio(true);
         imageView.setPickOnBounds(true);//it i important to click on images
 //////////////////////////////////////////////////////////////////////////////////
+        imageView7.setImage(chicken);
+        imageView7.setX(10);
+        imageView7.setY(100);
+        imageView7.setFitWidth(50);
+        imageView7.setFitHeight(50);
+        imageView7.setPreserveRatio(true);
+        imageView7.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////////////
         imageView7.setImage(chicken);
         imageView7.setX(10);
         imageView7.setY(100);

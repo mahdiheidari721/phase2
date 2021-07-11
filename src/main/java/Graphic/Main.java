@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
@@ -21,13 +22,11 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     public void start(Stage primaryStage) throws Exception {
         Manager.getManager().Fill();
         LoadPhotos.getLP().Load();
-
 //        ///////////////////////////////////////////////////////////////////////////////////////
        MainView.getMV().setMainStage(primaryStage);
         primaryStage.setResizable(false);
         MainView.getMV().setScene("Start.fxml");
 //        /////////////////////////////////////////////////////////////////////////////////////////
-//click in images
         LoadPhotos.getLP().imageView6.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -55,7 +54,6 @@ a.play();
 
             }
         });
-//click in images
         LoadPhotos.getLP().imageView.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -84,7 +82,7 @@ a.play();
 
             }
         });
-        LoadPhotos.getLP().imageView4.setOnMouseClicked(new EventHandler() {
+        LoadPhotos.getLP().imageView33.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
 
@@ -112,37 +110,7 @@ a.play();
 
             }
         });
-//click in images
-        LoadPhotos.getLP().imageView1.setOnMouseClicked(new EventHandler() {
-            @Override
-            public void handle(Event event) {
-
-                ImageView imageViews = new ImageView();
-                // Setting image to the image view
-                try {
-                    imageViews.setImage(LoadPhotos.getLP().dog2);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                Dog dog=new Dog(imageViews);
-                Manager.getManager().allDefenders.add(dog);
-                //Setting the image view parameters
-                imageViews.setX(200);
-                imageViews.setY(200);
-                imageViews.setFitWidth(150);
-                imageViews.setFitHeight(150);
-                imageViews.setPreserveRatio(true);
-                imageViews.setPickOnBounds(true);//it i important to click on images
-                MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(dog,imageViews,1);
-                AnimalAnimation.AnimalAn.add(a);
-                a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
-
-            }
-        });
-//click in images
-        LoadPhotos.getLP().imageView5.setOnMouseClicked(new EventHandler() {
+        LoadPhotos.getLP().imageView31.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
                 if (Manager.getManager().bank.getCoin() >= 500) {
@@ -172,7 +140,35 @@ a.play();
                 }
             }
         });
-        LoadPhotos.getLP().imageView3.setOnMouseClicked(new EventHandler() {
+        LoadPhotos.getLP().imageView30.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+
+                ImageView imageViews = new ImageView();
+                // Setting image to the image view
+                try {
+                    imageViews.setImage(LoadPhotos.getLP().dog2);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                Dog dog=new Dog(imageViews);
+                Manager.getManager().allDefenders.add(dog);
+                //Setting the image view parameters
+                imageViews.setX(200);
+                imageViews.setY(200);
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                MainView.pane.getChildren().add(imageViews);
+                AnimalAnimation a=new AnimalAnimation(dog,imageViews,1);
+                AnimalAnimation.AnimalAn.add(a);
+                a.play();
+                System.out.println( AnimalAnimation.AnimalAn.size());
+
+            }
+        });
+        LoadPhotos.getLP().imageView18.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
                 if (Manager.getManager().bank.getCoin() >= 200) {
@@ -230,7 +226,316 @@ a.play();
 
             }
         });
-        LoadPhotos.getLP().imageView7.setOnMouseClicked(new EventHandler() {
+        LoadPhotos.getLP().imageView25.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView10.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView11.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    LabratoryAnimation a=new LabratoryAnimation(1);
+                    a.play();
+                    a.setOnFinished(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            try {
+                                LoadPhotos.getLP().imageView29.setVisible(true);
+                                LoadPhotos.getLP().imageView29.setPickOnBounds(true);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                else{
+                    //good allert
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView29.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+
+                try {
+                    LoadPhotos.getLP().imageView29.setVisible(false);
+                    LoadPhotos.getLP().imageView29.setPickOnBounds(false);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("brilliant");
+            }
+        });
+        LoadPhotos.getLP().imageView12.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView15.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView20.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView21.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView23.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView27.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                if (Manager.getManager().bank.getCoin() >= 100) {
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
+                    System.out.println("bank");
+                    ImageView imageViews = new ImageView();
+                    // Setting image to the image view
+                    try {
+                        imageViews.setImage(LoadPhotos.getLP().chicken);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    Hen hen=new Hen(imageViews);
+                    Manager.getManager().allDomestics.add(hen);
+                    //Setting the image view parameters
+                    imageViews.setX(200);
+                    imageViews.setY(200);
+                    imageViews.setFitWidth(150);
+                    imageViews.setFitHeight(150);
+                    imageViews.setPreserveRatio(true);
+                    imageViews.setPickOnBounds(true);//it i important to click on images
+                    MainView.pane.getChildren().add(imageViews);
+                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
+                    AnimalAnimation.AnimalAn.add(a);
+                    a.play();
+                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView36.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
                 if (Manager.getManager().bank.getCoin() >= 100) {
@@ -297,9 +602,15 @@ a.play();
 //        }
 //    });
 //}
+
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        Text text = new Text();
+        text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
+        text.setX(1000);
+        text.setY(50);
         /////////////////////////////////////////////
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
+        MainView.pane.getChildren().add(text);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView1);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
@@ -308,6 +619,22 @@ a.play();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView5);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView7);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView10);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView11);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView12);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView15);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView18);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView20);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView21);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView22);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView23);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView25);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView27);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView30);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView29);
         /////////////////////////////////////////////
         Scene scene =new Scene(MainView.pane);
         MainView.pane.setOnMouseClicked(e -> {
