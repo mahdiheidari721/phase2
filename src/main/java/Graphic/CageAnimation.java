@@ -21,6 +21,7 @@ public class CageAnimation extends Transition {
         if(frac==1) {this.imageView.setVisible(false);
             this.pause();
             this.animation.play();
+this.animation.setTeded(0);
         }
         this.imageView.setX(this.animal.getImageview().getX());
         this.imageView.setY(this.animal.getImageview().getY());

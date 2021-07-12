@@ -98,6 +98,8 @@ Logic/WeavingFactory.java
  Logic.WeavingFactory
 Logic/Flour.java
  Logic.Flour
+Graphic/MainView.java
+ Graphic.MainView
 Graphic/AnimalAnimation.java
  Graphic.AnimalAnimation
 Graphic/CageAnimation.java
@@ -128,5 +130,3 @@ Graphic/Main.java
  Graphic.Main$8
  Graphic.Main$9
  Graphic.Main$9$1
-Graphic/MainView.java
- Graphic.MainView

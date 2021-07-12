@@ -143,129 +143,129 @@ public  ImageView imageView = new ImageView();
         imageView29.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView10.setImage(weavingfactory);
-        imageView10.setX(100);
-        imageView10.setY(100);
-        imageView10.setFitWidth(50);
-        imageView10.setFitHeight(50);
+        imageView10.setX(1043);
+        imageView10.setY(333);
+        imageView10.setFitWidth(150);
+        imageView10.setFitHeight(150);
         imageView10.setPreserveRatio(true);
         imageView10.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView11.setImage(waterwell);
-        imageView11.setX(150);
-        imageView11.setY(100);
-        imageView11.setFitWidth(50);
-        imageView11.setFitHeight(50);
+        imageView11.setX(1043);
+        imageView11.setY(195);
+        imageView11.setFitWidth(150);
+        imageView11.setFitHeight(150);
         imageView11.setPreserveRatio(true);
         imageView11.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView12.setImage(truck);
-        imageView12.setX(200);
-        imageView12.setY(0);
-        imageView12.setFitWidth(50);
-        imageView12.setFitHeight(50);
+        imageView12.setX(985);
+        imageView12.setY(7);
+        imageView12.setFitWidth(100);
+        imageView12.setFitHeight(100);
         imageView12.setPreserveRatio(true);
         imageView12.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView15.setImage(shirtstor);
-        imageView15.setX(250);
-        imageView15.setY(0);
-        imageView15.setFitWidth(50);
-        imageView15.setFitHeight(50);
+        imageView15.setX(1043);
+        imageView15.setY(473);
+        imageView15.setFitWidth(150);
+        imageView15.setFitHeight(150);
         imageView15.setPreserveRatio(true);
         imageView15.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView18.setImage(ostrichitem);
-        imageView18.setX(300);
-        imageView18.setY(0);
-        imageView18.setFitWidth(50);
-        imageView18.setFitHeight(50);
+        imageView18.setX(397);
+        imageView18.setY(10);
+        imageView18.setFitWidth(100);
+        imageView18.setFitHeight(100);
         imageView18.setPreserveRatio(true);
         imageView18.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView20.setImage(milkfactory);
-        imageView20.setX(350);
-        imageView20.setY(0);
-        imageView20.setFitWidth(50);
-        imageView20.setFitHeight(50);
+        imageView20.setX(916);
+        imageView20.setY(459);
+        imageView20.setFitWidth(200);
+        imageView20.setFitHeight(150);
         imageView20.setPreserveRatio(true);
         imageView20.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView21.setImage(menu);
-        imageView21.setX(400);
-        imageView21.setY(0);
-        imageView21.setFitWidth(50);
-        imageView21.setFitHeight(50);
+        imageView21.setX(866);
+        imageView21.setY(2);
+        imageView21.setFitWidth(100);
+        imageView21.setFitHeight(100);
         imageView21.setPreserveRatio(true);
         imageView21.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView22.setImage(incubator);
-        imageView22.setX(450);
-        imageView22.setY(0);
-        imageView22.setFitWidth(50);
-        imageView22.setFitHeight(50);
+        imageView22.setX(1069);
+        imageView22.setY(100);
+        imageView22.setFitWidth(150);
+        imageView22.setFitHeight(92);
         imageView22.setPreserveRatio(true);
         imageView22.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView23.setImage(IceCreamShop);
-        imageView23.setX(500);
-        imageView23.setY(0);
-        imageView23.setFitWidth(50);
-        imageView23.setFitHeight(50);
+        imageView23.setX(54);
+        imageView23.setY(477);
+        imageView23.setFitWidth(200);
+        imageView23.setFitHeight(200);
         imageView23.setPreserveRatio(true);
         imageView23.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView25.setImage(henitem);
-        imageView25.setX(550);
-        imageView25.setY(0);
-        imageView25.setFitWidth(50);
-        imageView25.setFitHeight(50);
+        imageView25.setX(296);
+        imageView25.setY(3);
+        imageView25.setFitWidth(100);
+        imageView25.setFitHeight(100);
         imageView25.setPreserveRatio(true);
         imageView25.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView27.setImage(flourfactory);
-        imageView27.setX(600);
-        imageView27.setY(0);
-        imageView27.setFitWidth(50);
-        imageView27.setFitHeight(50);
+        imageView27.setX(0);
+        imageView27.setY(308);
+        imageView27.setFitWidth(175);
+        imageView27.setFitHeight(175);
         imageView27.setPreserveRatio(true);
         imageView27.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView30.setImage(dogitem);
-        imageView30.setX(650);
-        imageView30.setY(0);
-        imageView30.setFitWidth(50);
-        imageView30.setFitHeight(50);
+        imageView30.setX(4);
+        imageView30.setY(3);
+        imageView30.setFitWidth(100);
+        imageView30.setFitHeight(74);
         imageView30.setPreserveRatio(true);
         imageView30.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView31.setImage(cowitem);
-        imageView31.setX(700);
-        imageView31.setY(0);
-        imageView31.setFitWidth(50);
-        imageView31.setFitHeight(50);
+        imageView31.setX(196);
+        imageView31.setY(10);
+        imageView31.setFitWidth(100);
+        imageView31.setFitHeight(100);
         imageView31.setPreserveRatio(true);
         imageView31.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView33.setImage(catitem);
-        imageView33.setX(750);
-        imageView33.setY(0);
-        imageView33.setFitWidth(50);
-        imageView33.setFitHeight(50);
+        imageView33.setX(104);
+        imageView33.setY(3);
+        imageView33.setFitWidth(100);
+        imageView33.setFitHeight(100);
         imageView33.setPreserveRatio(true);
         imageView33.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView36.setImage(bakery);
-        imageView36.setX(800);
-        imageView36.setY(0);
-        imageView36.setFitWidth(50);
-        imageView36.setFitHeight(50);
+        imageView36.setX(14);
+        imageView36.setY(146);
+        imageView36.setFitWidth(150);
+        imageView36.setFitHeight(150);
         imageView36.setPreserveRatio(true);
         imageView36.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView8.setImage(background);
         imageView8.setX(0);
         imageView8.setY(0);
-        imageView8.setFitWidth(1500);
+        imageView8.setFitWidth(1200);
         imageView8.setFitHeight(800);
         imageView8.setPreserveRatio(true);
         imageView8.setPickOnBounds(true);//it i important to click on images
@@ -279,34 +279,26 @@ public  ImageView imageView = new ImageView();
         imageView9.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         imageView6.setImage(tiger);
-        imageView6.setX(10);
-        imageView6.setY(10);
-        imageView6.setFitWidth(50);
-        imageView6.setFitHeight(50);
+        imageView6.setX(764);
+        imageView6.setY(14);
+        imageView6.setFitWidth(100);
+        imageView6.setFitHeight(100);
         imageView6.setPreserveRatio(true);
         imageView6.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         imageView.setImage(bear);
-        imageView.setX(10);
-        imageView.setY(550);
-        imageView.setFitWidth(50);
-        imageView.setFitHeight(50);
+        imageView.setX(633);
+        imageView.setY(14);
+        imageView.setFitWidth(100);
+        imageView.setFitHeight(100);
         imageView.setPreserveRatio(true);
         imageView.setPickOnBounds(true);//it i important to click on images
 //////////////////////////////////////////////////////////////////////////////////
         imageView7.setImage(chicken);
-        imageView7.setX(10);
-        imageView7.setY(100);
-        imageView7.setFitWidth(50);
-        imageView7.setFitHeight(50);
-        imageView7.setPreserveRatio(true);
-        imageView7.setPickOnBounds(true);//it i important to click on images
-        ///////////////////////////////////////////
-        imageView7.setImage(chicken);
-        imageView7.setX(10);
-        imageView7.setY(100);
-        imageView7.setFitWidth(50);
-        imageView7.setFitHeight(50);
+        imageView7.setX(296);
+        imageView7.setY(3);
+        imageView7.setFitWidth(100);
+        imageView7.setFitHeight(100);
         imageView7.setPreserveRatio(true);
         imageView7.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
@@ -319,10 +311,10 @@ public  ImageView imageView = new ImageView();
         imageView1.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////
         imageView2.setImage(lion);
-        imageView2.setX(10);
-        imageView2.setY(200);
-        imageView2.setFitWidth(50);
-        imageView2.setFitHeight(50);
+        imageView2.setX(508);
+        imageView2.setY(31);
+        imageView2.setFitWidth(100);
+        imageView2.setFitHeight(100);
         imageView2.setPreserveRatio(true);
         imageView2.setPickOnBounds(true);//it i important to click on images
         ///////////////////////////////////////////

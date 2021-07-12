@@ -730,13 +730,13 @@ a.play();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
         MainView.pane.getChildren().add(text);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView1);
+        //MainView.pane.getChildren().add(LoadPhotos.getLP().imageView1);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView3);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView4);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView5);
+        //MainView.pane.getChildren().add(LoadPhotos.getLP().imageView3);
+      //  MainView.pane.getChildren().add(LoadPhotos.getLP().imageView4);
+      //  MainView.pane.getChildren().add(LoadPhotos.getLP().imageView5);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);
-        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView7);
+      //  MainView.pane.getChildren().add(LoadPhotos.getLP().imageView7);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView10);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView11);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView12);
@@ -759,7 +759,10 @@ a.play();
 int t=0;
 for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
     if(AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("bear")||AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("tiger")||AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("lion")){
-        if(AnimalAnimation.AnimalAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){ImageView imageViews = new ImageView();
+        if(AnimalAnimation.AnimalAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){
+            t=1;
+            ImageView imageViews = new ImageView();
+
             try {
 
                 imageViews.setImage(LoadPhotos.getLP().cage);
@@ -784,7 +787,7 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 MainView.pane.getChildren().add(imageViews);
 
                 m.play();
-                t=1;
+
 
                 AnimalAnimation.AnimalAn.get(i).setTeded(AnimalAnimation.AnimalAn.get(i).getTeded()+1);
             }
@@ -827,7 +830,7 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                        }
                    }
                }
-                else if(t==0){
+                if(t==0){
                     if(e.getX()>200&&e.getY()>250){
                         ImageView imageViews = new ImageView();
                         try {
