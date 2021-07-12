@@ -259,30 +259,55 @@ a.play();
         LoadPhotos.getLP().imageView10.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("feather")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
                     }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
-                    a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=250){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
+                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().cloth);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                Cloth cloth =new Cloth(imageViews);
+                                Manager.getManager().products.add(cloth);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView10.getX());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView10.getY()+50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(50);
+                                imageViews.setFitHeight(50);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                ProductAnimation b=new ProductAnimation(cloth,imageViews,5,1);
+                                ProductAnimation.ProductAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
                 }
             }
         });
@@ -296,7 +321,6 @@ a.play();
                }
             }
         });
-
         LoadPhotos.getLP().imageView12.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -330,60 +354,110 @@ a.play();
         LoadPhotos.getLP().imageView15.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("cloth")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
                     }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
-                    a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=400){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
+                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().shirt);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                Shirt shirt =new Shirt(imageViews);
+                                Manager.getManager().products.add(shirt);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView15.getX());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView15.getY()+50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(50);
+                                imageViews.setFitHeight(50);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                ProductAnimation b=new ProductAnimation(shirt,imageViews,5,1);
+                                ProductAnimation.ProductAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
                 }
             }
         });
         LoadPhotos.getLP().imageView20.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("milk")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
                     }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
-                    a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=400){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
+                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().packagedMilk);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                PackagedMilk packagedMilk =new PackagedMilk(imageViews);
+                                Manager.getManager().products.add(packagedMilk);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView20.getX());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView20.getY()+50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(50);
+                                imageViews.setFitHeight(50);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                ProductAnimation b=new ProductAnimation(packagedMilk,imageViews,5,1);
+                                ProductAnimation.ProductAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
                 }
             }
         });
@@ -450,90 +524,161 @@ a.play();
         LoadPhotos.getLP().imageView23.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagemilk")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
                     }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
-                    a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=550){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-550);
+                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().iceCream);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                IceCream iceCream =new IceCream(imageViews);
+                                Manager.getManager().products.add(iceCream);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView23.getX());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView23.getY()+50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(50);
+                                imageViews.setFitHeight(50);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                ProductAnimation b=new ProductAnimation(iceCream,imageViews,5,1);
+                                ProductAnimation.ProductAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
                 }
             }
         });
         LoadPhotos.getLP().imageView27.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
+              boolean s=false;
+              for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                  if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
+                      s=true;
+                      Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                      break;
+                  }
+              }
+             if(s){
+                if(Manager.getManager().bank.getCoin()>=150){
+                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-150);
+                    LabratoryAnimation a=new LabratoryAnimation(4);
                     a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                    a.setOnFinished(new EventHandler<ActionEvent>() {
+                        @Override
+                        public void handle(ActionEvent event) {
+                            ImageView imageViews = new ImageView();
+                            try {
+                                imageViews.setImage(LoadPhotos.getLP().flour);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            Flour flour =new Flour(imageViews);
+                            Manager.getManager().products.add(flour);
+                            try {
+                                imageViews.setX( LoadPhotos.getLP().imageView27.getX());
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            try {
+                                imageViews.setX( LoadPhotos.getLP().imageView27.getY()+50);
+                            } catch (FileNotFoundException e) {
+                                e.printStackTrace();
+                            }
+                            imageViews.setFitWidth(50);
+                            imageViews.setFitHeight(50);
+                            imageViews.setPreserveRatio(true);
+                            imageViews.setPickOnBounds(true);//it i important to click on images
+                            MainView.pane.getChildren().add(imageViews);
+                            ProductAnimation b=new ProductAnimation(flour,imageViews,5,1);
+                            ProductAnimation.ProductAn.add(b);
+                            b.play();
+                        }
+                    });
                 }
+             }
             }
         });
         LoadPhotos.getLP().imageView36.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                if (Manager.getManager().bank.getCoin() >= 100) {
-                    Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 100);
-                    System.out.println("bank");
-                    ImageView imageViews = new ImageView();
-                    // Setting image to the image view
-                    try {
-                        imageViews.setImage(LoadPhotos.getLP().chicken);
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("flour")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
                     }
-                    Hen hen=new Hen(imageViews);
-                    Manager.getManager().allDomestics.add(hen);
-                    //Setting the image view parameters
-                    imageViews.setX(200);
-                    imageViews.setY(200);
-                    imageViews.setFitWidth(150);
-                    imageViews.setFitHeight(150);
-                    imageViews.setPreserveRatio(true);
-                    imageViews.setPickOnBounds(true);//it i important to click on images
-                    MainView.pane.getChildren().add(imageViews);
-                    AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
-                    AnimalAnimation.AnimalAn.add(a);
-                    a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=250){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
+                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().bread);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                Bread bread =new Bread(imageViews);
+                                Manager.getManager().products.add(bread);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView36.getX());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView36.getY()+50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(50);
+                                imageViews.setFitHeight(50);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                ProductAnimation b=new ProductAnimation(bread,imageViews,5,1);
+                                ProductAnimation.ProductAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
                 }
             }
         });

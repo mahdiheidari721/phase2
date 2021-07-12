@@ -11,8 +11,8 @@ public class IceCream extends Product{
     public IceCream(int currentTime, int x_position, int y_position, boolean harvested) {
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
-    public IceCream(ImageView imageview, int currentTime, int x_position, int y_position, boolean harvested) {
-        super(nameOfProduct,currentTime, x_position, y_position, harvested);
+    public IceCream(ImageView imageview) {
+        super();
         this.imageview=imageview;
     }
 }

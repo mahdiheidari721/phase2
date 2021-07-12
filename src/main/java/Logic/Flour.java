@@ -11,8 +11,8 @@ public class Flour extends Product{
     public Flour(int currentTime, int x_position, int y_position, boolean harvested) {
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
-    public Flour( ImageView imageView,int currentTime, int x_position, int y_position, boolean harvested) {
-        super(nameOfProduct,currentTime, x_position, y_position, harvested);
+    public Flour( ImageView imageView) {
+        super();
         this.imageview=imageView;
     }
 }

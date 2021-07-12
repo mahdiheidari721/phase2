@@ -3,12 +3,12 @@ package Logic;
 import java.util.ArrayList;
 public class WareHouse {
     int Level;
-    static final int Capacity = 30;
+    static final int Capacity = 300;
     int AllCapacity;
     int AvailableCapacity;
-    ArrayList<Product> products = new ArrayList<>();
-    ArrayList<Animal> animals = new ArrayList<>();
-    ArrayList<Product> RecentlySold = new ArrayList<>();
+  public  ArrayList<Product> products = new ArrayList<>();
+  public  ArrayList<Animal> animals = new ArrayList<>();
+
 
     public int getAllCapacity() {
         return AllCapacity;
