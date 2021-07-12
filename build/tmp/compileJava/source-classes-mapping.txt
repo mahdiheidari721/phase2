@@ -1,7 +1,7 @@
 Graphic/LabratoryAnimation.java
  Graphic.LabratoryAnimation
-Graphic/AnimalAnimation.java
- Graphic.AnimalAnimation
+Graphic/LoadPhotos.java
+ Graphic.LoadPhotos
 Logic/DomesticAnimal.java
  Logic.DomesticAnimal
 Logic/Cow.java
@@ -18,26 +18,8 @@ Logic/WareHouse.java
  Logic.WareHouse
 Logic/Truck.java
  Logic.Truck
-Graphic/Main.java
- Graphic.Main
- Graphic.Main$1
- Graphic.Main$10
- Graphic.Main$11
- Graphic.Main$12
- Graphic.Main$13
- Graphic.Main$14
- Graphic.Main$15
- Graphic.Main$16
- Graphic.Main$17
- Graphic.Main$18
- Graphic.Main$2
- Graphic.Main$3
- Graphic.Main$4
- Graphic.Main$5
- Graphic.Main$6
- Graphic.Main$7
- Graphic.Main$8
- Graphic.Main$9
+Graphic/ProductAnimation.java
+ Graphic.ProductAnimation
 Logic/IceCream.java
  Logic.IceCream
 Logic/Product.java
@@ -66,8 +48,8 @@ Logic/MilkPackagingFactory.java
  Logic.MilkPackagingFactory
 Logic/Lion.java
  Logic.Lion
-Graphic/MainView.java
- Graphic.MainView
+Logic/Tiger.java
+ Logic.Tiger
 Logic/Grass.java
  Logic.Grass
 Logic/DefenderAnimal.java
@@ -116,9 +98,35 @@ Logic/WeavingFactory.java
  Logic.WeavingFactory
 Logic/Flour.java
  Logic.Flour
-Logic/Tiger.java
- Logic.Tiger
-Graphic/ProductAnimation.java
- Graphic.ProductAnimation
-Graphic/LoadPhotos.java
- Graphic.LoadPhotos
+Graphic/AnimalAnimation.java
+ Graphic.AnimalAnimation
+Graphic/CageAnimation.java
+ Graphic.CageAnimation
+Graphic/Main.java
+ Graphic.Main
+ Graphic.Main$1
+ Graphic.Main$10
+ Graphic.Main$11
+ Graphic.Main$12
+ Graphic.Main$12$1
+ Graphic.Main$13
+ Graphic.Main$13$1
+ Graphic.Main$14
+ Graphic.Main$15
+ Graphic.Main$16
+ Graphic.Main$16$1
+ Graphic.Main$17
+ Graphic.Main$17$1
+ Graphic.Main$18
+ Graphic.Main$18$1
+ Graphic.Main$2
+ Graphic.Main$3
+ Graphic.Main$4
+ Graphic.Main$5
+ Graphic.Main$6
+ Graphic.Main$7
+ Graphic.Main$8
+ Graphic.Main$9
+ Graphic.Main$9$1
+Graphic/MainView.java
+ Graphic.MainView

@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -756,18 +757,77 @@ a.play();
         Scene scene =new Scene(MainView.pane);
         MainView.pane.setOnMouseClicked(e -> {
 int t=0;
-                for(int i=0;i<ProductAnimation.ProductAn.size();i++){
-                    if(ProductAnimation.ProductAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){
-                       boolean s= Manager.getManager().AddToWareHouse(ProductAnimation.ProductAn.get(i).product);
-                       t=1;
-                       if(s){
-                           ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
-                           ProductAnimation.ProductAn.get(i).pause();
-                           ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
-                       }
-                    }
+for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
+    if(AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("bear")||AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("tiger")||AnimalAnimation.AnimalAn.get(i).animal.getNameOfAnimal().equalsIgnoreCase("lion")){
+        if(AnimalAnimation.AnimalAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){ImageView imageViews = new ImageView();
+            try {
+
+                imageViews.setImage(LoadPhotos.getLP().cage);
+
+            } catch (FileNotFoundException w) {
+                w.printStackTrace();
+            }
+            imageViews.setVisible(false);
+            CageAnimation m=new CageAnimation(AnimalAnimation.AnimalAn.get(i),imageViews,AnimalAnimation.AnimalAn.get(i).getAnimal());
+            int w=0;
+            int h=0;
+            if(AnimalAnimation.AnimalAn.get(i).getTeded()==0){
+
+
+                imageViews.setX(AnimalAnimation.AnimalAn.get(i).imageview.getX());
+                imageViews.setY(AnimalAnimation.AnimalAn.get(i).imageview.getY());
+                imageViews.setFitWidth(150);
+                imageViews.setFitHeight(150);
+                imageViews.setPreserveRatio(true);
+                imageViews.setPickOnBounds(true);//it i important to click on images
+                imageViews.setVisible(true);
+                MainView.pane.getChildren().add(imageViews);
+
+                m.play();
+                t=1;
+
+                AnimalAnimation.AnimalAn.get(i).setTeded(AnimalAnimation.AnimalAn.get(i).getTeded()+1);
+            }
+             else if(AnimalAnimation.AnimalAn.get(i).getTeded()>0&&AnimalAnimation.AnimalAn.get(i).getTeded()<3){
+                AnimalAnimation.AnimalAn.get(i).setTeded(AnimalAnimation.AnimalAn.get(i).getTeded()+1);
+            }
+             else if(AnimalAnimation.AnimalAn.get(i).getTeded()==3||AnimalAnimation.AnimalAn.get(i).getTeded()==4){
+                 if(AnimalAnimation.AnimalAn.get(i).getTeded()==3){
+                     AnimalAnimation.AnimalAn.get(i).pause();
+                     AnimalAnimation.AnimalAn.get(i).setTeded(AnimalAnimation.AnimalAn.get(i).getTeded()+1);
+                 }
+               else if(AnimalAnimation.AnimalAn.get(i).getTeded()==4){
+                    AnimalAnimation.AnimalAn.get(i).getImageview().setVisible(false);
+                    AnimalAnimation.AnimalAn.remove( AnimalAnimation.AnimalAn.get(i));
+                    //move to warehouse
+                     //TODO
                 }
-                if(t==0){
+            }
+
+        }
+
+
+        }
+    }
+
+               if(t==0){
+                   for(int i=0;i<ProductAnimation.ProductAn.size();i++){
+                       if(ProductAnimation.ProductAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){
+                           boolean s= Manager.getManager().AddToWareHouse(ProductAnimation.ProductAn.get(i).product);
+                           t=1;
+                           if(s){
+
+                               ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
+                               ProductAnimation.ProductAn.get(i).pause();
+                               ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
+                               Alert a = new Alert(Alert.AlertType.INFORMATION);
+                               a.setContentText("the product has been reached to the warehouse");
+                               a.show();
+                           }
+                       }
+                   }
+               }
+                else if(t==0){
                     if(e.getX()>200&&e.getY()>250){
                         ImageView imageViews = new ImageView();
                         try {

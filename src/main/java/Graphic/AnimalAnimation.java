@@ -12,11 +12,45 @@ public class AnimalAnimation extends Transition {
      static ArrayList<AnimalAnimation> AnimalAn=new ArrayList<>();
     Animal animal;
     ImageView imageview;
+    int teded;
     public AnimalAnimation(Animal animal, ImageView imageview,int t) {
 this.imageview=imageview;
         this.animal = animal;
-        this.setCycleDuration(Duration.millis(2000*t));
+        this.setCycleDuration(Duration.millis(6000*t));
         this.setCycleCount(-1);
+        this.teded=0;
+    }
+
+    public static ArrayList<AnimalAnimation> getAnimalAn() {
+        return AnimalAn;
+    }
+
+    public static void setAnimalAn(ArrayList<AnimalAnimation> animalAn) {
+        AnimalAn = animalAn;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
+    public ImageView getImageview() {
+        return imageview;
+    }
+
+    public void setImageview(ImageView imageview) {
+        this.imageview = imageview;
+    }
+
+    public int getTeded() {
+        return teded;
+    }
+
+    public void setTeded(int teded) {
+        this.teded = teded;
     }
 
     @Override
