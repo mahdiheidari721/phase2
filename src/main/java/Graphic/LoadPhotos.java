@@ -81,6 +81,8 @@ InputStream stream7 = new FileInputStream("D:\\images\\hen.gif");
     Image bread = new Image(stream35);
     InputStream stream36 = new FileInputStream("D:\\images\\bakery.png");
     Image bakery = new Image(stream36);
+    InputStream stream37 = new FileInputStream("D:\\images\\coin.png");
+    Image coin = new Image(stream37);
     ////////////////////////////////////////////////////////////////////////
 public  ImageView imageView = new ImageView();
     public  ImageView imageView1 = new ImageView();
@@ -119,6 +121,7 @@ public  ImageView imageView = new ImageView();
     public  ImageView imageView34 = new ImageView();
     public  ImageView imageView35 = new ImageView();
     public  ImageView imageView36 = new ImageView();
+    public  ImageView imageView37 = new ImageView();
     ////////////////////////////////////////////////////////////////////////
     private static LoadPhotos LP;
     public static Pane pane;
@@ -133,6 +136,15 @@ public  ImageView imageView = new ImageView();
         return LP;
     }
     public void Load() throws FileNotFoundException {
+        imageView37.setImage(coin);
+        imageView37.setX(900);
+        imageView37.setY(0);
+        imageView37.setFitWidth(800);
+        imageView37.setFitHeight(200);
+        imageView37.setPreserveRatio(true);
+        imageView37.setVisible(true);
+        imageView37.setPickOnBounds(true);//it i important to click on images
+        //////////////////////////////////////////////
         imageView29.setImage(egg1);
         imageView29.setX(400);
         imageView29.setY(400);
