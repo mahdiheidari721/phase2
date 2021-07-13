@@ -51,7 +51,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 AnimalAnimation a=new AnimalAnimation(tigers,imageViews,1);
                 AnimalAnimation.AnimalAn.add(a);
 a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+               // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
         });
@@ -79,7 +79,7 @@ a.play();
                 AnimalAnimation a=new AnimalAnimation(bears,imageViews,1);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+               // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
         });
@@ -104,10 +104,10 @@ a.play();
                 imageViews.setPreserveRatio(true);
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(cats,imageViews,1);
+                AnimalAnimation a=new AnimalAnimation(cats,imageViews,1000);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+               // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
         });
@@ -137,7 +137,7 @@ a.play();
                     AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                   // System.out.println( AnimalAnimation.AnimalAn.size());
                 }
             }
         });
@@ -162,10 +162,10 @@ a.play();
                 imageViews.setPreserveRatio(true);
                 imageViews.setPickOnBounds(true);//it i important to click on images
                 MainView.pane.getChildren().add(imageViews);
-                AnimalAnimation a=new AnimalAnimation(dog,imageViews,1);
+                AnimalAnimation a=new AnimalAnimation(dog,imageViews,10000);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+              //  System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
         });
@@ -174,7 +174,7 @@ a.play();
             public void handle(Event event) {
                 if (Manager.getManager().bank.getCoin() >= 200) {
                     Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin() - 200);
-                    System.out.println("bank");
+                    System.out.println(Manager.getManager().bank.getCoin());
                     ImageView imageViews = new ImageView();
                     // Setting image to the image view
                     try {
@@ -184,6 +184,7 @@ a.play();
                     }
                     Ostrich ostrichs=new Ostrich(imageViews);
                     Manager.getManager().allDomestics.add(ostrichs);
+                 //   System.out.println( Manager.getManager().allDomestics.size());
                     //Setting the image view parameters
                     imageViews.setX(200);
                     imageViews.setY(200);
@@ -195,7 +196,7 @@ a.play();
                     AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                  //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
             }
         });
@@ -223,7 +224,7 @@ a.play();
                 AnimalAnimation a=new AnimalAnimation(lions,imageViews,1);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
-                System.out.println( AnimalAnimation.AnimalAn.size());
+               // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
         });
@@ -253,7 +254,7 @@ a.play();
                     AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
-                    System.out.println( AnimalAnimation.AnimalAn.size());
+                  //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
             }
         });
@@ -315,9 +316,20 @@ a.play();
         LoadPhotos.getLP().imageView11.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-               boolean a=Manager.getManager().Well1();
-               if(!a){
+               boolean a=Manager.getManager().CheckWell1();
+               if(a){
+                LabratoryAnimation q= new LabratoryAnimation(1);
+                q.play();
+                q.setOnFinished(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        Manager.getManager().Well1();
+                    }
+                });
+               }
+              else{
                    //show a good allert
+                   System.out.println("well is not empty");
                    //TODO
                }
             }
@@ -831,26 +843,31 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                    }
                }
                 if(t==0){
-                    if(e.getX()>200&&e.getY()>250){
+                    if(e.getX()<900&&e.getX()>200&&e.getY()>250){
                         ImageView imageViews = new ImageView();
                         try {
                             if(Manager.getManager().well.getCapacity()>0){
+                                Manager.getManager().well.setCapacity(Manager.getManager().well.getCapacity()-1);
                                 imageViews.setImage(LoadPhotos.getLP().grass);
+                                Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
+                                Manager.getManager().grasses.add(grasss);
+                                System.out.println(Manager.getManager().grasses.size()+"grass");
+                                imageViews.setX((int)Math.floor(e.getX())-75);
+                                imageViews.setY((int)Math.floor(e.getY())-55);
+                                imageViews.setFitWidth(150);
+                                imageViews.setFitHeight(150);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
                             }
-                            else{}  //play a good sound
+                            else{
+                                System.out.println("well is empty");
+                            }  //play a good sound
                             //TODO
                         } catch (FileNotFoundException w) {
                             w.printStackTrace();
                         }
-                        Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
-                        Manager.getManager().grasses.add(grasss);
-                        imageViews.setX((int)Math.floor(e.getX()));
-                        imageViews.setY((int)Math.floor(e.getY()));
-                        imageViews.setFitWidth(150);
-                        imageViews.setFitHeight(150);
-                        imageViews.setPreserveRatio(true);
-                        imageViews.setPickOnBounds(true);//it i important to click on images
-                        MainView.pane.getChildren().add(imageViews);
+
                     }
                 }
 

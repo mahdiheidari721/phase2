@@ -63,7 +63,7 @@ public class InputProcessor {
                                     add[2].matches("^[0-9]+$")) {
                                 manager.PickUp(Integer.parseInt(add[1]), Integer.parseInt(add[2]));
                             } else if (add.length == 1 && add[0].equalsIgnoreCase("WELL")) {
-                                manager.Well();
+                              //  manager.Well();
                             } else if (add.length == 3 && add[0].equalsIgnoreCase("PLANT") && add[1].matches("^[0-9]+$") &&
                                     add[2].matches("^[0-9]+$")) {
                                 manager.Plant(Integer.parseInt(add[1]), Integer.parseInt(add[2]));

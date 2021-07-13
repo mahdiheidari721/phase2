@@ -16,7 +16,7 @@ public class AnimalAnimation extends Transition {
     public AnimalAnimation(Animal animal, ImageView imageview,int t) {
 this.imageview=imageview;
         this.animal = animal;
-        this.setCycleDuration(Duration.millis(2000000*t));
+        this.setCycleDuration(Duration.millis(2000*t));
         this.setCycleCount(1);
         this.teded=0;
     }
@@ -66,6 +66,7 @@ this.imageview=imageview;
               }
              Milk milk =new Milk(imageViews);
               Manager.getManager().products.add(milk);
+              System.out.println(  Manager.getManager().products.size()+" products till now");
               imageViews.setX(this.animal.getX_position());
               imageViews.setY(this.animal.getY_position());
               imageViews.setFitWidth(50);
@@ -86,6 +87,7 @@ this.imageview=imageview;
               }
               Egg egg =new Egg(imageViews);
               Manager.getManager().products.add(egg);
+              System.out.println(  Manager.getManager().products.size()+" products till now");
               imageViews.setX(this.animal.getX_position());
               imageViews.setY(this.animal.getY_position());
               imageViews.setFitWidth(50);
@@ -106,6 +108,7 @@ this.imageview=imageview;
               }
               Feather feather =new Feather(imageViews);
               Manager.getManager().products.add(feather);
+              System.out.println(  Manager.getManager().products.size()+" products till now");
               imageViews.setX(this.animal.getX_position());
               imageViews.setY(this.animal.getY_position());
               imageViews.setFitWidth(50);

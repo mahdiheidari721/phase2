@@ -159,10 +159,10 @@ public  ImageView imageView = new ImageView();
         imageView11.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView12.setImage(truck);
-        imageView12.setX(985);
-        imageView12.setY(7);
-        imageView12.setFitWidth(100);
-        imageView12.setFitHeight(100);
+        imageView12.setX(4);
+        imageView12.setY(620);
+        imageView12.setFitWidth(200);
+        imageView12.setFitHeight(200);
         imageView12.setPreserveRatio(true);
         imageView12.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
@@ -183,18 +183,18 @@ public  ImageView imageView = new ImageView();
         imageView18.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView20.setImage(milkfactory);
-        imageView20.setX(916);
-        imageView20.setY(459);
+        imageView20.setX(1043);
+        imageView20.setY(590);
         imageView20.setFitWidth(200);
         imageView20.setFitHeight(150);
         imageView20.setPreserveRatio(true);
         imageView20.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView21.setImage(menu);
-        imageView21.setX(866);
-        imageView21.setY(2);
-        imageView21.setFitWidth(100);
-        imageView21.setFitHeight(100);
+        imageView21.setX(1044);
+        imageView21.setY(710);
+        imageView21.setFitWidth(80);
+        imageView21.setFitHeight(80);
         imageView21.setPreserveRatio(true);
         imageView21.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
@@ -207,8 +207,8 @@ public  ImageView imageView = new ImageView();
         imageView22.setPickOnBounds(true);//it i important to click on images
         //////////////////////////////////////////////
         imageView23.setImage(IceCreamShop);
-        imageView23.setX(54);
-        imageView23.setY(477);
+        imageView23.setX(4);
+        imageView23.setY(490);
         imageView23.setFitWidth(200);
         imageView23.setFitHeight(200);
         imageView23.setPreserveRatio(true);

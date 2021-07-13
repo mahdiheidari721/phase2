@@ -1,5 +1,6 @@
 package Graphic;
 
+import Logic.Manager;
 import Logic.Product;
 import javafx.animation.Transition;
 import javafx.scene.image.ImageView;
@@ -14,13 +15,15 @@ public class ProductAnimation extends Transition {
     public ProductAnimation(Product product, ImageView imageview,int t,int w) {
         this.imageview=imageview;
         this.product = product;
-        this.setCycleDuration(Duration.millis(1000*t));
+        this.setCycleDuration(Duration.millis(100000000*t));
         this.setCycleCount(w);
     }
     @Override
     protected void interpolate(double frac) {
 if(frac==1) {
     this.imageview.setVisible(false);
+    Manager.getManager().products.remove(this.product);
+     System.out.println(Manager.getManager().products.size()+" deleting");
     ProductAn.remove(this);
 }
     }
