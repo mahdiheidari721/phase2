@@ -1,33 +1,33 @@
 Graphic/LabratoryAnimation.java
  Graphic.LabratoryAnimation
-Logic/Flour.java
- Logic.Flour
+Graphic/LoadPhotos.java
+ Graphic.LoadPhotos
 Logic/DomesticAnimal.java
  Logic.DomesticAnimal
 Logic/Cow.java
  Logic.Cow
 Logic/IceCreamShop.java
  Logic.IceCreamShop
-Logic/InputProcessor.java
- Logic.InputProcessor
-Logic/PackagedMilk.java
- Logic.PackagedMilk
-Logic/Egg.java
- Logic.Egg
-Logic/WareHouse.java
- Logic.WareHouse
+Logic/Cage.java
+ Logic.Cage
+Logic/Dog.java
+ Logic.Dog
+Logic/Cloth.java
+ Logic.Cloth
+Logic/WeavingFactory.java
+ Logic.WeavingFactory
 Logic/Truck.java
  Logic.Truck
 Logic/Tiger.java
  Logic.Tiger
-Logic/IceCream.java
- Logic.IceCream
-Logic/Product.java
- Logic.Product
+Logic/Animal.java
+ Logic.Animal
+Logic/HameKare.java
+ Logic.HameKare
 Logic/FlourFactory.java
  Logic.FlourFactory
-Logic/Bread.java
- Logic.Bread
+Logic/Bank.java
+ Logic.Bank
 Logic/LogicMain.java
  Logic.LogicMain
 Logic/Bear.java
@@ -36,8 +36,8 @@ Logic/Tailoring.java
  Logic.Tailoring
 Logic/Labratory.java
  Logic.Labratory
-Logic/Manager.java
- Logic.Manager
+Logic/Motor.java
+ Logic.Motor
 Logic/TransformVehicle.java
  Logic.TransformVehicle
 Logic/Farm.java
@@ -48,8 +48,8 @@ Logic/MilkPackagingFactory.java
  Logic.MilkPackagingFactory
 Logic/Lion.java
  Logic.Lion
-Graphic/ProductAnimation.java
- Graphic.ProductAnimation
+Logic/Ostrich.java
+ Logic.Ostrich
 Logic/Grass.java
  Logic.Grass
 Logic/DefenderAnimal.java
@@ -70,38 +70,34 @@ Logic/Level.java
  Logic.Level
 Logic/Bakery.java
  Logic.Bakery
-Logic/Milk.java
- Logic.Milk
+Graphic/CageAnimation.java
+ Graphic.CageAnimation
 Logic/Sheep.java
  Logic.Sheep
-Logic/Cage.java
- Logic.Cage
-Logic/Cloth.java
- Logic.Cloth
-Logic/Bank.java
- Logic.Bank
-Logic/Dog.java
- Logic.Dog
-Logic/Ostrich.java
- Logic.Ostrich
-Logic/HameKare.java
- Logic.HameKare
-Logic/Animal.java
- Logic.Animal
+Logic/Bread.java
+ Logic.Bread
+Logic/PackagedMilk.java
+ Logic.PackagedMilk
+Logic/Flour.java
+ Logic.Flour
+Logic/Egg.java
+ Logic.Egg
+Logic/WareHouse.java
+ Logic.WareHouse
 Logic/Shirt.java
  Logic.Shirt
 Logic/Feather.java
  Logic.Feather
-Logic/Motor.java
- Logic.Motor
-Graphic/CageAnimation.java
- Graphic.CageAnimation
-Logic/WeavingFactory.java
- Logic.WeavingFactory
+Graphic/MainView.java
+ Graphic.MainView
+Logic/Milk.java
+ Logic.Milk
+Logic/IceCream.java
+ Logic.IceCream
+Logic/Product.java
+ Logic.Product
 Graphic/AnimalAnimation.java
  Graphic.AnimalAnimation
-Graphic/LoadPhotos.java
- Graphic.LoadPhotos
 Graphic/Main.java
  Graphic.Main
  Graphic.Main$1
@@ -129,5 +125,9 @@ Graphic/Main.java
  Graphic.Main$8
  Graphic.Main$9
  Graphic.Main$9$1
-Graphic/MainView.java
- Graphic.MainView
+Logic/InputProcessor.java
+ Logic.InputProcessor
+Logic/Manager.java
+ Logic.Manager
+Graphic/ProductAnimation.java
+ Graphic.ProductAnimation

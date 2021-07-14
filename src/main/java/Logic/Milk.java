@@ -13,7 +13,7 @@ public class Milk extends Product{
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
     public Milk(ImageView imageview) {
-        super();
+        super("Milk");
         this.imageview=imageview;
     }
 

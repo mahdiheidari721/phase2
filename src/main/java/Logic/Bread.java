@@ -12,7 +12,7 @@ public class Bread extends Product{
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
     public Bread(ImageView imageView) {
-        super();
+        super("Bread");
         this.imageview=imageView;
     }
 }

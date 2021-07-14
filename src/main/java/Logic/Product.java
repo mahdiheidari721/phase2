@@ -11,8 +11,8 @@ public class Product {
     int PY_position;
     boolean Harvested;
 
-    public Product() {
-
+    public Product(String nameOfProduct) {
+this.nameOfProduct=nameOfProduct;
     }
 
     void ToLive(){};

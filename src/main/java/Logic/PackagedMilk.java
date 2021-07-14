@@ -9,7 +9,7 @@ public class PackagedMilk extends Product {
     static final int SizeInWareHouse = 2 ;
     static final int Time = 6 ;
     public PackagedMilk(ImageView imageView) {
-        super();
+        super("PackagedMilk");
         this.imageview=imageView;
     }
     public PackagedMilk(int currentTime, int x_position, int y_position, boolean harvested) {

@@ -15,7 +15,7 @@ public class ProductAnimation extends Transition {
     public ProductAnimation(Product product, ImageView imageview,int t,int w) {
         this.imageview=imageview;
         this.product = product;
-        this.setCycleDuration(Duration.millis(100000000*t));
+        this.setCycleDuration(Duration.millis(100000*t));
         this.setCycleCount(w);
     }
     @Override

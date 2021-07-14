@@ -987,13 +987,11 @@ public class Manager {
         if (animal.getNameOfAnimal().equalsIgnoreCase("cat")) {
             int r = 0, x = 0, y = 0;
             for (int j = 0; j < products.size(); j++) {
-               // if (products.get(j).getNameOfProduct().equalsIgnoreCase("egg") || products.get(j).getNameOfProduct().equalsIgnoreCase("milk") || products.get(j).getNameOfProduct().equalsIgnoreCase("feather")) {
-                    if (r <= Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getY_position())) {
-                        r = Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getY_position());
-                        x = products.get(j).getX_position();
-                        y = products.get(j).getY_position();
-                    }
-             //   }
+                if (r <= Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position())) {
+                    r = Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position());
+                    x = products.get(j).getX_position();
+                    y = products.get(j).getY_position();
+                }
             }
             if (x == animal.getX_position()) {
                 if (y >= animal.getY_position())

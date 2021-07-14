@@ -13,7 +13,7 @@ public class Feather extends Product{
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
     public Feather(ImageView imageView) {
-        super();
+        super("Feather");
         this.imageview=imageView;
     }
 }

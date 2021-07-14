@@ -12,7 +12,7 @@ public class Cloth extends Product{
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
     public Cloth(ImageView imageView) {
-        super();
+        super("Cloth");
         this.imageview=imageView;
     }
 }

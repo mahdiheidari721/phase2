@@ -617,7 +617,7 @@ else{
         LoadPhotos.getLP().imageView27.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-              boolean s=false;
+              boolean s=true;
               for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
                   if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
                       s=true;
@@ -626,13 +626,17 @@ else{
                   }
               }
              if(s){
+                 System.out.println("hi");
                 if(Manager.getManager().bank.getCoin()>=150){
+                    System.out.println("hello");
                     Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-150);
-                    LabratoryAnimation a=new LabratoryAnimation(4);
+                    LabratoryAnimation a=new LabratoryAnimation(1);
                     a.play();
                     a.setOnFinished(new EventHandler<ActionEvent>() {
+
                         @Override
                         public void handle(ActionEvent event) {
+                            System.out.println("salam");
                             ImageView imageViews = new ImageView();
                             try {
                                 imageViews.setImage(LoadPhotos.getLP().flour);
@@ -642,12 +646,12 @@ else{
                             Flour flour =new Flour(imageViews);
                             Manager.getManager().products.add(flour);
                             try {
-                                imageViews.setX( LoadPhotos.getLP().imageView27.getX());
+                                imageViews.setX( LoadPhotos.getLP().imageView27.getX()+400);
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
                             try {
-                                imageViews.setX( LoadPhotos.getLP().imageView27.getY()+50);
+                                imageViews.setY( LoadPhotos.getLP().imageView27.getY());
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             }
@@ -662,6 +666,9 @@ else{
                         }
                     });
                 }
+             }
+             else{
+                 System.out.println("there is no egg:(");
              }
             }
         });
@@ -806,9 +813,10 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                    for(int i=0;i<ProductAnimation.ProductAn.size();i++){
                        if(ProductAnimation.ProductAn.get(i).imageview.getBoundsInParent().intersects(e.getX(),e.getY(),1,1)){
                            boolean s= Manager.getManager().AddToWareHouse(ProductAnimation.ProductAn.get(i).product);
+
                            t=1;
                            if(s){
-
+                               System.out.println(Manager.getManager().wareHouse.products.size()+" warehouse");
                                ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                                ProductAnimation.ProductAn.get(i).pause();
                                ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));

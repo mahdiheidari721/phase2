@@ -12,7 +12,7 @@ public class IceCream extends Product{
         super(nameOfProduct,currentTime, x_position, y_position, harvested);
     }
     public IceCream(ImageView imageview) {
-        super();
+        super("IceCream");
         this.imageview=imageview;
     }
 }
