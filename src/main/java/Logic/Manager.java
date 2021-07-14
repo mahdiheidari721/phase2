@@ -969,7 +969,7 @@ public class Manager {
     public boolean Walk1(AnimalAnimation animalAnimation, Animal animal, double t) {
 
         if (animal.getNameOfAnimal().equalsIgnoreCase("bear") || animal.getNameOfAnimal().equalsIgnoreCase("lion") || animal.getNameOfAnimal().equalsIgnoreCase("tiger")) {
-            if (t < 1 && animal.getX_position() < 1350 && animal.getY_position() < 600) {
+            if (t < 1 && animal.getX_position() < 900 && animal.getY_position() < 600) {
                 if (animal.getNameOfAnimal().equalsIgnoreCase("tiger")) {
                     animal.setX_position(animal.getX_position() + 2);
                     animal.setY_position(animal.getY_position() + 2);
@@ -997,20 +997,20 @@ public class Manager {
 
                 }
             }
-            if (x == animal.getX_position()) {
-               // System.out.println("cat");
-                if (y >= animal.getY_position())
+            if(animal.getY_position()>200&&animal.getX_position()>200){
+                if (x == animal.getX_position()) {
+                    if (y >= animal.getY_position())
+                        animal.setY_position(animal.getY_position() + 1);
+                    else animal.setY_position(animal.getY_position() - 1);
+                } else if (y == animal.getY_position()) {
+                    if (x >= animal.getX_position())
+                        animal.setX_position(animal.getX_position() + 1);
+                    else animal.setX_position(animal.getX_position() - 1);
+                } else if (y >= animal.getY_position())
                     animal.setY_position(animal.getY_position() + 1);
-                else animal.setY_position(animal.getY_position() - 1);
-            } else if (y == animal.getY_position()) {
-                //System.out.println("cat");
-                if (x >= animal.getX_position())
-                    animal.setX_position(animal.getX_position() + 1);
-                else animal.setX_position(animal.getX_position() - 1);
-            } else if (y >= animal.getY_position())
-                animal.setY_position(animal.getY_position() + 1);
-            else if (y < animal.getY_position())
-                animal.setY_position(animal.getY_position() - 1);
+                else if (y < animal.getY_position())
+                    animal.setY_position(animal.getY_position() - 1);
+            }
         }
         if (animal.getNameOfAnimal().equalsIgnoreCase("dog")) {
             int r = 0, x = 0, y = 0;
@@ -1021,18 +1021,20 @@ public class Manager {
                     y = allWilds.get(j).getY_position();
                 }
             }
-            if (x == animal.getX_position()) {
-                if (y >= animal.getY_position())
+            if(animal.getY_position()>200&&animal.getX_position()>200){
+                if (x == animal.getX_position()) {
+                    if (y >= animal.getY_position())
+                        animal.setY_position(animal.getY_position() + 1);
+                    else animal.setY_position(animal.getY_position() - 1);
+                } else if (y == animal.getY_position()) {
+                    if (x >= animal.getX_position())
+                        animal.setX_position(animal.getX_position() + 1);
+                    else animal.setX_position(animal.getX_position() - 1);
+                } else if (y >= animal.getY_position())
                     animal.setY_position(animal.getY_position() + 1);
-                else animal.setY_position(animal.getY_position() - 1);
-            } else if (y == animal.getY_position()) {
-                if (x >= animal.getX_position())
-                    animal.setX_position(animal.getX_position() + 1);
-                else animal.setX_position(animal.getX_position() - 1);
-            } else if (y >= animal.getY_position())
-                animal.setY_position(animal.getY_position() + 1);
-            else if (y < animal.getY_position())
-                animal.setY_position(animal.getY_position() - 1);
+                else if (y < animal.getY_position())
+                    animal.setY_position(animal.getY_position() - 1);
+            }
         }
 
         if (animal.getNameOfAnimal().equalsIgnoreCase("sheep") || animal.getNameOfAnimal().equalsIgnoreCase("hen") || animal.getNameOfAnimal().equalsIgnoreCase("ostrich")) {
@@ -1048,18 +1050,20 @@ public class Manager {
             }
 
 
-            if (x == animal.getX_position()) {
-                if (y >= animal.getY_position())
+            if(animal.getY_position()>200&&animal.getX_position()>200){
+                if (x == animal.getX_position()) {
+                    if (y >= animal.getY_position())
+                        animal.setY_position(animal.getY_position() + 1);
+                    else animal.setY_position(animal.getY_position() - 1);
+                } else if (y == animal.getY_position()) {
+                    if (x >= animal.getX_position())
+                        animal.setX_position(animal.getX_position() + 1);
+                    else animal.setX_position(animal.getX_position() - 1);
+                } else if (y >= animal.getY_position())
                     animal.setY_position(animal.getY_position() + 1);
-                else animal.setY_position(animal.getY_position() - 1);
-            } else if (y == animal.getY_position()) {
-                if (x >= animal.getX_position())
-                    animal.setX_position(animal.getX_position() + 1);
-                else animal.setX_position(animal.getX_position() - 1);
-            } else if (y >= animal.getY_position())
-                animal.setY_position(animal.getY_position() + 1);
-            else if (y < animal.getY_position())
-                animal.setY_position(animal.getY_position() - 1);
+                else if (y < animal.getY_position())
+                    animal.setY_position(animal.getY_position() - 1);
+            }
         }
 
 

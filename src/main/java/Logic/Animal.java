@@ -46,8 +46,8 @@ ImageView imageview;
 
     public  Animal() {
         Random rand=new Random();
-        int a=0,b=1000;
-        int A=0,B=600;
+        int a=200,b=1000;
+        int A=200,B=600;
         int x=rand.nextInt((b-a)+1)+a;
         int y=rand.nextInt((B-A)+1)+A;;
         X_position =x;
