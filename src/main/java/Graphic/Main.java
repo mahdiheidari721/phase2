@@ -834,7 +834,7 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                             if(Manager.getManager().well.getCapacity()>0){
                                 Manager.getManager().well.setCapacity(Manager.getManager().well.getCapacity()-1);
                                 imageViews.setImage(LoadPhotos.getLP().grass);
-                                Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX()),(int)Math.floor(e.getY()),1);
+                                Grass grasss=new Grass(imageViews,(int)Math.floor(e.getX())-75,(int)Math.floor(e.getY())-55,1);
                                 Manager.getManager().grasses.add(grasss);
                                 System.out.println(Manager.getManager().grasses.size()+"grass");
                                 imageViews.setX((int)Math.floor(e.getX())-75);

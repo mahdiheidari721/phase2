@@ -1,5 +1,6 @@
 package Logic;
 
+import Graphic.AnimalAnimation;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
@@ -965,7 +966,7 @@ public class Manager {
         }
     }
 
-    public boolean Walk1(Animal animal, double t) {
+    public boolean Walk1(AnimalAnimation animalAnimation, Animal animal, double t) {
 
         if (animal.getNameOfAnimal().equalsIgnoreCase("bear") || animal.getNameOfAnimal().equalsIgnoreCase("lion") || animal.getNameOfAnimal().equalsIgnoreCase("tiger")) {
             if (t < 1 && animal.getX_position() < 1350 && animal.getY_position() < 600) {
@@ -985,19 +986,24 @@ public class Manager {
 
 
         if (animal.getNameOfAnimal().equalsIgnoreCase("cat")) {
+
             int r = 0, x = 0, y = 0;
             for (int j = 0; j < products.size(); j++) {
+
                 if (r <= Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position())) {
                     r = Math.abs(products.get(j).getX_position() + products.get(j).getY_position() - animal.getX_position() - animal.getX_position());
                     x = products.get(j).getX_position();
                     y = products.get(j).getY_position();
+
                 }
             }
             if (x == animal.getX_position()) {
+               // System.out.println("cat");
                 if (y >= animal.getY_position())
                     animal.setY_position(animal.getY_position() + 1);
                 else animal.setY_position(animal.getY_position() - 1);
             } else if (y == animal.getY_position()) {
+                //System.out.println("cat");
                 if (x >= animal.getX_position())
                     animal.setX_position(animal.getX_position() + 1);
                 else animal.setX_position(animal.getX_position() - 1);
@@ -1063,7 +1069,7 @@ public class Manager {
         }
         return false;
     }
-    public int Intersection(ImageView image, Animal animal, double t) {
+    public int Intersection(AnimalAnimation animalAnimation,ImageView image, Animal animal, double t) {
         //0-> nothing
         //1-> a.play
         //2-> allert  the cat has picken up sth
@@ -1074,7 +1080,8 @@ public class Manager {
                 for (int i = 0; i < grasses.size(); i++) {
                     if(grasses.get(i).getMaxPower()>0){
                         if (image.getBoundsInParent().intersects(grasses.get(i).getImageView().getBoundsInParent()) ){
-                            System.out.println("hello");
+                            System.out.println(t);
+                            animalAnimation.playFromStart();
                         grasses.get(i).setMaxPower(grasses.get(i).getMaxPower() - 1);
                         return 1;
                     }

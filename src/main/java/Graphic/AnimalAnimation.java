@@ -16,7 +16,7 @@ public class AnimalAnimation extends Transition {
     public AnimalAnimation(Animal animal, ImageView imageview,int t) {
 this.imageview=imageview;
         this.animal = animal;
-        this.setCycleDuration(Duration.millis(2000*t));
+        this.setCycleDuration(Duration.millis(10000*t));
         this.setCycleCount(1);
         this.teded=0;
     }
@@ -127,8 +127,8 @@ if(frac==1){
     this.pause();
     AnimalAn.remove(this);
 }
-boolean s=Manager.getManager().Walk1(this.animal,frac);
-int a=Manager.getManager().Intersection(this.imageview,this.animal,frac);
+boolean s=Manager.getManager().Walk1(this,this.animal,frac);
+int a=Manager.getManager().Intersection(this,this.imageview,this.animal,frac);
         Manager.getManager().RemoveDeadAnimals(this.imageview,this.animal,frac);
 if(s) this.imageview.setVisible(false);
         this.imageview.setX(this.animal.getX_position());
