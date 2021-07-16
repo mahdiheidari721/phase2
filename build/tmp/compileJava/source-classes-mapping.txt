@@ -1,15 +1,15 @@
 Graphic/LabratoryAnimation.java
  Graphic.LabratoryAnimation
-Graphic/AnimalAnimation.java
- Graphic.AnimalAnimation
+Graphic/TruckAnimation.java
+ Graphic.TruckAnimation
 Logic/DomesticAnimal.java
  Logic.DomesticAnimal
 Logic/Cow.java
  Logic.Cow
 Logic/IceCreamShop.java
  Logic.IceCreamShop
-Logic/InputProcessor.java
- Logic.InputProcessor
+Logic/Tiger.java
+ Logic.Tiger
 Logic/PackagedMilk.java
  Logic.PackagedMilk
 Logic/Egg.java
@@ -36,10 +36,10 @@ Logic/Tailoring.java
  Logic.Tailoring
 Logic/Labratory.java
  Logic.Labratory
-Logic/Manager.java
- Logic.Manager
-Graphic/ProductAnimation.java
- Graphic.ProductAnimation
+Logic/Flour.java
+ Logic.Flour
+Logic/WeavingFactory.java
+ Logic.WeavingFactory
 Logic/TransformVehicle.java
  Logic.TransformVehicle
 Logic/Farm.java
@@ -50,8 +50,8 @@ Logic/MilkPackagingFactory.java
  Logic.MilkPackagingFactory
 Logic/Lion.java
  Logic.Lion
-Graphic/MainView.java
- Graphic.MainView
+Graphic/ProductAnimation.java
+ Graphic.ProductAnimation
 Logic/Grass.java
  Logic.Grass
 Logic/DefenderAnimal.java
@@ -98,12 +98,12 @@ Logic/Motor.java
  Logic.Motor
 Graphic/CageAnimation.java
  Graphic.CageAnimation
-Logic/WeavingFactory.java
- Logic.WeavingFactory
-Logic/Flour.java
- Logic.Flour
-Logic/Tiger.java
- Logic.Tiger
+Graphic/AnimalAnimation.java
+ Graphic.AnimalAnimation
+Logic/Manager.java
+ Logic.Manager
+Logic/InputProcessor.java
+ Logic.InputProcessor
 Graphic/Main.java
  Graphic.Main
  Graphic.Main$1
@@ -132,5 +132,33 @@ Graphic/Main.java
  Graphic.Main$8
  Graphic.Main$9
  Graphic.Main$9$1
-Graphic/TruckAnimation.java
- Graphic.TruckAnimation
+Graphic/MainView.java
+ Graphic.MainView
+Graphic/WareHouse.java
+ Graphic.WareHouse
+ Graphic.WareHouse$1
+ Graphic.WareHouse$10
+ Graphic.WareHouse$10$1
+ Graphic.WareHouse$11
+ Graphic.WareHouse$12
+ Graphic.WareHouse$12$1
+ Graphic.WareHouse$13
+ Graphic.WareHouse$13$1
+ Graphic.WareHouse$14
+ Graphic.WareHouse$15
+ Graphic.WareHouse$15$1
+ Graphic.WareHouse$16
+ Graphic.WareHouse$16$1
+ Graphic.WareHouse$17
+ Graphic.WareHouse$17$1
+ Graphic.WareHouse$18
+ Graphic.WareHouse$18$1
+ Graphic.WareHouse$2
+ Graphic.WareHouse$3
+ Graphic.WareHouse$4
+ Graphic.WareHouse$5
+ Graphic.WareHouse$6
+ Graphic.WareHouse$7
+ Graphic.WareHouse$8
+ Graphic.WareHouse$9
+ Graphic.WareHouse$9$1

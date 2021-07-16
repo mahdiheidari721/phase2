@@ -16,10 +16,12 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 
 public class Main extends Application implements EventHandler<ActionEvent>{
     static int pqrs=0;
+  static  Text text = new Text();
     public static void main(String[] args) {
         launch(args);
     }
@@ -27,7 +29,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     public void start(Stage primaryStage) throws Exception {
         Manager.getManager().Fill();
         LoadPhotos.getLP().Load();
-        Text text = new Text();
+
         text.setFont(Font.font("Arial", FontWeight.BOLD, 36));
         text.setFill(Color.YELLOW);
         text.setStroke(Color.GREEN);
@@ -505,9 +507,16 @@ else{
             @Override
             public void handle(Event event) {
 
-              if(pqrs%2==0) Pause(true);
-                 else if(pqrs%2==1) Pause(false);
-                 pqrs++;
+               Pause(true);
+
+
+                try {
+                    MainView.getMV().setScene("WareHouse.fxml");
+                    Scene scene =new Scene(MainView.pane);
+                    MainView.getMV().getMainStage().setScene(scene);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
         LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
@@ -866,13 +875,15 @@ for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
         MainView.getMV().getMainStage().setScene(scene);
         primaryStage.show();
     }
+public void initialize(){
 
+}
     @Override
     public void handle(ActionEvent event) {
 
 
     }
-    public void Pause(boolean s){
+  static  public void Pause(boolean s){
         if(s){
             for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 AnimalAnimation.AnimalAn.get(i).pause();

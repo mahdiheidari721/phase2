@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="804.0"  xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.WareHouse">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1299.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@back.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Bread" fitHeight="82.0" fitWidth="88.0" onMouseClicked="#setBread" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bread.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Cloth" fitHeight="103.0" fitWidth="102.0" layoutY="92.0" onMouseClicked="#setCloth" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cloth.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Egg" fitHeight="70.0" fitWidth="72.0" layoutX="6.0" layoutY="194.0" onMouseClicked="#setEgg" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@egg1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Feather" fitHeight="102.0" fitWidth="113.0" layoutY="276.0" onMouseClicked="#setFeeather" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@feather.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Flour" fitHeight="90.0" fitWidth="90.0" layoutX="217.0" layoutY="14.0" onMouseClicked="#setFlour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@flour.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Icecream" fitHeight="90.0" fitWidth="82.0" layoutX="232.0" layoutY="112.0" onMouseClicked="#setIcecream" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@iceCream.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="PackageMilk" fitHeight="102.0" fitWidth="102.0" layoutX="232.0" layoutY="204.0" onMouseClicked="#setPackageMilk" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@packagedMilk.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Shirt" fitHeight="82.0" fitWidth="90.0" layoutX="228.0" layoutY="313.0" onMouseClicked="#setShirt" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@shirt.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="breadt" layoutX="137.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="clotht" layoutX="137.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="eggt" layoutX="137.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="feathert" layoutX="137.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="flourt" layoutX="357.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="icecreamt" layoutX="346.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="packagemilkt" layoutX="346.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="shirtt" layoutX="346.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="go" layoutX="572.0" layoutY="465.0" mnemonicParsing="false" onAction="#Gocode" text="Go" textFill="#b71010">
+         <font>
+            <Font name="Arial Bold Italic" size="43.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="48.0" fitWidth="82.0" layoutX="559.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bread.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="90.0" layoutX="563.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cloth.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="70.0" layoutX="567.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@egg1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="48.0" layoutX="567.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@feather.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="563.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@flour.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="567.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@iceCream.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="61.0" layoutX="560.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@packagedMilk.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="560.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@shirt.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="sbread" layoutX="620.0" layoutY="11.0" mnemonicParsing="false" onAction="#SBREAD" prefHeight="17.0" prefWidth="22.0" text="-">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="scloth" layoutX="620.0" layoutY="69.0" mnemonicParsing="false" onAction="#SCLOTH" prefHeight="16.0" prefWidth="22.0" text="-" />
+      <Button fx:id="segg" layoutX="620.0" layoutY="129.0" mnemonicParsing="false" onAction="#SEGG" prefHeight="16.0" prefWidth="14.0" text="-" />
+      <Button fx:id="sfeather" layoutX="620.0" layoutY="181.0" mnemonicParsing="false" onAction="#SFEATHER" prefHeight="26.0" prefWidth="22.0" text="-" />
+      <Button fx:id="sflour" layoutX="618.0" layoutY="235.0" mnemonicParsing="false" onAction="#SFLOUR" prefHeight="16.0" prefWidth="22.0" text="-" />
+      <Button fx:id="sicecream" layoutX="616.0" layoutY="279.0" mnemonicParsing="false" onAction="#SICECREAM" prefHeight="16.0" prefWidth="22.0" text="-" />
+      <Button fx:id="spackagemilk" layoutX="618.0" layoutY="341.0" mnemonicParsing="false" onAction="#SPACKAGEMILK" prefHeight="16.0" prefWidth="24.0" text="-" />
+      <Button fx:id="sshirt" layoutX="620.0" layoutY="397.0" mnemonicParsing="false" onAction="#SSHIRT" prefHeight="16.0" prefWidth="22.0" text="-" />
+      <Text fx:id="breads" layoutX="712.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="cloths" layoutX="712.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="eggs" layoutX="712.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="feathers" layoutX="709.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="flours" layoutX="712.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="icecreams" layoutX="720.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="milks" layoutX="720.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="shirts" layoutX="720.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>

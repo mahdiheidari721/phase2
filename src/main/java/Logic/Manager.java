@@ -1084,7 +1084,7 @@ public class Manager {
                 for (int i = 0; i < grasses.size(); i++) {
                     if(grasses.get(i).getMaxPower()>0){
                         if (image.getBoundsInParent().intersects(grasses.get(i).getImageView().getBoundsInParent()) ){
-                            System.out.println(t);
+                           // System.out.println(t);
                             animalAnimation.playFromStart();
                         grasses.get(i).setMaxPower(grasses.get(i).getMaxPower() - 1);
                         return 1;
