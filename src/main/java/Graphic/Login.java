@@ -34,8 +34,7 @@ public class Login {
      SignUp();
     }
     private void checkLogin() throws IOException {
-     if(username.getText().toString().equalsIgnoreCase("Mahdi")&&
-        password.getText().toString().equals("1380"))
+     if(Sign.HasAccount(username.getText(),password.getText()))
      {
          wrongLogin.setText("Your password or your username is not wrong");
          MainView.getMV().setScene("Menu.fxml");

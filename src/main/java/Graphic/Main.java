@@ -28,14 +28,14 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     }
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        Manager.getManager().Fill();
-//        LoadPhotos.getLP().Load();
-//
-//        text.setFont(Font.font("Arial", FontWeight.BOLD, 36));
-//        text.setFill(Color.YELLOW);
-//        text.setStroke(Color.GREEN);
-//        text.setX(955);
-//        text.setY(110);
+        Manager.getManager().Fill();
+        LoadPhotos.getLP().Load();
+
+        text.setFont(Font.font("Arial", FontWeight.BOLD, 36));
+        text.setFill(Color.YELLOW);
+        text.setStroke(Color.GREEN);
+        text.setX(955);
+        text.setY(110);
 //        ///////////////////////////////////////////////////////////////////////////////////////
        MainView.getMV().setMainStage(primaryStage);
         primaryStage.setResizable(false);
@@ -503,77 +503,6 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 //                }
 //            }
 //        });
-//        LoadPhotos.getLP().imageView21.setOnMouseClicked(new EventHandler() {
-//            @Override
-//            public void handle(Event event) {
-//
-//               Pause(true);
-//
-//
-//                try {
-//                    MainView.getMV().setScene("WareHouse.fxml");
-//                    Scene scene =new Scene(MainView.pane);
-//                    MainView.getMV().getMainStage().setScene(scene);
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//        LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
-//            @Override
-//            public void handle(Event event) {
-//                boolean s=false;
-//                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
-//                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
-//                        s=true;
-//                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
-//                        break;
-//                    }
-//                }
-//                if(s){
-//                    if(Manager.getManager().bank.getCoin()>=400){
-//                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-//                        LabratoryAnimation a=new LabratoryAnimation(6);
-//                        a.play();
-//                        a.setOnFinished(new EventHandler<ActionEvent>() {
-//                            @Override
-//                            public void handle(ActionEvent event) {
-//                                ImageView imageViews = new ImageView();
-//                                try {
-//                                    imageViews.setImage(LoadPhotos.getLP().chicken);
-//                                } catch (FileNotFoundException e) {
-//                                    e.printStackTrace();
-//                                }
-//                                Hen hen =new Hen(imageViews);
-//                                Manager.getManager().allDomestics.add(hen);
-//                                try {
-//                                    imageViews.setX( LoadPhotos.getLP().imageView22.getX()-50);
-//                                } catch (FileNotFoundException e) {
-//                                    e.printStackTrace();
-//                                }
-//                                try {
-//                                    imageViews.setY( LoadPhotos.getLP().imageView22.getY());
-//                                } catch (FileNotFoundException e) {
-//                                    e.printStackTrace();
-//                                }
-//                                imageViews.setFitWidth(50);
-//                                imageViews.setFitHeight(50);
-//                                imageViews.setPreserveRatio(true);
-//                                imageViews.setPickOnBounds(true);//it i important to click on images
-//                                MainView.pane.getChildren().add(imageViews);
-//                              AnimalAnimation b=new AnimalAnimation(hen,imageViews,5);
-//                                AnimalAnimation.AnimalAn.add(b);
-//                                b.play();
-//                            }
-//                        });
-//                    }
-//                }
-//                else{
-//                    // a good allert
-//                    //TODO
-//                }
-//            }
-//        });
 //        LoadPhotos.getLP().imageView23.setOnMouseClicked(new EventHandler() {
 //            @Override
 //            public void handle(Event event) {
@@ -742,9 +671,87 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 //                }
 //            }
 //        });
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//        LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
+//            @Override
+//            public void handle(Event event) {
+//                boolean s=false;
+//                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+//                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
+//                        s=true;
+//                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+//                        break;
+//                    }
+//                }
+//                if(s){
+//                    if(Manager.getManager().bank.getCoin()>=400){
+//                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
+//                        LabratoryAnimation a=new LabratoryAnimation(6);
+//                        a.play();
+//                        a.setOnFinished(new EventHandler<ActionEvent>() {
+//                            @Override
+//                            public void handle(ActionEvent event) {
+//                                ImageView imageViews = new ImageView();
+//                                try {
+//                                    imageViews.setImage(LoadPhotos.getLP().chicken);
+//                                } catch (FileNotFoundException e) {
+//                                    e.printStackTrace();
+//                                }
+//                                Hen hen =new Hen(imageViews);
+//                                Manager.getManager().allDomestics.add(hen);
+//                                try {
+//                                    imageViews.setX( LoadPhotos.getLP().imageView22.getX()-50);
+//                                } catch (FileNotFoundException e) {
+//                                    e.printStackTrace();
+//                                }
+//                                try {
+//                                    imageViews.setY( LoadPhotos.getLP().imageView22.getY());
+//                                } catch (FileNotFoundException e) {
+//                                    e.printStackTrace();
+//                                }
+//                                imageViews.setFitWidth(100);
+//                                imageViews.setFitHeight(100);
+//                                imageViews.setPreserveRatio(true);
+//                                imageViews.setPickOnBounds(true);//it i important to click on images
+//                                MainView.pane.getChildren().add(imageViews);
+//                                AnimalAnimation b=new AnimalAnimation(hen,imageViews,5);
+//                                AnimalAnimation.AnimalAn.add(b);
+//                                b.play();
+//                            }
+//                        });
+//                    }
+//                }
+//                else{
+//                    // a good allert
+//                    //TODO
+//                }
+//            }
+//        });
+//        LoadPhotos.getLP().imageView38.setOnMouseClicked(new EventHandler() {
+//            @Override
+//            public void handle(Event event) {
+//                Pause(true);
+//
+//
+//                try {
+//                    MainView.getMV().setScene("WareHouse.fxml");
+//                    Scene scene =new Scene(MainView.pane);
+//                    MainView.getMV().getMainStage().setScene(scene);
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
+//        LoadPhotos.getLP().imageView21.setOnMouseClicked(new EventHandler() {
+//            @Override
+//            public void handle(Event event) {
+//
+//
+//            }
+//        });
+//        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
+//        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
 //       MainView.pane.getChildren().add(text);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
@@ -883,20 +890,29 @@ public class Main extends Application implements EventHandler<ActionEvent>{
     }
   static  public void Pause(boolean s){
         if(s){
-            for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
+            if(AnimalAnimation.AnimalAn.size()>0){
+                for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 AnimalAnimation.AnimalAn.get(i).pause();
-            }
-            for(int i=0;i<ProductAnimation.ProductAn.size();i++){
+            }}
+            if(ProductAnimation.ProductAn.size()>0){
+                for(int i=0;i<ProductAnimation.ProductAn.size();i++){
                 AnimalAnimation.AnimalAn.get(i).pause();
-            }
+            }}
+
+
+
         }
         if(!s){
-            for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
-                AnimalAnimation.AnimalAn.get(i).play();
+            if(AnimalAnimation.AnimalAn.size()>0){
+                for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
+                    AnimalAnimation.AnimalAn.get(i).play();
+                }
             }
-            for(int i=0;i<ProductAnimation.ProductAn.size();i++){
-                AnimalAnimation.AnimalAn.get(i).play();
-            }
+                if(ProductAnimation.ProductAn.size()>0){
+                    for(int i=0;i<ProductAnimation.ProductAn.size();i++){
+                        AnimalAnimation.AnimalAn.get(i).play();
+                    }
+                }
         }
 
     }

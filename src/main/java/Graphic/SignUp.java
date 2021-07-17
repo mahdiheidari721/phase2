@@ -21,7 +21,10 @@ public class SignUp {
 
     @FXML
     void Register(ActionEvent event) throws IOException {
-        MainView.getMV().setScene("Start.fxml");
+        Sign user=new Sign(Password.getText(),username.getText());
+        Sign.Users.add(user);
+        Sign.SignUp(username.getText(),Password.getText());
+        MainView.getMV().setScene("Startt.fxml");
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
     }

@@ -138,7 +138,6 @@ int shirt=10;
     @FXML
    public void Gocode(ActionEvent event) throws IOException {
         Main.Pause(false);
-
         MainView.getMV().setScene("Start.fxml");
         //////////////////////////////////////////
         Manager.getManager().Fill();
@@ -613,77 +612,6 @@ int shirt=10;
                 }
             }
         });
-        LoadPhotos.getLP().imageView21.setOnMouseClicked(new EventHandler() {
-            @Override
-            public void handle(Event event) {
-
-                Main.Pause(true);
-
-
-                try {
-                    MainView.getMV().setScene("WareHouse.fxml");
-                    Scene scene =new Scene(MainView.pane);
-                    MainView.getMV().getMainStage().setScene(scene);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
-            @Override
-            public void handle(Event event) {
-                boolean s=false;
-                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
-                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
-                        s=true;
-                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
-                        break;
-                    }
-                }
-                if(s){
-                    if(Manager.getManager().bank.getCoin()>=400){
-                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
-                        a.play();
-                        a.setOnFinished(new EventHandler<ActionEvent>() {
-                            @Override
-                            public void handle(ActionEvent event) {
-                                ImageView imageViews = new ImageView();
-                                try {
-                                    imageViews.setImage(LoadPhotos.getLP().chicken);
-                                } catch (FileNotFoundException e) {
-                                    e.printStackTrace();
-                                }
-                                Hen hen =new Hen(imageViews);
-                                Manager.getManager().allDomestics.add(hen);
-                                try {
-                                    imageViews.setX( LoadPhotos.getLP().imageView22.getX()-50);
-                                } catch (FileNotFoundException e) {
-                                    e.printStackTrace();
-                                }
-                                try {
-                                    imageViews.setY( LoadPhotos.getLP().imageView22.getY());
-                                } catch (FileNotFoundException e) {
-                                    e.printStackTrace();
-                                }
-                                imageViews.setFitWidth(50);
-                                imageViews.setFitHeight(50);
-                                imageViews.setPreserveRatio(true);
-                                imageViews.setPickOnBounds(true);//it i important to click on images
-                                MainView.pane.getChildren().add(imageViews);
-                                AnimalAnimation b=new AnimalAnimation(hen,imageViews,5);
-                                AnimalAnimation.AnimalAn.add(b);
-                                b.play();
-                            }
-                        });
-                    }
-                }
-                else{
-                    // a good allert
-                    //TODO
-                }
-            }
-        });
         LoadPhotos.getLP().imageView23.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -852,9 +780,87 @@ int shirt=10;
                 }
             }
         });
+        LoadPhotos.getLP().imageView22.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+                boolean s=false;
+                for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
+                        s=true;
+                        Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
+                        break;
+                    }
+                }
+                if(s){
+                    if(Manager.getManager().bank.getCoin()>=400){
+                        Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
+                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        a.play();
+                        a.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override
+                            public void handle(ActionEvent event) {
+                                ImageView imageViews = new ImageView();
+                                try {
+                                    imageViews.setImage(LoadPhotos.getLP().chicken);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                Hen hen =new Hen(imageViews);
+                                Manager.getManager().allDomestics.add(hen);
+                                try {
+                                    imageViews.setX( LoadPhotos.getLP().imageView22.getX()-50);
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                try {
+                                    imageViews.setY( LoadPhotos.getLP().imageView22.getY());
+                                } catch (FileNotFoundException e) {
+                                    e.printStackTrace();
+                                }
+                                imageViews.setFitWidth(100);
+                                imageViews.setFitHeight(100);
+                                imageViews.setPreserveRatio(true);
+                                imageViews.setPickOnBounds(true);//it i important to click on images
+                                MainView.pane.getChildren().add(imageViews);
+                                AnimalAnimation b=new AnimalAnimation(hen,imageViews,5);
+                                AnimalAnimation.AnimalAn.add(b);
+                                b.play();
+                            }
+                        });
+                    }
+                }
+                else{
+                    // a good allert
+                    //TODO
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView38.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+               Main.Pause(true);
+
+
+                try {
+                    MainView.getMV().setScene("WareHouse.fxml");
+                    Scene scene =new Scene(MainView.pane);
+                    MainView.getMV().getMainStage().setScene(scene);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        LoadPhotos.getLP().imageView21.setOnMouseClicked(new EventHandler() {
+            @Override
+            public void handle(Event event) {
+
+
+            }
+        });
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
+        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
         MainView.pane.getChildren().add(Main.text);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
@@ -874,12 +880,20 @@ int shirt=10;
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
-        for(int i=0;i<Manager.getManager().grasses.size();i++){
+        if(AnimalAnimation.AnimalAn.size()>0){
+            for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
+                MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
+            }
+        }
+        if(ProductAnimation.ProductAn.size()>0){
+            for(int i=0;i<ProductAnimation.ProductAn.size();i++){
+                MainView.pane.getChildren().add(ProductAnimation.ProductAn.get(i).imageview);
+            }
+        }
+        if(Manager.getManager().grasses.size()>0){
+            for(int i=0;i<Manager.getManager().grasses.size();i++){
             MainView.pane.getChildren().add(Manager.getManager().grasses.get(i).getImageView());
-        }
-        for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
-            MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
-        }
+        }}
         /////////////////////////////////////////////
 
         MainView.pane.setOnMouseClicked(e -> {
