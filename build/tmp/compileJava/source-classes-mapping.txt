@@ -38,24 +38,32 @@ Graphic/WareHouse.java
  Graphic.WareHouse
  Graphic.WareHouse$1
  Graphic.WareHouse$10
- Graphic.WareHouse$10$1
  Graphic.WareHouse$11
- Graphic.WareHouse$11$1
  Graphic.WareHouse$12
- Graphic.WareHouse$12$1
  Graphic.WareHouse$13
- Graphic.WareHouse$13$1
  Graphic.WareHouse$14
- Graphic.WareHouse$14$1
  Graphic.WareHouse$15
- Graphic.WareHouse$15$1
  Graphic.WareHouse$16
  Graphic.WareHouse$16$1
  Graphic.WareHouse$17
  Graphic.WareHouse$17$1
  Graphic.WareHouse$18
+ Graphic.WareHouse$18$1
  Graphic.WareHouse$19
+ Graphic.WareHouse$19$1
  Graphic.WareHouse$2
+ Graphic.WareHouse$20
+ Graphic.WareHouse$20$1
+ Graphic.WareHouse$21
+ Graphic.WareHouse$21$1
+ Graphic.WareHouse$22
+ Graphic.WareHouse$22$1
+ Graphic.WareHouse$23
+ Graphic.WareHouse$23$1
+ Graphic.WareHouse$24
+ Graphic.WareHouse$24$1
+ Graphic.WareHouse$25
+ Graphic.WareHouse$26
  Graphic.WareHouse$3
  Graphic.WareHouse$4
  Graphic.WareHouse$5
@@ -63,7 +71,6 @@ Graphic/WareHouse.java
  Graphic.WareHouse$7
  Graphic.WareHouse$8
  Graphic.WareHouse$9
- Graphic.WareHouse$9$1
 Logic/LogicMain.java
  Logic.LogicMain
 Logic/Bear.java
@@ -86,6 +93,8 @@ Logic/MilkPackagingFactory.java
  Logic.MilkPackagingFactory
 Logic/Lion.java
  Logic.Lion
+Graphic/DataBase.java
+ Graphic.DataBase
 Graphic/MainView.java
  Graphic.MainView
 Graphic/Bye.java
@@ -114,24 +123,32 @@ Graphic/Menu.java
  Graphic.Menu
  Graphic.Menu$1
  Graphic.Menu$10
- Graphic.Menu$10$1
  Graphic.Menu$11
- Graphic.Menu$11$1
  Graphic.Menu$12
- Graphic.Menu$12$1
  Graphic.Menu$13
- Graphic.Menu$13$1
  Graphic.Menu$14
- Graphic.Menu$14$1
  Graphic.Menu$15
- Graphic.Menu$15$1
  Graphic.Menu$16
  Graphic.Menu$16$1
  Graphic.Menu$17
  Graphic.Menu$17$1
  Graphic.Menu$18
+ Graphic.Menu$18$1
  Graphic.Menu$19
+ Graphic.Menu$19$1
  Graphic.Menu$2
+ Graphic.Menu$20
+ Graphic.Menu$20$1
+ Graphic.Menu$21
+ Graphic.Menu$21$1
+ Graphic.Menu$22
+ Graphic.Menu$22$1
+ Graphic.Menu$23
+ Graphic.Menu$23$1
+ Graphic.Menu$24
+ Graphic.Menu$24$1
+ Graphic.Menu$25
+ Graphic.Menu$26
  Graphic.Menu$3
  Graphic.Menu$4
  Graphic.Menu$5
@@ -139,7 +156,6 @@ Graphic/Menu.java
  Graphic.Menu$7
  Graphic.Menu$8
  Graphic.Menu$9
- Graphic.Menu$9$1
 Graphic/Sign.java
  Graphic.Sign
 Logic/Bakery.java

@@ -173,6 +173,8 @@ public  ImageView imageView = new ImageView();
         imageView10.setFitHeight(150);
         imageView10.setPreserveRatio(true);
         imageView10.setPickOnBounds(true);//it i important to click on images
+        ///////////////////////////////////
+
         //////////////////////////////////////////////
         imageView11.setImage(waterwell);
         imageView11.setX(1043);

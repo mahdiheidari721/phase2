@@ -23,7 +23,8 @@ public class Welcome {
         MainView.getMV().getMainStage().setScene(scene);
     }
 
-    public void go(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void go(javafx.event.ActionEvent actionEvent) throws Exception {
+        DataBase.run();
         MainView.getMV().setScene("Startt.fxml");
 //        String path = "D:\\images\\MainMenu.mp3";
 //        Media media = new Media(new File(path).toURI().toString());

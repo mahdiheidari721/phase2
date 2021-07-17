@@ -51,7 +51,8 @@ static int a1=0;
     }
 
     @FXML
-    void exitpressed(MouseEvent event) throws IOException {
+    void exitpressed(MouseEvent event) throws Exception {
+        DataBase.write();
         MainView.getMV().setScene("Bye.fxml");
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
@@ -84,6 +85,20 @@ Button b1=new Button();
         b5.setText("Build");
         b6.setText("Build");
         b7.setText("Build");
+        b1.setLayoutX(993);
+        b1.setLayoutY(333);
+        b2.setLayoutX(993);
+        b2.setLayoutY(590);
+        b3.setLayoutX(950);
+        b3.setLayoutY(100);
+        b4.setLayoutX(204);
+        b4.setLayoutY(490);
+        b5.setLayoutX(175);
+        b5.setLayoutY(308);
+        b6.setLayoutX(160);
+        b6.setLayoutY(146);
+        b7.setLayoutX(950);
+        b7.setLayoutY(473);
         b1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
