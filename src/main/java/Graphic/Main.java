@@ -8,18 +8,24 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
+import java.io.File;
 
 public class Main extends Application implements EventHandler<ActionEvent>{
+     static String path = "D:\\images\\MainMenu.mp3";
+   static Media media = new Media(new File(path).toURI().toString());
+ static   MediaPlayer mediaPlayer = new MediaPlayer(media);
     static int pqrs=0;
     static int ProductCost=0;
   static  Text text = new Text();
@@ -748,7 +754,11 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 //
 //            }
 //        });
-//        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+//
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
@@ -772,6 +782,13 @@ public class Main extends Application implements EventHandler<ActionEvent>{
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
 //        MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
         /////////////////////////////////////////////
+//        String path = "D:\\images\\MainMenu.mp3";
+//        Media media = new Media(new File(path).toURI().toString());
+//        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setCycleCount(-1);
+        MediaView mediaView = new MediaView(mediaPlayer);
+        MainView.pane.getChildren().add(mediaView);
         Scene scene =new Scene(MainView.pane);
 //        MainView.pane.setOnMouseClicked(e -> {
 //int t=0;

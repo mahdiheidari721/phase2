@@ -9,16 +9,20 @@ package Graphic;
         import javafx.scene.control.Label;
         import javafx.scene.image.ImageView;
         import javafx.scene.input.MouseEvent;
+        import javafx.scene.media.Media;
+        import javafx.scene.media.MediaPlayer;
+        import javafx.scene.media.MediaView;
         import javafx.scene.paint.Color;
         import javafx.scene.text.Font;
         import javafx.scene.text.FontWeight;
         import javafx.scene.text.Text;
 
+        import java.io.File;
         import java.io.FileNotFoundException;
         import java.io.IOException;
 
 public class Menu {
-
+static int b=0;
     @FXML
     private Label play;
 
@@ -82,6 +86,14 @@ public class Menu {
                 AnimalAnimation a=new AnimalAnimation(tigers,imageViews,1);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                String path = "D:\\images\\roar.wav";
+                Media media = new Media(new File(path).toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.setVolume(1);
+                mediaPlayer.setCycleCount(1);
+                MediaView mediaView = new MediaView(mediaPlayer);
+                MainView.pane.getChildren().add(mediaView);
                 // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
@@ -110,6 +122,14 @@ public class Menu {
                 AnimalAnimation a=new AnimalAnimation(bears,imageViews,1);
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
+                String path = "D:\\images\\roar.wav";
+                Media media = new Media(new File(path).toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.setVolume(1);
+                mediaPlayer.setCycleCount(1);
+                MediaView mediaView = new MediaView(mediaPlayer);
+                MainView.pane.getChildren().add(mediaView);
                 // System.out.println( AnimalAnimation.AnimalAn.size());
 
             }
@@ -140,10 +160,25 @@ public class Menu {
                     AnimalAnimation a=new AnimalAnimation(cats,imageViews,1000);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
+                    String path2 = "D:\\images\\monkey.wav";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                     // System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
-                    //good allert
+                    String path2 = "D:\\images\\warn.wav";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                 }
 
             }
@@ -175,6 +210,16 @@ public class Menu {
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
                     // System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                else{
+                    String path3 = "D:\\images\\warn.wav";
+                    Media media3 = new Media(new File(path3).toURI().toString());
+                    MediaPlayer mediaPlayer3 = new MediaPlayer(media3);
+                    mediaPlayer3.setAutoPlay(true);
+                    mediaPlayer3.setVolume(1);
+                    mediaPlayer3.setCycleCount(1);
+                    MediaView mediaView3 = new MediaView(mediaPlayer3);
+                    MainView.pane.getChildren().add(mediaView3);
                 }
             }
         });
@@ -208,7 +253,14 @@ public class Menu {
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
-                    //good allert
+                    String path4 = "D:\\images\\warn.wav";
+                    Media media4= new Media(new File(path4).toURI().toString());
+                    MediaPlayer mediaPlayer4 = new MediaPlayer(media4);
+                    mediaPlayer4.setAutoPlay(true);
+                    mediaPlayer4.setVolume(1);
+                    mediaPlayer4.setCycleCount(1);
+                    MediaView mediaView4 = new MediaView(mediaPlayer4);
+                    MainView.pane.getChildren().add(mediaView4);
                 }
             }
         });
@@ -242,6 +294,16 @@ public class Menu {
                     a.play();
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
+                else{
+                    String path5 = "D:\\images\\warn.wav";
+                    Media media5= new Media(new File(path5).toURI().toString());
+                    MediaPlayer mediaPlayer5 = new MediaPlayer(media5);
+                    mediaPlayer5.setAutoPlay(true);
+                    mediaPlayer5.setVolume(1);
+                    mediaPlayer5.setCycleCount(1);
+                    MediaView mediaView5 = new MediaView(mediaPlayer5);
+                    MainView.pane.getChildren().add(mediaView5);
+                }
             }
         });
         LoadPhotos.getLP().imageView2.setOnMouseClicked(new EventHandler() {
@@ -269,7 +331,14 @@ public class Menu {
                 AnimalAnimation.AnimalAn.add(a);
                 a.play();
                 // System.out.println( AnimalAnimation.AnimalAn.size());
-
+                String path = "D:\\images\\roar.wav";
+                Media media = new Media(new File(path).toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.setVolume(1);
+                mediaPlayer.setCycleCount(1);
+                MediaView mediaView = new MediaView(mediaPlayer);
+                MainView.pane.getChildren().add(mediaView);
             }
         });
         LoadPhotos.getLP().imageView25.setOnMouseClicked(new EventHandler() {
@@ -300,6 +369,16 @@ public class Menu {
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
+                }
+                else{
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -353,8 +432,16 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+
+                        String path6 = "D:\\images\\warn.wav";
+                        Media media6= new Media(new File(path6).toURI().toString());
+                        MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                        mediaPlayer6.setAutoPlay(true);
+                        mediaPlayer6.setVolume(1);
+                        mediaPlayer6.setCycleCount(1);
+                        MediaView mediaView6 = new MediaView(mediaPlayer6);
+                        MainView.pane.getChildren().add(mediaView6);
+
                 }
             }
         });
@@ -365,6 +452,14 @@ public class Menu {
                 if(a){
                     LabratoryAnimation q= new LabratoryAnimation(1);
                     q.play();
+                    String path6 = "D:\\images\\waterWell.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                     q.setOnFinished(new EventHandler<ActionEvent>() {
                         @Override
                         public void handle(ActionEvent event) {
@@ -373,7 +468,16 @@ public class Menu {
                     });
                 }
                 else{
-                    //show a good allert
+
+                        String path6 = "D:\\images\\warn.wav";
+                        Media media6= new Media(new File(path6).toURI().toString());
+                        MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                        mediaPlayer6.setAutoPlay(true);
+                        mediaPlayer6.setVolume(1);
+                        mediaPlayer6.setCycleCount(1);
+                        MediaView mediaView6 = new MediaView(mediaPlayer6);
+                        MainView.pane.getChildren().add(mediaView6);
+
                     System.out.println("well is not empty");
                     //TODO
                 }
@@ -462,8 +566,14 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -517,8 +627,14 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -572,15 +688,21 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
         LoadPhotos.getLP().imageView27.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
-                boolean s=true;
+                boolean s=false;
                 for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
                     if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
                         s=true;
@@ -631,7 +753,14 @@ public class Menu {
                     }
                 }
                 else{
-                    System.out.println("there is no egg:(");
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -685,8 +814,14 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -740,8 +875,14 @@ public class Menu {
                     }
                 }
                 else{
-                    // a good allert
-                    //TODO
+                    String path6 = "D:\\images\\warn.wav";
+                    Media media6= new Media(new File(path6).toURI().toString());
+                    MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                    mediaPlayer6.setAutoPlay(true);
+                    mediaPlayer6.setVolume(1);
+                    mediaPlayer6.setCycleCount(1);
+                    MediaView mediaView6 = new MediaView(mediaPlayer6);
+                    MainView.pane.getChildren().add(mediaView6);
                 }
             }
         });
@@ -764,7 +905,9 @@ public class Menu {
             @Override
             public void handle(Event event) {
 
-
+                if(b%2==0) Main.Pause(true);
+                if(b%2==1) Main.Pause(true);
+                b++;
             }
         });
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -790,6 +933,15 @@ public class Menu {
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
+        Main.mediaPlayer.stop();
+        String path = "D:\\images\\Africa.mp3";
+        Media media = new Media(new File(path).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        mediaPlayer.setVolume(1);
+        mediaPlayer.setCycleCount(-1);
+        MediaView mediaView = new MediaView(mediaPlayer);
+        MainView.pane.getChildren().add(mediaView);
         if(AnimalAnimation.AnimalAn.size()>0){
             for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
@@ -901,7 +1053,14 @@ public class Menu {
                             MainView.pane.getChildren().add(imageViews);
                         }
                         else{
-                            System.out.println("well is empty");
+                            String path1 = "D:\\images\\warn.wav";
+                            Media media1 = new Media(new File(path1).toURI().toString());
+                            MediaPlayer mediaPlayer1 = new MediaPlayer(media1);
+                            mediaPlayer1.setAutoPlay(true);
+                            mediaPlayer1.setVolume(1);
+                            mediaPlayer1.setCycleCount(1);
+                            MediaView mediaView1 = new MediaView(mediaPlayer1);
+                            MainView.pane.getChildren().add(mediaView1);
                         }  //play a good sound
                         //TODO
                     } catch (FileNotFoundException w) {
