@@ -209,6 +209,14 @@ static int b=0;
                     AnimalAnimation a=new AnimalAnimation(sheeps,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
+                    String path2 = "D:\\images\\cow.mp3";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                     // System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
@@ -250,6 +258,14 @@ static int b=0;
                     AnimalAnimation a=new AnimalAnimation(dog,imageViews,10000);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
+                    String path2 = "D:\\images\\dog.mp3";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
@@ -292,6 +308,14 @@ static int b=0;
                     AnimalAnimation a=new AnimalAnimation(ostrichs,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
+                    String path2 = "D:\\images\\ostrich.mp3";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
@@ -368,6 +392,14 @@ static int b=0;
                     AnimalAnimation a=new AnimalAnimation(hen,imageViews,1);
                     AnimalAnimation.AnimalAn.add(a);
                     a.play();
+                    String path2 = "D:\\images\\hen.mp3";
+                    Media media2 = new Media(new File(path2).toURI().toString());
+                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                    mediaPlayer2.setAutoPlay(true);
+                    mediaPlayer2.setVolume(1);
+                    mediaPlayer2.setCycleCount(1);
+                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                    MainView.pane.getChildren().add(mediaView2);
                     //  System.out.println( AnimalAnimation.AnimalAn.size());
                 }
                 else{
@@ -398,6 +430,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
                         LabratoryAnimation a=new LabratoryAnimation(5);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -506,6 +546,22 @@ static int b=0;
                 MainView.pane.getChildren().add(imageViews);
                 TruckAnimation truck=new TruckAnimation(imageViews);
                 truck.play();
+                String path2 = "D:\\images\\car1.mp3";
+                Media media2 = new Media(new File(path2).toURI().toString());
+                MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                mediaPlayer2.setAutoPlay(true);
+                mediaPlayer2.setVolume(1);
+                mediaPlayer2.setCycleCount(1);
+                MediaView mediaView2 = new MediaView(mediaPlayer2);
+                MainView.pane.getChildren().add(mediaView2);
+                String path = "D:\\images\\car2.mp3";
+                Media media = new Media(new File(path).toURI().toString());
+                MediaPlayer mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                mediaPlayer.setVolume(1);
+                mediaPlayer.setCycleCount(1);
+                MediaView mediaView = new MediaView(mediaPlayer);
+                MainView.pane.getChildren().add(mediaView);
                 truck.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
@@ -593,6 +649,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
                         LabratoryAnimation a=new LabratoryAnimation(6);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -654,6 +718,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-550);
                         LabratoryAnimation a=new LabratoryAnimation(6);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -717,6 +789,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-150);
                         LabratoryAnimation a=new LabratoryAnimation(1);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
 
                             @Override
@@ -780,6 +860,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
                         LabratoryAnimation a=new LabratoryAnimation(5);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -841,6 +929,14 @@ static int b=0;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
                         LabratoryAnimation a=new LabratoryAnimation(6);
                         a.play();
+                        String path2 = "D:\\images\\labratory.mp3";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -914,7 +1010,7 @@ static int b=0;
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView8);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
-        MainView.pane.getChildren().add(Main.text);
+        MainView.pane.getChildren().add(text);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);

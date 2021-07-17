@@ -34,8 +34,36 @@ Graphic/Login.java
  Graphic.Login
 Logic/Bread.java
  Logic.Bread
-Graphic/ProductAnimation.java
- Graphic.ProductAnimation
+Graphic/WareHouse.java
+ Graphic.WareHouse
+ Graphic.WareHouse$1
+ Graphic.WareHouse$10
+ Graphic.WareHouse$10$1
+ Graphic.WareHouse$11
+ Graphic.WareHouse$11$1
+ Graphic.WareHouse$12
+ Graphic.WareHouse$12$1
+ Graphic.WareHouse$13
+ Graphic.WareHouse$13$1
+ Graphic.WareHouse$14
+ Graphic.WareHouse$14$1
+ Graphic.WareHouse$15
+ Graphic.WareHouse$15$1
+ Graphic.WareHouse$16
+ Graphic.WareHouse$16$1
+ Graphic.WareHouse$17
+ Graphic.WareHouse$17$1
+ Graphic.WareHouse$18
+ Graphic.WareHouse$19
+ Graphic.WareHouse$2
+ Graphic.WareHouse$3
+ Graphic.WareHouse$4
+ Graphic.WareHouse$5
+ Graphic.WareHouse$6
+ Graphic.WareHouse$7
+ Graphic.WareHouse$8
+ Graphic.WareHouse$9
+ Graphic.WareHouse$9$1
 Logic/LogicMain.java
  Logic.LogicMain
 Logic/Bear.java
@@ -82,8 +110,36 @@ Logic/WaterWell.java
  Logic.WaterWell
 Logic/Level.java
  Logic.Level
-Graphic/LoadPhotos.java
- Graphic.LoadPhotos
+Graphic/Menu.java
+ Graphic.Menu
+ Graphic.Menu$1
+ Graphic.Menu$10
+ Graphic.Menu$10$1
+ Graphic.Menu$11
+ Graphic.Menu$11$1
+ Graphic.Menu$12
+ Graphic.Menu$12$1
+ Graphic.Menu$13
+ Graphic.Menu$13$1
+ Graphic.Menu$14
+ Graphic.Menu$14$1
+ Graphic.Menu$15
+ Graphic.Menu$15$1
+ Graphic.Menu$16
+ Graphic.Menu$16$1
+ Graphic.Menu$17
+ Graphic.Menu$17$1
+ Graphic.Menu$18
+ Graphic.Menu$19
+ Graphic.Menu$2
+ Graphic.Menu$3
+ Graphic.Menu$4
+ Graphic.Menu$5
+ Graphic.Menu$6
+ Graphic.Menu$7
+ Graphic.Menu$8
+ Graphic.Menu$9
+ Graphic.Menu$9$1
 Graphic/Sign.java
  Graphic.Sign
 Logic/Bakery.java
@@ -120,63 +176,7 @@ Logic/Flour.java
  Logic.Flour
 Logic/Tiger.java
  Logic.Tiger
-Graphic/Menu.java
- Graphic.Menu
- Graphic.Menu$1
- Graphic.Menu$10
- Graphic.Menu$10$1
- Graphic.Menu$11
- Graphic.Menu$11$1
- Graphic.Menu$12
- Graphic.Menu$12$1
- Graphic.Menu$13
- Graphic.Menu$13$1
- Graphic.Menu$14
- Graphic.Menu$14$1
- Graphic.Menu$15
- Graphic.Menu$15$1
- Graphic.Menu$16
- Graphic.Menu$16$1
- Graphic.Menu$17
- Graphic.Menu$17$1
- Graphic.Menu$18
- Graphic.Menu$19
- Graphic.Menu$2
- Graphic.Menu$3
- Graphic.Menu$4
- Graphic.Menu$5
- Graphic.Menu$6
- Graphic.Menu$7
- Graphic.Menu$8
- Graphic.Menu$9
- Graphic.Menu$9$1
-Graphic/WareHouse.java
- Graphic.WareHouse
- Graphic.WareHouse$1
- Graphic.WareHouse$10
- Graphic.WareHouse$10$1
- Graphic.WareHouse$11
- Graphic.WareHouse$11$1
- Graphic.WareHouse$12
- Graphic.WareHouse$12$1
- Graphic.WareHouse$13
- Graphic.WareHouse$13$1
- Graphic.WareHouse$14
- Graphic.WareHouse$14$1
- Graphic.WareHouse$15
- Graphic.WareHouse$15$1
- Graphic.WareHouse$16
- Graphic.WareHouse$16$1
- Graphic.WareHouse$17
- Graphic.WareHouse$17$1
- Graphic.WareHouse$18
- Graphic.WareHouse$19
- Graphic.WareHouse$2
- Graphic.WareHouse$3
- Graphic.WareHouse$4
- Graphic.WareHouse$5
- Graphic.WareHouse$6
- Graphic.WareHouse$7
- Graphic.WareHouse$8
- Graphic.WareHouse$9
- Graphic.WareHouse$9$1
+Graphic/ProductAnimation.java
+ Graphic.ProductAnimation
+Graphic/LoadPhotos.java
+ Graphic.LoadPhotos
