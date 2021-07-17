@@ -16,7 +16,7 @@ public class AnimalAnimation extends Transition {
     public AnimalAnimation(Animal animal, ImageView imageview,int t) {
 this.imageview=imageview;
         this.animal = animal;
-        this.setCycleDuration(Duration.millis(1000000*t));
+        this.setCycleDuration(Duration.millis(4000*t));
         this.setCycleCount(1);
         this.teded=0;
     }

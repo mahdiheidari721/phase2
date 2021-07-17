@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="337.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.Menu">
+   <center>
+      <AnchorPane prefHeight="322.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="348.0" fitWidth="619.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@menuBackground.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="71.0" layoutX="104.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Play.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="play" layoutX="124.0" layoutY="52.0" onMouseClicked="#playpressed" text="Play" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="71.0" layoutX="104.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Setting.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="setting" layoutX="114.0" layoutY="91.0" onMouseClicked="#settingPressed" text="Setting" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="71.0" layoutX="104.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Level.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Level" layoutX="121.0" layoutY="131.0" onMouseClicked="#Levelpressed" text="Level" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="29.0" fitWidth="71.0" layoutX="104.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Exit.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="exit" layoutX="125.0" layoutY="173.0" onMouseClicked="#exitpressed" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

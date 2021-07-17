@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.Welcome">
+   <children>
+      <ImageView fitHeight="443.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@welcom.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="15.0" layoutY="58.0" mnemonicParsing="false" onAction="#go" prefHeight="28.0" prefWidth="123.0" style="-fx-background-color: #63bee7;" text="Go to the game " textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Cooper Black" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

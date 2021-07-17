@@ -22,7 +22,7 @@ import javafx.stage.Stage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class WareHouse extends Application {
+public class WareHouse  {
     @FXML
     private ImageView Bread;
 
@@ -493,13 +493,13 @@ int shirt=10;
                 MainView.pane.getChildren().add(imageViews);
                 TruckAnimation truck=new TruckAnimation(imageViews);
                 truck.play();
-//                truck.setOnFinished(new EventHandler<ActionEvent>() {
-//                    @Override
-//                    public void handle(ActionEvent event) {
-//                        TruckAnimation truck2=new TruckAnimation(imageViews,false);
-//                        truck2.play();
-//                    }
-//                });
+                truck.setOnFinished(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        Manager.getManager().bank.setCoin( Manager.getManager().bank.getCoin() +Main.ProductCost);
+                        Main.text.setText( String.valueOf(Manager.getManager().bank.getCoin()));
+                    }
+                });
 
             }
         });
@@ -989,6 +989,15 @@ int shirt=10;
 
         } ); //for get the location of mouseclick
         //////////////////////////////////////////
+        Main.ProductCost=bread1*80+cloth1*100+egg1*15+fearher1*20+flour1*40+icecream1*120+packagemilk1*60+shirt1*100;
+        int bread1=0;
+        int cloth1=0;
+        int egg1=0;
+        int fearher1=0;
+        int flour1=0;
+        int icecream1=0;
+        int packagemilk1=0;
+        int shirt1=0;
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
 
@@ -1122,8 +1131,5 @@ breadt.setText(String.valueOf(bread));
         shirtt.setText(String.valueOf(shirt));
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
 
-    }
 }
