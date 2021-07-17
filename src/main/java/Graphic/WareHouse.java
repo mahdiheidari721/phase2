@@ -153,7 +153,83 @@ int shirt=10;
         text.setStroke(Color.GREEN);
         text.setX(955);
         text.setY(110);
-
+        Button b1=new Button();
+        Button b2=new Button();
+        Button b3=new Button();
+        Button b4=new Button();
+        Button b5=new Button();
+        Button b6=new Button();
+        Button b7=new Button();
+        b1.setText("Build");
+        b2.setText("Build");
+        b3.setText("Build");
+        b4.setText("Build");
+        b5.setText("Build");
+        b6.setText("Build");
+        b7.setText("Build");
+        b1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a1<3) Menu.a1++;
+                if(Menu.a1==1) b1.setText("level1");
+                if(Menu.a1==2) b1.setText("level2");
+                if(Menu.a1==3) b1.setText("level3");
+            }
+        });
+        b2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a2<3) Menu.a2++;
+                if(Menu.a2==1) b2.setText("level1");
+                if(Menu.a2==2) b2.setText("level2");
+                if(Menu.a2==3) b2.setText("level3");
+            }
+        });
+        b3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a3<3) Menu.a3++;
+                if(Menu.a3==1) b3.setText("level1");
+                if(Menu.a3==2) b3.setText("level2");
+                if(Menu.a3==3) b3.setText("level3");
+            }
+        });
+        b4.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a4<3) Menu.a4++;
+                if(Menu.a4==1) b4.setText("level1");
+                if(Menu.a4==2) b4.setText("level2");
+                if(Menu.a4==3) b4.setText("level3");
+            }
+        });
+        b5.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a5<1) Menu.a5++;
+                if(Menu.a5==1) b5.setText("level1");
+                if(Menu.a5==2) b5.setText("level2");
+                if(Menu.a5==3) b5.setText("level3");
+            }
+        });
+        b6.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a6<3) Menu.a6++;
+                if(Menu.a6==1) b6.setText("level1");
+                if(Menu.a6==2) b6.setText("level2");
+                if(Menu.a6==3) b6.setText("level3");
+            }
+        });
+        b7.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a7<3) Menu.a7++;
+                if(Menu.a7==1) b7.setText("level1");
+                if(Menu.a7==2) b7.setText("level2");
+                if(Menu.a7==3) b7.setText("level3");
+            }
+        });
         LoadPhotos.getLP().imageView6.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -522,7 +598,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=250){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
-                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        LabratoryAnimation a=new LabratoryAnimation(5-Menu.a1);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -676,7 +752,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-Menu.a7);
                         a.play();
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
@@ -737,7 +813,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-Menu.a2);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -806,7 +882,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=550){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-550);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-Menu.a4);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -877,7 +953,7 @@ int shirt=10;
                     if(Manager.getManager().bank.getCoin()>=150){
                         System.out.println("hello");
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-150);
-                        LabratoryAnimation a=new LabratoryAnimation(1);
+                        LabratoryAnimation a=new LabratoryAnimation(2-Menu.a5);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -948,7 +1024,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=250){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
-                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        LabratoryAnimation a=new LabratoryAnimation(5-Menu.a6);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -1017,7 +1093,7 @@ int shirt=10;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-Menu.a3);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -1100,6 +1176,13 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
         MainView.pane.getChildren().add(text);
+        MainView.pane.getChildren().add(b1);
+        MainView.pane.getChildren().add(b2);
+        MainView.pane.getChildren().add(b3);
+        MainView.pane.getChildren().add(b4);
+        MainView.pane.getChildren().add(b5);
+        MainView.pane.getChildren().add(b6);
+        MainView.pane.getChildren().add(b7);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);

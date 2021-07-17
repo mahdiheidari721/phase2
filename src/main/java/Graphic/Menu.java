@@ -6,6 +6,7 @@ package Graphic;
         import javafx.fxml.FXML;
         import javafx.scene.Scene;
         import javafx.scene.control.Alert;
+        import javafx.scene.control.Button;
         import javafx.scene.control.Label;
         import javafx.scene.image.ImageView;
         import javafx.scene.input.MouseEvent;
@@ -23,6 +24,13 @@ package Graphic;
 
 public class Menu {
 static int b=0;
+static int a1=0;
+    static int a2=0;
+    static int a3=0;
+    static int a4=0;
+    static int a5=0;
+    static int a6=0;
+    static int a7=0;
     @FXML
     private Label play;
 
@@ -62,7 +70,83 @@ static int b=0;
         text.setStroke(Color.GREEN);
         text.setX(955);
         text.setY(110);
-
+Button b1=new Button();
+        Button b2=new Button();
+        Button b3=new Button();
+        Button b4=new Button();
+        Button b5=new Button();
+        Button b6=new Button();
+        Button b7=new Button();
+        b1.setText("Build");
+        b2.setText("Build");
+        b3.setText("Build");
+        b4.setText("Build");
+        b5.setText("Build");
+        b6.setText("Build");
+        b7.setText("Build");
+        b1.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a1<3) a1++;
+                if(a1==1) b1.setText("level1");
+                if(a1==2) b1.setText("level2");
+                if(a1==3) b1.setText("level3");
+            }
+        });
+        b2.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a2<3) a2++;
+                if(a2==1) b2.setText("level1");
+                if(a2==2) b2.setText("level2");
+                if(a2==3) b2.setText("level3");
+            }
+        });
+        b3.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a3<3) a3++;
+                if(a3==1) b3.setText("level1");
+                if(a3==2) b3.setText("level2");
+                if(a3==3) b3.setText("level3");
+            }
+        });
+        b4.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a4<3) a4++;
+                if(a4==1) b4.setText("level1");
+                if(a4==2) b4.setText("level2");
+                if(a4==3) b4.setText("level3");
+            }
+        });
+        b5.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a5<1) a5++;
+                if(a5==1) b5.setText("level1");
+                if(a5==2) b5.setText("level2");
+                if(a5==3) b5.setText("level3");
+            }
+        });
+        b6.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a6<3) a6++;
+                if(a6==1) b6.setText("level1");
+                if(a6==2) b6.setText("level2");
+                if(a6==3) b6.setText("level3");
+            }
+        });
+        b7.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a7<3) a7++;
+                if(a7==1) b7.setText("level1");
+                if(a7==2) b7.setText("level2");
+                if(a7==3) b7.setText("level3");
+            }
+        });
         LoadPhotos.getLP().imageView6.setOnMouseClicked(new EventHandler() {
             @Override
             public void handle(Event event) {
@@ -428,7 +512,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=250){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
-                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        LabratoryAnimation a=new LabratoryAnimation(5-a1);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -586,7 +670,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-a7);
                         a.play();
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
@@ -647,7 +731,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-a2);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -716,7 +800,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=550){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-550);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-a4);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -787,7 +871,7 @@ static int b=0;
                     if(Manager.getManager().bank.getCoin()>=150){
                         System.out.println("hello");
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-150);
-                        LabratoryAnimation a=new LabratoryAnimation(1);
+                        LabratoryAnimation a=new LabratoryAnimation(2-a5);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -858,7 +942,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=250){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-250);
-                        LabratoryAnimation a=new LabratoryAnimation(5);
+                        LabratoryAnimation a=new LabratoryAnimation(5-a6);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -927,7 +1011,7 @@ static int b=0;
                 if(s){
                     if(Manager.getManager().bank.getCoin()>=400){
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
-                        LabratoryAnimation a=new LabratoryAnimation(6);
+                        LabratoryAnimation a=new LabratoryAnimation(6-a3);
                         a.play();
                         String path2 = "D:\\images\\labratory.mp3";
                         Media media2 = new Media(new File(path2).toURI().toString());
@@ -1011,6 +1095,13 @@ static int b=0;
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView37);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView38);
         MainView.pane.getChildren().add(text);
+        MainView.pane.getChildren().add(b1);
+        MainView.pane.getChildren().add(b2);
+        MainView.pane.getChildren().add(b3);
+        MainView.pane.getChildren().add(b4);
+        MainView.pane.getChildren().add(b5);
+        MainView.pane.getChildren().add(b6);
+        MainView.pane.getChildren().add(b7);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);
