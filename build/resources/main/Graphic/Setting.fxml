@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.Setting">
    <children>
       <ImageView fitHeight="400.0" fitWidth="565.0" pickOnBounds="true" preserveRatio="true">
@@ -16,19 +15,19 @@
             <Image url="@speaker.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="game" layoutX="69.0" layoutY="107.0" mnemonicParsing="false" onAction="#games" text="GameMusic" textFill="#138c19">
+      <Button fx:id="game" layoutX="31.0" layoutY="64.0" mnemonicParsing="false" onAction="#games" text="GameMusic" textFill="#138c19">
          <font>
             <Font name="Arial Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="menu" layoutX="69.0" layoutY="216.0" mnemonicParsing="false" onAction="#menus" text="MenuMusic" textFill="#21a62c">
+      <Button fx:id="menu" layoutX="34.0" layoutY="120.0" mnemonicParsing="false" onAction="#menus" text="MenuMusic" textFill="#21a62c">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <TextField fx:id="t1" layoutX="218.0" layoutY="107.0" prefHeight="26.0" prefWidth="52.0" />
-      <TextField fx:id="t2" layoutX="219.0" layoutY="216.0" prefHeight="26.0" prefWidth="52.0" />
-      <Text fill="#e59932" layoutX="130.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="plaese entre a double from 0 to 1">
+      <TextField fx:id="t1" layoutX="161.0" layoutY="63.0" prefHeight="26.0" prefWidth="52.0" />
+      <TextField fx:id="t2" layoutX="161.0" layoutY="121.0" prefHeight="26.0" prefWidth="52.0" />
+      <Text fill="#e59932" layoutX="130.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plaese Entre A Double From 0 To 1">
          <font>
             <Font name="Arial Bold Italic" size="19.0" />
          </font>
@@ -38,5 +37,15 @@
             <Font name="Arial Black" size="20.0" />
          </font>
       </Button>
+      <Button fx:id="AFRICA" layoutX="34.0" layoutY="246.0" mnemonicParsing="false" onAction="#africa" text="Africa" textFill="#ef7408" />
+      <Button fx:id="PR" layoutX="135.0" layoutY="246.0" mnemonicParsing="false" onAction="#pr" text="Prairie" textFill="#40c41e" />
+      <Button fx:id="ANTARCTICA" layoutX="226.0" layoutY="246.0" mnemonicParsing="false" onAction="#antarctica" text="Antarctica" textFill="#d12323" />
+      <Button fx:id="RUSSIA" layoutX="332.0" layoutY="246.0" mnemonicParsing="false" onAction="#russia" text="Russia" textFill="#1f2ac1" />
+      <Button fx:id="AMERICA" layoutX="427.0" layoutY="246.0" mnemonicParsing="false" onAction="#america" text="South America" textFill="#d1178d" />
+      <Text fill="#631eeb" layoutX="32.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Your Favorite GameMusic" wrappingWidth="491.689453125">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

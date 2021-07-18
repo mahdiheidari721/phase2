@@ -241,7 +241,12 @@ public class WareHouse  {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Menu.mediaPlayer.stop();
+                if(Setting.MUSIC==1){ Setting.mediaPlayer1.stop();}
+                if(Setting.MUSIC==2){ Setting.mediaPlayer2.stop();}
+                if(Setting.MUSIC==3){ Setting.mediaPlayer3.stop();}
+                if(Setting.MUSIC==4){ Setting.mediaPlayer4.stop();}
+                if(Setting.MUSIC==5){ Setting.mediaPlayer5.stop();}
+
                 Scene scene =new Scene(MainView.pane);
                 MainView.getMV().getMainStage().setScene(scene);
             }
@@ -1302,11 +1307,32 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(Tasks);
         Main.mediaPlayer.stop();
        Menu.t++;
-        Menu.mediaPlayer.setAutoPlay(true);
-        Menu.mediaPlayer.setVolume(0.5);
-        Menu.mediaPlayer.setCycleCount(-1);
+        if(Setting.MUSIC==1){Setting.mediaPlayer1.setAutoPlay(true);
+            Setting.mediaPlayer1.setVolume(0.5);
+            Setting.mediaPlayer1.setCycleCount(-1);
 
-     if(Menu.t==1)   MainView.pane.getChildren().add(Menu.mediaView);
+            if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView1);}
+        if(Setting.MUSIC==2){Setting.mediaPlayer2.setAutoPlay(true);
+            Setting.mediaPlayer2.setVolume(0.5);
+            Setting.mediaPlayer2.setCycleCount(-1);
+
+            if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView2);}
+        if(Setting.MUSIC==3){Setting.mediaPlayer3.setAutoPlay(true);
+            Setting.mediaPlayer3.setVolume(0.5);
+            Setting.mediaPlayer3.setCycleCount(-1);
+
+            if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView3);}
+        if(Setting.MUSIC==4){Setting.mediaPlayer4.setAutoPlay(true);
+            Setting.mediaPlayer4.setVolume(0.5);
+            Setting.mediaPlayer4.setCycleCount(-1);
+
+            if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView4);}
+        if(Setting.MUSIC==5){Setting.mediaPlayer5.setAutoPlay(true);
+            Setting.mediaPlayer5.setVolume(0.5);
+            Setting.mediaPlayer5.setCycleCount(-1);
+
+            if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView5);}
+
         if(AnimalAnimation.AnimalAn.size()>0){
             for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
@@ -1402,7 +1428,14 @@ if(a%2==0) Main.Pause(true);
                             System.out.println(Manager.getManager().wareHouse.products.size()+" warehouse");
                             ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                             ProductAnimation.ProductAn.get(i).pause();
-
+                            String path3 = "D:\\images\\mouse.mp3";
+                            Media media3 = new Media(new File(path3).toURI().toString());
+                            MediaPlayer mediaPlayer3 = new MediaPlayer(media3);
+                            mediaPlayer3.setAutoPlay(true);
+                            mediaPlayer3.setVolume(1);
+                            mediaPlayer3.setCycleCount(1);
+                            MediaView mediaView3 = new MediaView(mediaPlayer3);
+                            MainView.pane.getChildren().add(mediaView3);
                             if(ProductAnimation.ProductAn.get(i).product.getNameOfProduct().equalsIgnoreCase("egg")){
                                 Main.NumberofEggs++;
                                 Tasks.setText(Main.NumberofEggs+"/"+Main.CURRENTLEVEL*5 +"Eggs");
@@ -1428,7 +1461,12 @@ if(a%2==0) Main.Pause(true);
                                     mediaPlayer.setCycleCount(1);
                                     MediaView mediaView = new MediaView(mediaPlayer);
                                     MainView.pane.getChildren().add(mediaView);
-                                    Menu.mediaPlayer.stop();
+                                    if(Setting.MUSIC==1){Setting.mediaPlayer1.stop();}
+                                    if(Setting.MUSIC==2){Setting.mediaPlayer2.stop();}
+                                    if(Setting.MUSIC==3){Setting.mediaPlayer3.stop();}
+                                    if(Setting.MUSIC==4){Setting.mediaPlayer4.stop();}
+                                    if(Setting.MUSIC==5){Setting.mediaPlayer5.stop();}
+
                                     Scene scene =new Scene(MainView.pane);
                                     MainView.getMV().getMainStage().setScene(scene);
                                 }
