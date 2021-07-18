@@ -8,10 +8,12 @@ public class Sign {
     int Level;
     static public ArrayList<String> accounts=new ArrayList<String>();
     static   public ArrayList<String> passwords=new ArrayList<String>();
+    static   public ArrayList<String> Levels=new ArrayList<String>();
     static  public ArrayList<Sign> Users=new ArrayList<>();
-    public Sign(String password, String account) {
+    public Sign(String password, String account ,int Level) {
         this.password = password;
         this.account = account;
+        this.Level=Level;
     }
 
     static boolean HasAccount(String acount, String pass){
@@ -19,15 +21,17 @@ public class Sign {
         for(int i=0;i<accounts.size();i++){
             if(accounts.get(i).equals(acount)&&passwords.get(i).equals(pass)){
                 r=1;
+                Main.LEVEL=Integer.parseInt(Levels.get(i));
                 return true;
             }
         }
 
         return  false;
     }
-    static   public void SignUp(String acount,String pass){
+    static   public void SignUp(String acount,String pass,String Level){
         accounts.add(acount);
         passwords.add(pass);
+        Levels.add(Level);
     }
 
     public String getPassword() {

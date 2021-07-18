@@ -85,13 +85,19 @@ Button b1=new Button();
         Button b6=new Button();
         Button b7=new Button();
         Button EXIT=new Button();
-        b1.setText("level0");
-        b2.setText("level0");
-        b3.setText("level0");
-        b4.setText("level0");
-        b5.setText("level0");
-        b6.setText("level0");
-        b7.setText("level0");
+        Text Tasks=new Text();
+        Tasks.setLayoutX(600);
+        Tasks.setLayoutY(750);
+        Tasks.setText("hello");
+        Tasks.setFont(Font.font("Arial", FontWeight.BOLD, 36));
+        Tasks.setFill(Color.YELLOW);
+        b1.setText("level 0");
+        b2.setText("level 0");
+        b3.setText("level 0");
+        b4.setText("level 0");
+        b5.setText("level 0");
+        b6.setText("level 0");
+        b7.setText("level 0");
         b1.setLayoutX(993);
         b1.setLayoutY(333);
         b2.setLayoutX(993);
@@ -1178,6 +1184,7 @@ Button b1=new Button();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
+        MainView.pane.getChildren().add(Tasks);
         t++;
         Main.mediaPlayer.stop();
         mediaPlayer.setAutoPlay(true);
@@ -1246,9 +1253,22 @@ Button b1=new Button();
                             }
                             else if(AnimalAnimation.AnimalAn.get(i).getTeded()==4){
                                 AnimalAnimation.AnimalAn.get(i).getImageview().setVisible(false);
+                                System.out.println(Manager.getManager().wareHouse.getAvailableCapacity());
+                                boolean s= Manager.getManager().AddToWareHouse(AnimalAnimation.AnimalAn.get(i).getAnimal());
+                                if(s) System.out.println("wild moved");
+                                System.out.println(Manager.getManager().wareHouse.getAvailableCapacity());
                                 AnimalAnimation.AnimalAn.remove( AnimalAnimation.AnimalAn.get(i));
-                                //move to warehouse
-                                //TODO
+                                if(!s){
+                                    System.out.println(Manager.getManager().wareHouse.getAvailableCapacity());
+                                    String path1 = "D:\\images\\warn.wav";
+                                    Media media1 = new Media(new File(path1).toURI().toString());
+                                    MediaPlayer mediaPlayer1 = new MediaPlayer(media1);
+                                    mediaPlayer1.setAutoPlay(true);
+                                    mediaPlayer1.setVolume(1);
+                                    mediaPlayer1.setCycleCount(1);
+                                    MediaView mediaView1 = new MediaView(mediaPlayer1);
+                                    MainView.pane.getChildren().add(mediaView1);
+                                }
                             }
                         }
 
@@ -1268,10 +1288,39 @@ Button b1=new Button();
                             System.out.println(Manager.getManager().wareHouse.products.size()+" warehouse");
                             ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                             ProductAnimation.ProductAn.get(i).pause();
+
+                          if(ProductAnimation.ProductAn.get(i).product.getNameOfProduct().equalsIgnoreCase("egg")){
+                              Main.NumberofEggs++;
+                              Tasks.setText(Main.NumberofEggs+"/"+Main.CURRENTLEVEL*5+"Eggs");
+                              if(Main.NumberofEggs>=Main.CURRENTLEVEL*5){
+                                  try {
+                                      MainView.getMV().setScene("Winning.fxml");
+                                  } catch (IOException ioException) {
+                                      ioException.printStackTrace();
+                                  }
+
+                                  Menu.mediaPlayer.stop();
+                                  String path2 = "D:\\images\\vic1.mp3";
+                                  Media media2 = new Media(new File(path2).toURI().toString());
+                                  MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                                  mediaPlayer2.setAutoPlay(true);
+                                  mediaPlayer2.setVolume(1);
+                                  mediaPlayer2.setCycleCount(1);
+                                  MediaView mediaView2 = new MediaView(mediaPlayer2);
+                                  MainView.pane.getChildren().add(mediaView2);
+                                  String path = "D:\\images\\vic2.mp3";
+                                  Media media = new Media(new File(path).toURI().toString());
+                                  MediaPlayer mediaPlayer = new MediaPlayer(media);
+                                  mediaPlayer.setAutoPlay(true);
+                                  mediaPlayer.setVolume(1);
+                                  mediaPlayer.setCycleCount(1);
+                                  MediaView mediaView = new MediaView(mediaPlayer);
+                                  MainView.pane.getChildren().add(mediaView);
+                                  Scene scene =new Scene(MainView.pane);
+                                  MainView.getMV().getMainStage().setScene(scene);
+                              }
+                          }
                             ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
-//                            Alert a = new Alert(Alert.AlertType.INFORMATION);
-//                            a.setContentText("the product has been reached to the warehouse");
-//                            a.show();
                         }
                     }
                 }
@@ -1303,8 +1352,8 @@ Button b1=new Button();
                             mediaPlayer1.setCycleCount(1);
                             MediaView mediaView1 = new MediaView(mediaPlayer1);
                             MainView.pane.getChildren().add(mediaView1);
-                        }  //play a good sound
-                        //TODO
+                        }
+
                     } catch (FileNotFoundException w) {
                         w.printStackTrace();
                     }

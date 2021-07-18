@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="804.0"  xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.WareHouse">
+<AnchorPane prefHeight="600.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.WareHouse">
    <children>
       <ImageView fitHeight="600.0" fitWidth="1299.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -62,9 +62,9 @@
       <Text fx:id="icecreamt" layoutX="346.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="packagemilkt" layoutX="346.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="shirtt" layoutX="346.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Button fx:id="go" layoutX="572.0" layoutY="465.0" mnemonicParsing="false" onAction="#Gocode" text="Go" textFill="#b71010">
+      <Button fx:id="go" layoutX="456.0" layoutY="505.0" mnemonicParsing="false" onAction="#Gocode" prefHeight="82.0" prefWidth="102.0" text="Go" textFill="#b71010">
          <font>
-            <Font name="Arial Bold Italic" size="43.0" />
+            <Font name="Arial Bold Italic" size="36.0" />
          </font>
       </Button>
       <ImageView fitHeight="48.0" fitWidth="82.0" layoutX="559.0" pickOnBounds="true" preserveRatio="true">
@@ -127,5 +127,58 @@
       <Text fx:id="icecreams" layoutX="720.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="milks" layoutX="720.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text fx:id="shirts" layoutX="720.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="Lion" fitHeight="102.0" fitWidth="82.0" layoutX="14.0" layoutY="396.0" onMouseClicked="#setLion" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lion.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Bear" fitHeight="78.0" fitWidth="82.0" layoutX="234.0" layoutY="398.0" onMouseClicked="#setBear" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bear.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Tiger" fitHeight="102.0" fitWidth="82.0" layoutX="10.0" layoutY="478.0" onMouseClicked="#setTiger" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiger.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Milk" fitHeight="55.0" fitWidth="70.0" layoutX="241.0" layoutY="478.0" onMouseClicked="#setMilk" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@milk2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="564.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lion.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="568.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bear.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="40.0" layoutX="564.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@tiger.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="33.0" layoutX="570.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@milk2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="slion" layoutX="619.0" layoutY="448.0" mnemonicParsing="false" onAction="#SLION" prefHeight="26.0" prefWidth="24.0" text="-" />
+      <Button fx:id="sbear" layoutX="622.0" layoutY="483.0" mnemonicParsing="false" onAction="#SBEAR" prefHeight="26.0" prefWidth="24.0" text="-" />
+      <Button fx:id="stiger" layoutX="622.0" layoutY="516.0" mnemonicParsing="false" onAction="#STIGER" prefHeight="26.0" prefWidth="24.0" text="-" />
+      <Button fx:id="smilk" layoutX="622.0" layoutY="547.0" mnemonicParsing="false" onAction="#SMILK" prefHeight="26.0" prefWidth="24.0" text="-" />
+      <Text fx:id="liont" layoutX="137.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.799999999999955" />
+      <Text fx:id="tigert" layoutX="127.0" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.799999999999955" />
+      <Text fx:id="beart" layoutX="367.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="milkt" layoutX="367.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="lions" layoutX="698.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="bears" layoutX="698.0" layoutY="502.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="tigers" layoutX="701.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="milkss" layoutX="701.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+
    </children>
 </AnchorPane>

@@ -35,6 +35,7 @@ public class DataBase {
                 System.out.println(result.getString("password"));
                 Sign.passwords.add(result.getString("password"));
                 Sign.accounts.add(result.getString("username"));
+                Sign.Levels.add(result.getString("level"));
                 System.out.println("have been selected");
             }
 
@@ -55,7 +56,7 @@ public class DataBase {
           for(int i=0;i<Sign.accounts.size();i++){
               try{
                   Connection con=getConnection();
-                  PreparedStatement posted=con.prepareStatement("INSERT INTO usernameANDpassword (username,password,level) VALUES ('"+Sign.accounts.get(i)+"','"+Sign.passwords.get(i)+"','"+var3+"')");
+                  PreparedStatement posted=con.prepareStatement("INSERT INTO usernameANDpassword (username,password,level) VALUES ('"+Sign.accounts.get(i)+"','"+Sign.passwords.get(i)+"','"+Sign.Levels.get(i)+"')");
                   posted.executeUpdate();
               }
               catch (Exception e){

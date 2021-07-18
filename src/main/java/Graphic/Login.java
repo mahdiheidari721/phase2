@@ -40,7 +40,7 @@ public class Login {
     private void checkLogin() throws IOException {
      if(Sign.HasAccount(username.getText(),password.getText()))
      {
-         wrongLogin.setText("Your password or your username is not wrong");
+         wrongLogin.setText("Your password or your username is correct");
          MainView.getMV().setScene("Menu.fxml");
 //         String path = "D:\\images\\MainMenu.mp3";
 //         Media media = new Media(new File(path).toURI().toString());

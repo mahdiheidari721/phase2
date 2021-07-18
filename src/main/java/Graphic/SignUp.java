@@ -25,9 +25,9 @@ public class SignUp {
 
     @FXML
     void Register(ActionEvent event) throws IOException {
-        Sign user=new Sign(Password.getText(),username.getText());
+        Sign user=new Sign(Password.getText(),username.getText(),1);
         Sign.Users.add(user);
-        Sign.SignUp(username.getText(),Password.getText());
+        Sign.SignUp(username.getText(),Password.getText(),"1");
         MainView.getMV().setScene("Startt.fxml");
 //        String path = "D:\\images\\MainMenu.mp3";
 //        Media media = new Media(new File(path).toURI().toString());

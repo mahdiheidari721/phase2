@@ -478,6 +478,7 @@ public class Manager {
         LocalDateTime w = LocalDateTime.now();
         Logger.add(w.toString() + "  " + "request to add to warehouse");
         if (wareHouse.AvailableCapacity >= product.SizeInWarehouse) {
+           wareHouse.setAvailableCapacity(wareHouse.getAvailableCapacity()-product.SizeInWarehouse);
             wareHouse.products.add(product);
             return true;
         }
@@ -488,6 +489,7 @@ public class Manager {
         LocalDateTime w = LocalDateTime.now();
         Logger.add(w.toString() + "  " + "request to add to warehouse");
         if (wareHouse.AvailableCapacity >= animal.SizeInWareHouse) {
+            wareHouse.setAvailableCapacity(wareHouse.getAvailableCapacity()-animal.SizeInWareHouse);
             wareHouse.animals.add(animal);
             return true;
         }

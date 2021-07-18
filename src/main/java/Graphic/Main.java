@@ -23,6 +23,9 @@ import javafx.scene.media.MediaView;
 import java.io.File;
 
 public class Main extends Application implements EventHandler<ActionEvent>{
+    static int LEVEL=1;
+            static int NumberofEggs=0;
+    static int CURRENTLEVEL=1;
      static String path = "D:\\images\\MainMenu.mp3";
    static Media media = new Media(new File(path).toURI().toString());
  static   MediaPlayer mediaPlayer = new MediaPlayer(media);
@@ -960,7 +963,22 @@ public class Main extends Application implements EventHandler<ActionEvent>{
                 if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagedmilk")){
                     WareHouse.packagemilk++;
                 }
-
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("milk")){
+                    WareHouse.milk++;
+                }
+            }
+        }
+        if(Manager.getManager().wareHouse.animals.size()>0){
+            for(int i=0;i<Manager.getManager().wareHouse.animals.size();i++){
+                if(Manager.getManager().wareHouse.animals.get(i).getNameOfAnimal().equalsIgnoreCase("bear")){
+                    WareHouse.bear++;
+                }
+                if(Manager.getManager().wareHouse.animals.get(i).getNameOfAnimal().equalsIgnoreCase("lion")){
+                    WareHouse.lion++;
+                }
+                if(Manager.getManager().wareHouse.animals.get(i).getNameOfAnimal().equalsIgnoreCase("tiger")){
+                    WareHouse.tiger++;
+                }
             }
         }
     }

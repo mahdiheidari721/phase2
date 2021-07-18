@@ -4,29 +4,39 @@ import java.util.ArrayList;
 public class WareHouse {
     int Level;
     static final int Capacity = 300;
-    int AllCapacity;
-    int AvailableCapacity;
+    int AllCapacity=300;
+    int AvailableCapacity=300;
   public  ArrayList<Product> products = new ArrayList<>();
   public  ArrayList<Animal> animals = new ArrayList<>();
 
+    public int getLevel() {
+        return Level;
+    }
+
+    public void setLevel(int level) {
+        Level = level;
+    }
+
+    public static int getCapacity() {
+        return Capacity;
+    }
+
+    public void setAllCapacity(int allCapacity) {
+        AllCapacity = allCapacity;
+    }
+
+    public int getAvailableCapacity() {
+        return AvailableCapacity;
+    }
+
+    public void setAvailableCapacity(int availableCapacity) {
+        AvailableCapacity = availableCapacity;
+    }
 
     public int getAllCapacity() {
         return AllCapacity;
     }
-    boolean CanSellOrStore() {
-        return true;
-    }
-    public void addProduct(Product product)
-    {
-      this.products.add(product);
-    }
-    public void addAnimal(Animal animal)
-    {
-        this.animals.add(animal);
-    }
 
-    void Sell() {
-    }
 
 }
 //این کلاس کلاس انبار ما می باشد و شامل یک سری خصوصیات هست

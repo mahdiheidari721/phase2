@@ -60,6 +60,16 @@ public class WareHouse  {
     static int icecream=0;
     static int packagemilk=0;
    static int shirt=0;
+   //////////
+    static int milk=0;
+    static int tiger=0;
+    static int bear=0;
+    static int lion=0;
+    static int milk1=0;
+    static int tiger1=0;
+    static int bear1=0;
+    static int lion1=0;
+    ///////////
       int bread1=0;
     int cloth1=0;
     int egg1=0;
@@ -140,7 +150,51 @@ public class WareHouse  {
 
     @FXML
     private Text shirts;
+    @FXML
+    private ImageView Lion;
 
+    @FXML
+    private ImageView Bear;
+
+    @FXML
+    private ImageView Tiger;
+
+    @FXML
+    private ImageView Milk;
+
+    @FXML
+    private Button slion;
+
+    @FXML
+    private Button sbear;
+
+    @FXML
+    private Button stiger;
+
+    @FXML
+    private Button smilk;
+
+    @FXML
+    private Text liont;
+    @FXML
+    private Text tigert;
+
+    @FXML
+    private Text beart;
+
+    @FXML
+    private Text milkt;
+
+    @FXML
+    private Text lions;
+
+    @FXML
+    private Text bears;
+
+    @FXML
+    private Text tigers;
+    @FXML
+    private Text milkss;
     @FXML
    public void Gocode(ActionEvent event) throws IOException {
         Main.Pause(false);
@@ -162,13 +216,19 @@ public class WareHouse  {
         Button b6=new Button();
         Button b7=new Button();
         Button EXIT=new Button();
-        b1.setText("level0");
-        b2.setText("level0");
-        b3.setText("level0");
-        b4.setText("level0");
-        b5.setText("level0");
-        b6.setText("level0");
-        b7.setText("level0");
+        Text Tasks=new Text();
+        Tasks.setLayoutX(600);
+        Tasks.setLayoutY(750);
+        Tasks.setText("hello");
+        Tasks.setFont(Font.font("Arial", FontWeight.BOLD, 36));
+        Tasks.setFill(Color.YELLOW);
+        b1.setText("level 0");
+        b2.setText("level 0");
+        b3.setText("level 0");
+        b4.setText("level 0");
+        b5.setText("level 0");
+        b6.setText("level 0");
+        b7.setText("level 0");
         EXIT.setText("EXIT");
         EXIT.setLayoutX(1000);
         EXIT.setLayoutY(50);
@@ -1239,6 +1299,7 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
+        MainView.pane.getChildren().add(Tasks);
         Main.mediaPlayer.stop();
        Menu.t++;
         Menu.mediaPlayer.setAutoPlay(true);
@@ -1308,9 +1369,20 @@ if(a%2==0) Main.Pause(true);
                             }
                             else if(AnimalAnimation.AnimalAn.get(i).getTeded()==4){
                                 AnimalAnimation.AnimalAn.get(i).getImageview().setVisible(false);
+
+                                boolean s= Manager.getManager().AddToWareHouse(AnimalAnimation.AnimalAn.get(i).getAnimal());
+                                if(s) System.out.println("wild moved");
                                 AnimalAnimation.AnimalAn.remove( AnimalAnimation.AnimalAn.get(i));
-                                //move to warehouse
-                                //TODO
+                                if(!s){
+                                    String path1 = "D:\\images\\warn.wav";
+                                    Media media1 = new Media(new File(path1).toURI().toString());
+                                    MediaPlayer mediaPlayer1 = new MediaPlayer(media1);
+                                    mediaPlayer1.setAutoPlay(true);
+                                    mediaPlayer1.setVolume(1);
+                                    mediaPlayer1.setCycleCount(1);
+                                    MediaView mediaView1 = new MediaView(mediaPlayer1);
+                                    MainView.pane.getChildren().add(mediaView1);
+                                }
                             }
                         }
 
@@ -1330,10 +1402,38 @@ if(a%2==0) Main.Pause(true);
                             System.out.println(Manager.getManager().wareHouse.products.size()+" warehouse");
                             ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                             ProductAnimation.ProductAn.get(i).pause();
+
+                            if(ProductAnimation.ProductAn.get(i).product.getNameOfProduct().equalsIgnoreCase("egg")){
+                                Main.NumberofEggs++;
+                                Tasks.setText(Main.NumberofEggs+"/"+Main.CURRENTLEVEL*5 +"Eggs");
+                                if(Main.NumberofEggs>=Main.CURRENTLEVEL*5){
+                                    try {
+                                        MainView.getMV().setScene("Winning.fxml");
+                                    } catch (IOException ioException) {
+                                        ioException.printStackTrace();
+                                    }
+                                    String path2 = "D:\\images\\vic1.mp3";
+                                    Media media2 = new Media(new File(path2).toURI().toString());
+                                    MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                                    mediaPlayer2.setAutoPlay(true);
+                                    mediaPlayer2.setVolume(1);
+                                    mediaPlayer2.setCycleCount(1);
+                                    MediaView mediaView2 = new MediaView(mediaPlayer2);
+                                    MainView.pane.getChildren().add(mediaView2);
+                                    String path = "D:\\images\\vic2.mp3";
+                                    Media media = new Media(new File(path).toURI().toString());
+                                    MediaPlayer mediaPlayer = new MediaPlayer(media);
+                                    mediaPlayer.setAutoPlay(true);
+                                    mediaPlayer.setVolume(1);
+                                    mediaPlayer.setCycleCount(1);
+                                    MediaView mediaView = new MediaView(mediaPlayer);
+                                    MainView.pane.getChildren().add(mediaView);
+                                    Menu.mediaPlayer.stop();
+                                    Scene scene =new Scene(MainView.pane);
+                                    MainView.getMV().getMainStage().setScene(scene);
+                                }
+                            }
                             ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
-//                            Alert a = new Alert(Alert.AlertType.INFORMATION);
-//                            a.setContentText("the product has been reached to the warehouse");
-//                            a.show();
                         }
                     }
                 }
@@ -1365,8 +1465,8 @@ if(a%2==0) Main.Pause(true);
                             mediaPlayer1.setCycleCount(1);
                             MediaView mediaView1 = new MediaView(mediaPlayer1);
                             MainView.pane.getChildren().add(mediaView1);
-                        }  //play a good sound
-                        //TODO
+                        }
+
                     } catch (FileNotFoundException w) {
                         w.printStackTrace();
                     }
@@ -1377,14 +1477,7 @@ if(a%2==0) Main.Pause(true);
         } ); //for get the location of mouseclick
         //////////////////////////////////////////
      //   ProductCost=bread1*80+cloth1*100+egg1*15+fearher1*20+flour1*40+icecream1*120+packagemilk1*60+shirt1*100;
-        int bread1=0;
-        int cloth1=0;
-        int egg1=0;
-        int fearher1=0;
-        int flour1=0;
-        int icecream1=0;
-        int packagemilk1=0;
-        int shirt1=0;
+
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
 
@@ -1533,7 +1626,75 @@ if(a%2==0) Main.Pause(true);
 
         }
     }
+    @FXML
+    void SBEAR(ActionEvent event) {
+        if(bear1>0){
+            bears.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            bears.setFill(Color.YELLOW);
+            beart.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            beart.setFill(Color.YELLOW);
 
+            ProductCost-=400;
+            bear++;
+            bear1--;
+            bears.setText(String.valueOf(bear1));
+            beart.setText(String.valueOf(bear));
+
+        }
+    }
+
+    @FXML
+    void SLION(ActionEvent event) {
+        if(lion1>0){
+            lions.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            lions.setFill(Color.YELLOW);
+            liont.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            liont.setFill(Color.YELLOW);
+
+            ProductCost-=300;
+            lion++;
+            lion1--;
+            lions.setText(String.valueOf(lion1));
+            liont.setText(String.valueOf(lion));
+
+        }
+    }
+
+    @FXML
+    void SMILK(ActionEvent event) {
+        if(milk1>0){
+            milkss.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            milkss.setFill(Color.YELLOW);
+            milkt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            milkt.setFill(Color.YELLOW);
+
+            ProductCost-=25;
+            milk++;
+            milk1--;
+            milkss.setText(String.valueOf(milk1));
+            milkt.setText(String.valueOf(milk));
+
+        }
+    }
+
+
+
+    @FXML
+    void STIGER(ActionEvent event) {
+        if(tiger1>0){
+            tigers.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            tigers.setFill(Color.YELLOW);
+            tigert.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            tigert.setFill(Color.YELLOW);
+
+            ProductCost-=500;
+            tiger++;
+            tiger1--;
+            tigers.setText(String.valueOf(tiger1));
+            tigert.setText(String.valueOf(tiger));
+
+        }
+    }
     @FXML
     public  void setBread(MouseEvent event) {
 
@@ -1664,6 +1825,67 @@ if(a%2==0) Main.Pause(true);
             shirt1++;
             shirts.setText(String.valueOf(shirt1));
             shirtt.setText(String.valueOf(shirt));}
+    }
+
+
+    @FXML
+    void setBear(MouseEvent event) {
+       bears.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        bears.setFill(Color.YELLOW);
+        beart.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        beart.setFill(Color.YELLOW);
+
+        if(bear>0){
+            ProductCost+=400;
+            bear--;
+            bear1++;
+            bears.setText(String.valueOf(bear1));
+            beart.setText(String.valueOf(bear));}
+    }
+
+    @FXML
+    void setLion(MouseEvent event) {
+        lions.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        lions.setFill(Color.YELLOW);
+        liont.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        liont.setFill(Color.YELLOW);
+
+        if(lion>0){
+            ProductCost+=300;
+            lion--;
+            lion1++;
+            lions.setText(String.valueOf(lion1));
+            liont.setText(String.valueOf(lion));}
+    }
+
+    @FXML
+    void setMilk(MouseEvent event) {
+       milkss.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        milkss.setFill(Color.YELLOW);
+        milkt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        milkt.setFill(Color.YELLOW);
+
+        if(milk>0){
+            ProductCost+=25;
+            milk--;
+            milk1++;
+            milkss.setText(String.valueOf(milk1));
+            milkt.setText(String.valueOf(milk));}
+    }
+
+    @FXML
+    void setTiger(MouseEvent event) {
+        tigers.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        tigers.setFill(Color.YELLOW);
+        tigert.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        tigert.setFill(Color.YELLOW);
+
+        if(tiger>0){
+            ProductCost+=500;
+            tiger--;
+            tiger1++;
+            tigers.setText(String.valueOf(tiger1));
+            tigert.setText(String.valueOf(tiger));}
     }
 
 
