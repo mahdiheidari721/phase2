@@ -28,6 +28,7 @@ import java.io.IOException;
 
 public class WareHouse  {
     static int a=0;
+    static int ProductCost=0;
     @FXML
     private ImageView Bread;
 
@@ -160,6 +161,7 @@ int shirt=10;
         Button b5=new Button();
         Button b6=new Button();
         Button b7=new Button();
+        Button EXIT=new Button();
         b1.setText("Build");
         b2.setText("Build");
         b3.setText("Build");
@@ -167,6 +169,23 @@ int shirt=10;
         b5.setText("Build");
         b6.setText("Build");
         b7.setText("Build");
+        EXIT.setText("EXIT");
+        EXIT.setLayoutX(1000);
+        EXIT.setLayoutY(50);
+        EXIT.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    DataBase.write();
+                    MainView.getMV().setScene("Bye.fxml");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Menu.mediaPlayer.stop();
+                Scene scene =new Scene(MainView.pane);
+                MainView.getMV().getMainStage().setScene(scene);
+            }
+        });
         b1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -731,8 +750,17 @@ int shirt=10;
                 truck.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        Manager.getManager().bank.setCoin( Manager.getManager().bank.getCoin() +Main.ProductCost);
-                        Main.text.setText( String.valueOf(Manager.getManager().bank.getCoin()));
+                        Manager.getManager().bank.setCoin( Manager.getManager().bank.getCoin() +ProductCost);
+                        System.out.println(ProductCost);
+                        text.setText( String.valueOf(Manager.getManager().bank.getCoin()));
+                        String path2 = "D:\\images\\recievecoin.wav";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                     }
                 });
 
@@ -1191,6 +1219,7 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(b5);
         MainView.pane.getChildren().add(b6);
         MainView.pane.getChildren().add(b7);
+        MainView.pane.getChildren().add(EXIT);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);
@@ -1346,7 +1375,7 @@ if(a%2==0) Main.Pause(true);
 
         } ); //for get the location of mouseclick
         //////////////////////////////////////////
-        Main.ProductCost=bread1*80+cloth1*100+egg1*15+fearher1*20+flour1*40+icecream1*120+packagemilk1*60+shirt1*100;
+     //   ProductCost=bread1*80+cloth1*100+egg1*15+fearher1*20+flour1*40+icecream1*120+packagemilk1*60+shirt1*100;
         int bread1=0;
         int cloth1=0;
         int egg1=0;
@@ -1362,130 +1391,278 @@ if(a%2==0) Main.Pause(true);
 
     @FXML
     public void SBREAD(ActionEvent event) {
-bread++;
-bread1--;
-breads.setText(String.valueOf(bread1));
-breadt.setText(String.valueOf(bread));
+
+        if(bread1>0){
+            ProductCost-=80;
+            bread++;
+            bread1--;
+            breads.setText(String.valueOf(bread1));
+            breadt.setText(String.valueOf(bread));
+
+            breads.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            breads.setFill(Color.YELLOW);
+            breadt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            breadt.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public void SCLOTH(ActionEvent event) {
-        cloth++;
-        cloth1--;
-        cloths.setText(String.valueOf(cloth1));
-        clotht.setText(String.valueOf(cloth));
+
+        if(cloth1>0){
+            ProductCost-=100;
+            cloth++;
+            cloth1--;
+            cloths.setText(String.valueOf(cloth1));
+            clotht.setText(String.valueOf(cloth));
+
+            cloths.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            cloths.setFill(Color.YELLOW);
+            clotht.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            clotht.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public   void SEGG(ActionEvent event) {
-        egg++;
-        egg1--;
-        eggs.setText(String.valueOf(egg1));
-        eggt.setText(String.valueOf(egg));
+
+        if(egg1>0){
+            ProductCost-=15;
+            egg++;
+            egg1--;
+            eggs.setText(String.valueOf(egg1));
+            eggt.setText(String.valueOf(egg));
+
+            eggs.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            eggs.setFill(Color.YELLOW);
+            eggt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            eggt.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public  void SFEATHER(ActionEvent event) {
-        fearher++;
-        fearher1--;
-        feathers.setText(String.valueOf(fearher1));
-        feathert.setText(String.valueOf(fearher));
+
+        if(fearher1>0){
+            ProductCost-=20;
+            fearher++;
+            fearher1--;
+            feathers.setText(String.valueOf(fearher1));
+            feathert.setText(String.valueOf(fearher));
+
+            feathers.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            feathers.setFill(Color.YELLOW);
+            feathert.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            feathert.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public  void SFLOUR(ActionEvent event) {
-        flour++;
-        flour1--;
-        flours.setText(String.valueOf(flour1));
-        flourt.setText(String.valueOf(flour));
+
+        if(flour1>0){
+            ProductCost-=40;
+            flour++;
+            flour1--;
+            flours.setText(String.valueOf(flour1));
+            flourt.setText(String.valueOf(flour));
+
+            flours.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            flours.setFill(Color.YELLOW);
+            flourt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            flourt.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public  void SICECREAM(ActionEvent event) {
-        icecream++;
-        icecream1--;
-        icecreams.setText(String.valueOf(icecream1));
-        icecreamt.setText(String.valueOf(icecream));
+
+        if(icecream1>0){
+            ProductCost-=120;
+            icecream++;
+            icecream1--;
+            icecreams.setText(String.valueOf(icecream1));
+            icecreamt.setText(String.valueOf(icecream));
+
+            icecreams.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            icecreams.setFill(Color.YELLOW);
+            icecreamt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            icecreamt.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public   void SPACKAGEMILK(ActionEvent event) {
-        packagemilk++;
-        packagemilk1--;
-        milks.setText(String.valueOf(packagemilk1));
-        packagemilkt.setText(String.valueOf(packagemilk));
+
+        if(packagemilk1>0){
+            ProductCost=60;
+            packagemilk++;
+            packagemilk1--;
+            milks.setText(String.valueOf(packagemilk1));
+            packagemilkt.setText(String.valueOf(packagemilk));
+
+            milks.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            milks.setFill(Color.YELLOW);
+            packagemilkt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            packagemilkt.setFill(Color.YELLOW);
+
+        }
     }
 
     @FXML
     public  void SSHIRT(ActionEvent event) {
-        shirt++;
-        shirt1--;
-        shirts.setText(String.valueOf(shirt1));
-        shirtt.setText(String.valueOf(shirt));
+
+        if(shirt1>0){
+            shirts.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            shirts.setFill(Color.YELLOW);
+            shirtt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+            shirtt.setFill(Color.YELLOW);
+
+            ProductCost-=100;
+            shirt++;
+            shirt1--;
+            shirts.setText(String.valueOf(shirt1));
+            shirtt.setText(String.valueOf(shirt));
+
+        }
     }
 
     @FXML
     public  void setBread(MouseEvent event) {
-        bread--;
-        bread1++;
-        breads.setText(String.valueOf(bread1));
-        breadt.setText(String.valueOf(bread));
+
+        breads.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        breads.setFill(Color.YELLOW);
+        breadt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        breadt.setFill(Color.YELLOW);
+
+        if(bread>0){
+            ProductCost+=80;
+            bread--;
+            bread1++;
+            breads.setText(String.valueOf(bread1));
+            breadt.setText(String.valueOf(bread));
+           }
     }
 
     @FXML
     public  void setCloth(MouseEvent event) {
-        cloth--;
-        cloth1++;
-        cloths.setText(String.valueOf(cloth1));
-        clotht.setText(String.valueOf(cloth));
+
+        cloths.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        cloths.setFill(Color.YELLOW);
+        clotht.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        clotht.setFill(Color.YELLOW);
+
+        if(cloth>0){
+            ProductCost+=100;
+            cloth--;
+            cloth1++;
+            cloths.setText(String.valueOf(cloth1));
+            clotht.setText(String.valueOf(cloth));
+           }
     }
 
     @FXML
     public  void setEgg(MouseEvent event) {
-        egg--;
-        egg1++;
-        eggs.setText(String.valueOf(egg1));
-        eggt.setText(String.valueOf(egg));
+
+        eggs.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        eggs.setFill(Color.YELLOW);
+        eggt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        eggt.setFill(Color.YELLOW);
+
+        if(egg>0){
+            ProductCost+=15;
+            egg--;
+            egg1++;
+            eggs.setText(String.valueOf(egg1));
+            eggt.setText(String.valueOf(egg));
+           }
     }
 
     @FXML
     public  void setFeeather(MouseEvent event) {
-        fearher--;
-        fearher1++;
-        feathers.setText(String.valueOf(fearher1));
-        feathert.setText(String.valueOf(fearher));
+
+        feathers.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        feathers.setFill(Color.YELLOW);
+        feathert.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        feathert.setFill(Color.YELLOW);
+
+        if(fearher>0){
+            ProductCost+=20;
+            fearher--;
+            fearher1++;
+            feathers.setText(String.valueOf(fearher1));
+            feathert.setText(String.valueOf(fearher));
+            }
     }
 
     @FXML
     public  void setFlour(MouseEvent event) {
-        flour--;
-        flour1++;
-        flours.setText(String.valueOf(flour1));
-        flourt.setText(String.valueOf(flour));
+
+        flours.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        flours.setFill(Color.YELLOW);
+        flourt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        flourt.setFill(Color.YELLOW);
+
+        if(flour>0){
+            ProductCost+=40;
+            flour--;
+            flour1++;
+            flours.setText(String.valueOf(flour1));
+            flourt.setText(String.valueOf(flour));}
     }
 
     @FXML
     public void setIcecream(MouseEvent event) {
-        icecream--;
-        icecream1++;
-        icecreams.setText(String.valueOf(icecream1));
-        icecreamt.setText(String.valueOf(icecream));
+
+        icecreams.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        icecreams.setFill(Color.YELLOW);
+        icecreamt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        icecreamt.setFill(Color.YELLOW);
+
+        if(icecream>0){
+            ProductCost+=120;
+            icecream--;
+            icecream1++;
+            icecreams.setText(String.valueOf(icecream1));
+            icecreamt.setText(String.valueOf(icecream));}
     }
 
     @FXML
     public   void setPackageMilk(MouseEvent event) {
-        packagemilk--;
-        packagemilk1++;
-        milks.setText(String.valueOf(packagemilk1));
-        packagemilkt.setText(String.valueOf(packagemilk));
+
+        milks.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        milks.setFill(Color.YELLOW);
+        packagemilkt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        packagemilkt.setFill(Color.YELLOW);
+
+        if(packagemilk>0){
+            ProductCost+=60;
+            packagemilk--;
+            packagemilk1++;
+            milks.setText(String.valueOf(packagemilk1));
+            packagemilkt.setText(String.valueOf(packagemilk));}
     }
 
     @FXML
     public  void setShirt(MouseEvent event) {
-        shirt--;
-        shirt1++;
-        shirts.setText(String.valueOf(shirt1));
-        shirtt.setText(String.valueOf(shirt));
+
+        shirts.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        shirts.setFill(Color.YELLOW);
+        shirtt.setFont(Font.font("Arial", FontWeight.BOLD, 20));
+        shirtt.setFill(Color.YELLOW);
+
+        if(shirt>0){
+            ProductCost+=100;
+            shirt--;
+            shirt1++;
+            shirts.setText(String.valueOf(shirt1));
+            shirtt.setText(String.valueOf(shirt));}
     }
 
 

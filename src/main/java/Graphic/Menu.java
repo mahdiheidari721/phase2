@@ -59,6 +59,7 @@ static int a1=0;
     void exitpressed(MouseEvent event) throws Exception {
         DataBase.write();
         MainView.getMV().setScene("Bye.fxml");
+        mediaPlayer.stop();
         Scene scene =new Scene(MainView.pane);
         MainView.getMV().getMainStage().setScene(scene);
     }
@@ -83,6 +84,7 @@ Button b1=new Button();
         Button b5=new Button();
         Button b6=new Button();
         Button b7=new Button();
+        Button EXIT=new Button();
         b1.setText("Build");
         b2.setText("Build");
         b3.setText("Build");
@@ -104,6 +106,23 @@ Button b1=new Button();
         b6.setLayoutY(146);
         b7.setLayoutX(950);
         b7.setLayoutY(473);
+        EXIT.setText("EXIT");
+        EXIT.setLayoutX(1000);
+        EXIT.setLayoutY(50);
+        EXIT.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    DataBase.write();
+                    MainView.getMV().setScene("Bye.fxml");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                mediaPlayer.stop();
+                Scene scene =new Scene(MainView.pane);
+                MainView.getMV().getMainStage().setScene(scene);
+            }
+        });
         b1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -669,8 +688,17 @@ Button b1=new Button();
                 truck.setOnFinished(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        Manager.getManager().bank.setCoin( Manager.getManager().bank.getCoin() +Main.ProductCost);
-                        Main.text.setText( String.valueOf(Manager.getManager().bank.getCoin()));
+                        Manager.getManager().bank.setCoin( Manager.getManager().bank.getCoin() +WareHouse.ProductCost);
+                        WareHouse.ProductCost=0;
+                        text.setText( String.valueOf(Manager.getManager().bank.getCoin()));
+                        String path2 = "D:\\images\\recievecoin.wav";
+                        Media media2 = new Media(new File(path2).toURI().toString());
+                        MediaPlayer mediaPlayer2 = new MediaPlayer(media2);
+                        mediaPlayer2.setAutoPlay(true);
+                        mediaPlayer2.setVolume(1);
+                        mediaPlayer2.setCycleCount(1);
+                        MediaView mediaView2 = new MediaView(mediaPlayer2);
+                        MainView.pane.getChildren().add(mediaView2);
                     }
                 });
 
@@ -1130,6 +1158,7 @@ Button b1=new Button();
         MainView.pane.getChildren().add(b5);
         MainView.pane.getChildren().add(b6);
         MainView.pane.getChildren().add(b7);
+        MainView.pane.getChildren().add(EXIT);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView6);

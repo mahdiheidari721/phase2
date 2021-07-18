@@ -12,7 +12,7 @@ public class TruckAnimation extends Transition {
       this.s=s;
       this.imageView=imageView;
       this.q= (int) imageView.getX();
-      this.setCycleDuration(Duration.millis(10000));
+      this.setCycleDuration(Duration.millis(5000));
       this.setCycleCount(1);
       this.setAutoReverse(true);
     }
@@ -21,7 +21,7 @@ public class TruckAnimation extends Transition {
       //int t= (int) Math.floor(20*frac);
         this.imageView.setX(this.q-10*20*frac*(20*frac-20));
        if(frac==1){
-           this.pause();
+          // this.pause();
            this.imageView.setVisible(false);
        }
     }

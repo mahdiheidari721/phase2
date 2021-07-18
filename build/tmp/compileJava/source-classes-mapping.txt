@@ -44,7 +44,6 @@ Graphic/WareHouse.java
  Graphic.WareHouse$14
  Graphic.WareHouse$15
  Graphic.WareHouse$16
- Graphic.WareHouse$16$1
  Graphic.WareHouse$17
  Graphic.WareHouse$17$1
  Graphic.WareHouse$18
@@ -63,7 +62,9 @@ Graphic/WareHouse.java
  Graphic.WareHouse$24
  Graphic.WareHouse$24$1
  Graphic.WareHouse$25
+ Graphic.WareHouse$25$1
  Graphic.WareHouse$26
+ Graphic.WareHouse$27
  Graphic.WareHouse$3
  Graphic.WareHouse$4
  Graphic.WareHouse$5
@@ -129,7 +130,6 @@ Graphic/Menu.java
  Graphic.Menu$14
  Graphic.Menu$15
  Graphic.Menu$16
- Graphic.Menu$16$1
  Graphic.Menu$17
  Graphic.Menu$17$1
  Graphic.Menu$18
@@ -148,7 +148,9 @@ Graphic/Menu.java
  Graphic.Menu$24
  Graphic.Menu$24$1
  Graphic.Menu$25
+ Graphic.Menu$25$1
  Graphic.Menu$26
+ Graphic.Menu$27
  Graphic.Menu$3
  Graphic.Menu$4
  Graphic.Menu$5
