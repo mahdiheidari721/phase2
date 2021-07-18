@@ -1499,7 +1499,7 @@ if(a%2==0) Main.Pause(true);
                                     if(Setting.MUSIC==3){Setting.mediaPlayer3.stop();}
                                     if(Setting.MUSIC==4){Setting.mediaPlayer4.stop();}
                                     if(Setting.MUSIC==5){Setting.mediaPlayer5.stop();}
-
+                                    Main.LEVEL++;
                                     Scene scene =new Scene(MainView.pane);
                                     MainView.getMV().getMainStage().setScene(scene);
                                 }

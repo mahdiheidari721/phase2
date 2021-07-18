@@ -22,7 +22,9 @@ public class Sign {
             if(accounts.get(i).equals(acount)&&passwords.get(i).equals(pass)){
                 r=1;
                 Main.LEVEL=Integer.parseInt(Levels.get(i));
+                Main.INDEX=i;
                 return true;
+
             }
         }
 

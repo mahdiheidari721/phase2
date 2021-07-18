@@ -1394,6 +1394,7 @@ Button b1=new Button();
                                   MainView.pane.getChildren().add(mediaView);
                                   Scene scene =new Scene(MainView.pane);
                                   MainView.getMV().getMainStage().setScene(scene);
+                                  Main.LEVEL++;
                               }
                           }
                             ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));

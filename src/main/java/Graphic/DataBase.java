@@ -54,14 +54,26 @@ public class DataBase {
 //        }
       if(Sign.accounts.size()>0){
           for(int i=0;i<Sign.accounts.size();i++){
-              try{
-                  Connection con=getConnection();
-                  PreparedStatement posted=con.prepareStatement("INSERT INTO usernameANDpassword (username,password,level) VALUES ('"+Sign.accounts.get(i)+"','"+Sign.passwords.get(i)+"','"+Sign.Levels.get(i)+"')");
-                  posted.executeUpdate();
-              }
-              catch (Exception e){
-                  System.out.println(e);
-              }
+         if(i==Main.INDEX){
+             try{
+                 Connection con=getConnection();
+                 PreparedStatement posted=con.prepareStatement("INSERT INTO usernameANDpassword (username,password,level) VALUES ('"+Sign.accounts.get(i)+"','"+Sign.passwords.get(i)+"','"+Main.LEVEL+"')");
+                 posted.executeUpdate();
+             }
+             catch (Exception e){
+                 System.out.println(e);
+             }
+         }
+         else{
+             try{
+                 Connection con=getConnection();
+                 PreparedStatement posted=con.prepareStatement("INSERT INTO usernameANDpassword (username,password,level) VALUES ('"+Sign.accounts.get(i)+"','"+Sign.passwords.get(i)+"','"+Sign.Levels.get(i)+"')");
+                 posted.executeUpdate();
+             }
+             catch (Exception e){
+                 System.out.println(e);
+             }
+         }
           }
       }
 

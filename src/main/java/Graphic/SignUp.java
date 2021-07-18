@@ -28,6 +28,8 @@ public class SignUp {
         Sign user=new Sign(Password.getText(),username.getText(),1);
         Sign.Users.add(user);
         Sign.SignUp(username.getText(),Password.getText(),"1");
+        Main.LEVEL=1;
+        Main.INDEX=Sign.Levels.size()-1;
         MainView.getMV().setScene("Startt.fxml");
 //        String path = "D:\\images\\MainMenu.mp3";
 //        Media media = new Media(new File(path).toURI().toString());
