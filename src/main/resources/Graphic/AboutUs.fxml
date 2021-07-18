@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="363.0" prefWidth="658.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphic.AboutUs">
+   <children>
+      <ImageView fitHeight="424.0" fitWidth="658.0" layoutX="-1.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ssharif.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="162.0" layoutX="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="134.0" fitWidth="128.0" layoutX="161.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Mahdi.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="161.0" fitWidth="166.0" layoutX="320.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Hashem.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#1d1f96" layoutX="184.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mahdi Heidari">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#2e1ee4" layoutX="350.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M.Ali Hashemifar">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#b6ec02" layoutX="231.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B.A Students in S.U.T" wrappingWidth="178.45379638671875">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="back" layoutX="4.0" layoutY="326.0" mnemonicParsing="false" onAction="#backs" prefHeight="33.0" prefWidth="57.0" text="Menu" textFill="#e110b8" />
+   </children>
+</AnchorPane>

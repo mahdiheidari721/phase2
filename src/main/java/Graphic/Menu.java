@@ -46,6 +46,15 @@ static int a1=0;
 
     @FXML
     private Label exit;
+    @FXML
+    private Label aboutus;
+
+    @FXML
+    void ABOUTUS(MouseEvent event) throws IOException {
+        MainView.getMV().setScene("AboutUs.fxml");
+        Scene scene =new Scene(MainView.pane);
+        MainView.getMV().getMainStage().setScene(scene);
+    }
 
     @FXML
     void Levelpressed(MouseEvent event) throws IOException {

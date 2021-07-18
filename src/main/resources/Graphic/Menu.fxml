@@ -56,6 +56,12 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
+            <ImageView fitHeight="25.0" fitWidth="69.0" layoutX="106.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Exit.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="aboutus" layoutX="113.0" layoutY="214.0" onMouseClicked="#ABOUTUS" text="About Us" textFill="#fafafa" />
          </children>
       </AnchorPane>
    </center>
