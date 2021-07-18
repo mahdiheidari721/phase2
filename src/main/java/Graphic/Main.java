@@ -913,7 +913,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
             }}
             if(ProductAnimation.ProductAn.size()>0){
                 for(int i=0;i<ProductAnimation.ProductAn.size();i++){
-                AnimalAnimation.AnimalAn.get(i).pause();
+                    ProductAnimation.ProductAn.get(i).pause();
             }}
 
 
@@ -927,7 +927,7 @@ public class Main extends Application implements EventHandler<ActionEvent>{
             }
                 if(ProductAnimation.ProductAn.size()>0){
                     for(int i=0;i<ProductAnimation.ProductAn.size();i++){
-                        AnimalAnimation.AnimalAn.get(i).play();
+                        ProductAnimation.ProductAn.get(i).play();
                     }
                 }
         }

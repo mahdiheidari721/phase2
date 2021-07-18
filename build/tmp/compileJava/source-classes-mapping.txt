@@ -162,6 +162,8 @@ Logic/Bakery.java
  Logic.Bakery
 Logic/Milk.java
  Logic.Milk
+Graphic/Setting.java
+ Graphic.Setting
 Logic/Sheep.java
  Logic.Sheep
 Logic/Cage.java

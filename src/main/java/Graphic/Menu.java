@@ -23,6 +23,11 @@ package Graphic;
         import java.io.IOException;
 
 public class Menu {
+    static int t=0;
+  static  String path = "D:\\images\\Africa.mp3";
+    static  Media media = new Media(new File(path).toURI().toString());
+       static  MediaPlayer mediaPlayer = new MediaPlayer(media);
+    static MediaView mediaView = new MediaView(mediaPlayer);
 static int b=0;
 static int a1=0;
     static int a2=0;
@@ -687,6 +692,14 @@ Button b1=new Button();
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
                         LabratoryAnimation a=new LabratoryAnimation(6-a7);
                         a.play();
+                        String path6 = "D:\\images\\labratory.mp3";
+                        Media media6= new Media(new File(path6).toURI().toString());
+                        MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                        mediaPlayer6.setAutoPlay(true);
+                        mediaPlayer6.setVolume(1);
+                        mediaPlayer6.setCycleCount(1);
+                        MediaView mediaView6 = new MediaView(mediaPlayer6);
+                        MainView.pane.getChildren().add(mediaView6);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -806,7 +819,7 @@ Button b1=new Button();
             public void handle(Event event) {
                 boolean s=false;
                 for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
-                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagemilk")){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagedmilk")){
                         s=true;
                         Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
                         break;
@@ -842,7 +855,7 @@ Button b1=new Button();
                                     e.printStackTrace();
                                 }
                                 try {
-                                    imageViews.setX( LoadPhotos.getLP().imageView23.getY()+50);
+                                    imageViews.setY( LoadPhotos.getLP().imageView23.getY()+50);
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
@@ -1101,7 +1114,7 @@ Button b1=new Button();
             public void handle(Event event) {
 
                 if(b%2==0) Main.Pause(true);
-                if(b%2==1) Main.Pause(true);
+                if(b%2==1) Main.Pause(false);
                 b++;
             }
         });
@@ -1135,15 +1148,12 @@ Button b1=new Button();
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView31);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
+        t++;
         Main.mediaPlayer.stop();
-        String path = "D:\\images\\Africa.mp3";
-        Media media = new Media(new File(path).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
-        mediaPlayer.setVolume(1);
+        mediaPlayer.setVolume(0.5);
         mediaPlayer.setCycleCount(-1);
-        MediaView mediaView = new MediaView(mediaPlayer);
-        MainView.pane.getChildren().add(mediaView);
+       if(t==1) MainView.pane.getChildren().add(mediaView);
         if(AnimalAnimation.AnimalAn.size()>0){
             for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
@@ -1229,9 +1239,9 @@ Button b1=new Button();
                             ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                             ProductAnimation.ProductAn.get(i).pause();
                             ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
-                            Alert a = new Alert(Alert.AlertType.INFORMATION);
-                            a.setContentText("the product has been reached to the warehouse");
-                            a.show();
+//                            Alert a = new Alert(Alert.AlertType.INFORMATION);
+//                            a.setContentText("the product has been reached to the warehouse");
+//                            a.show();
                         }
                     }
                 }
@@ -1280,8 +1290,10 @@ Button b1=new Button();
     }
 
     @FXML
-    void settingPressed(MouseEvent event) {
-
+    void settingPressed(MouseEvent event) throws IOException {
+        MainView.getMV().setScene("Setting.fxml");
+        Scene scene =new Scene(MainView.pane);
+        MainView.getMV().getMainStage().setScene(scene);
     }
 
 }

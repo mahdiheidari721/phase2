@@ -754,6 +754,14 @@ int shirt=10;
                         Manager.getManager().bank.setCoin(Manager.getManager().bank.getCoin()-400);
                         LabratoryAnimation a=new LabratoryAnimation(6-Menu.a7);
                         a.play();
+                        String path6 = "D:\\images\\labratory.mp3";
+                        Media media6= new Media(new File(path6).toURI().toString());
+                        MediaPlayer mediaPlayer6 = new MediaPlayer(media6);
+                        mediaPlayer6.setAutoPlay(true);
+                        mediaPlayer6.setVolume(1);
+                        mediaPlayer6.setCycleCount(1);
+                        MediaView mediaView6 = new MediaView(mediaPlayer6);
+                        MainView.pane.getChildren().add(mediaView6);
                         a.setOnFinished(new EventHandler<ActionEvent>() {
                             @Override
                             public void handle(ActionEvent event) {
@@ -873,7 +881,7 @@ int shirt=10;
             public void handle(Event event) {
                 boolean s=false;
                 for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
-                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagemilk")){
+                    if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagedmilk")){
                         s=true;
                         Manager.getManager().wareHouse.products.remove(Manager.getManager().wareHouse.products.get(i));
                         break;
@@ -909,7 +917,7 @@ int shirt=10;
                                     e.printStackTrace();
                                 }
                                 try {
-                                    imageViews.setX( LoadPhotos.getLP().imageView23.getY()+50);
+                                    imageViews.setY( LoadPhotos.getLP().imageView23.getY()+50);
                                 } catch (FileNotFoundException e) {
                                     e.printStackTrace();
                                 }
@@ -1167,7 +1175,7 @@ int shirt=10;
             @Override
             public void handle(Event event) {
 if(a%2==0) Main.Pause(true);
-                if(a%2==1) Main.Pause(true);
+                if(a%2==1) Main.Pause(false);
                 a++;
             }
         });
@@ -1202,14 +1210,12 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView33);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView36);
         Main.mediaPlayer.stop();
-        String path = "D:\\images\\Africa.mp3";
-        Media media = new Media(new File(path).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(media);
-        mediaPlayer.setAutoPlay(true);
-        mediaPlayer.setVolume(1);
-        mediaPlayer.setCycleCount(-1);
-        MediaView mediaView = new MediaView(mediaPlayer);
-        MainView.pane.getChildren().add(mediaView);
+       Menu.t++;
+        Menu.mediaPlayer.setAutoPlay(true);
+        Menu.mediaPlayer.setVolume(0.5);
+        Menu.mediaPlayer.setCycleCount(-1);
+
+     if(Menu.t==1)   MainView.pane.getChildren().add(Menu.mediaView);
         if(AnimalAnimation.AnimalAn.size()>0){
             for(int i=0;i<AnimalAnimation.AnimalAn.size();i++){
                 MainView.pane.getChildren().add(AnimalAnimation.AnimalAn.get(i).imageview);
@@ -1295,9 +1301,9 @@ if(a%2==0) Main.Pause(true);
                             ProductAnimation.ProductAn.get(i).imageview.setVisible(false);
                             ProductAnimation.ProductAn.get(i).pause();
                             ProductAnimation.ProductAn.remove( ProductAnimation.ProductAn.get(i));
-                            Alert a = new Alert(Alert.AlertType.INFORMATION);
-                            a.setContentText("the product has been reached to the warehouse");
-                            a.show();
+//                            Alert a = new Alert(Alert.AlertType.INFORMATION);
+//                            a.setContentText("the product has been reached to the warehouse");
+//                            a.show();
                         }
                     }
                 }
