@@ -933,4 +933,35 @@ public class Main extends Application implements EventHandler<ActionEvent>{
         }
 
     }
+    static public void ReadWareHouse(){
+        if(Manager.getManager().wareHouse.products.size()>0){
+            for(int i=0;i<Manager.getManager().wareHouse.products.size();i++){
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("egg")){
+                    WareHouse.egg++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("feather")){
+                    WareHouse.fearher++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("bread")){
+                    WareHouse.bread++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("cloth")){
+                    WareHouse.cloth++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("flour")){
+                    WareHouse.flour++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("icecream")){
+                    WareHouse.icecream++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("shirt")){
+                    WareHouse.shirt++;
+                }
+                if(Manager.getManager().wareHouse.products.get(i).getNameOfProduct().equalsIgnoreCase("packagedmilk")){
+                    WareHouse.packagemilk++;
+                }
+
+            }
+        }
+    }
 }

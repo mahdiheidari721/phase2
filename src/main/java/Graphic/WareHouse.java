@@ -52,15 +52,15 @@ public class WareHouse  {
 
     @FXML
     private ImageView Shirt;
-int bread=10;
-int cloth=10;
-int egg=10;
-int fearher=10;
-int flour=10;
-int icecream=10;
-int packagemilk=10;
-int shirt=10;
-    int bread1=0;
+ static int bread=0;
+     static int cloth=0;
+    static int egg=0;
+    static int fearher=0;
+    static int flour=0;
+    static int icecream=0;
+    static int packagemilk=0;
+   static int shirt=0;
+      int bread1=0;
     int cloth1=0;
     int egg1=0;
     int fearher1=0;
@@ -162,13 +162,13 @@ int shirt=10;
         Button b6=new Button();
         Button b7=new Button();
         Button EXIT=new Button();
-        b1.setText("Build");
-        b2.setText("Build");
-        b3.setText("Build");
-        b4.setText("Build");
-        b5.setText("Build");
-        b6.setText("Build");
-        b7.setText("Build");
+        b1.setText("level0");
+        b2.setText("level0");
+        b3.setText("level0");
+        b4.setText("level0");
+        b5.setText("level0");
+        b6.setText("level0");
+        b7.setText("level0");
         EXIT.setText("EXIT");
         EXIT.setLayoutX(1000);
         EXIT.setLayoutY(50);
@@ -1191,6 +1191,7 @@ int shirt=10;
 
 
                 try {
+                    Main.ReadWareHouse();
                     MainView.getMV().setScene("WareHouse.fxml");
                     Scene scene =new Scene(MainView.pane);
                     MainView.getMV().getMainStage().setScene(scene);

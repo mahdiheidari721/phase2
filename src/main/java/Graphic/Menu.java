@@ -85,13 +85,13 @@ Button b1=new Button();
         Button b6=new Button();
         Button b7=new Button();
         Button EXIT=new Button();
-        b1.setText("Build");
-        b2.setText("Build");
-        b3.setText("Build");
-        b4.setText("Build");
-        b5.setText("Build");
-        b6.setText("Build");
-        b7.setText("Build");
+        b1.setText("level0");
+        b2.setText("level0");
+        b3.setText("level0");
+        b4.setText("level0");
+        b5.setText("level0");
+        b6.setText("level0");
+        b7.setText("level0");
         b1.setLayoutX(993);
         b1.setLayoutY(333);
         b2.setLayoutX(993);
@@ -1129,6 +1129,7 @@ Button b1=new Button();
 
 
                 try {
+                    Main.ReadWareHouse();
                     MainView.getMV().setScene("WareHouse.fxml");
                     Scene scene =new Scene(MainView.pane);
                     MainView.getMV().getMainStage().setScene(scene);
