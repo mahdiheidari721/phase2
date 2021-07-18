@@ -254,6 +254,8 @@ public class WareHouse  {
         b1.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
                 if(Menu.a1<3) Menu.a1++;
                 if(Menu.a1==1) b1.setText("level1");
                 if(Menu.a1==2) b1.setText("level2");
@@ -263,6 +265,8 @@ public class WareHouse  {
         b2.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
                 if(Menu.a2<3) Menu.a2++;
                 if(Menu.a2==1) b2.setText("level1");
                 if(Menu.a2==2) b2.setText("level2");
@@ -276,6 +280,8 @@ public class WareHouse  {
                 if(Menu.a3==1) b3.setText("level1");
                 if(Menu.a3==2) b3.setText("level2");
                 if(Menu.a3==3) b3.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b4.setOnAction(new EventHandler<ActionEvent>() {
@@ -285,6 +291,8 @@ public class WareHouse  {
                 if(Menu.a4==1) b4.setText("level1");
                 if(Menu.a4==2) b4.setText("level2");
                 if(Menu.a4==3) b4.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b5.setOnAction(new EventHandler<ActionEvent>() {
@@ -294,6 +302,8 @@ public class WareHouse  {
                 if(Menu.a5==1) b5.setText("level1");
                 if(Menu.a5==2) b5.setText("level2");
                 if(Menu.a5==3) b5.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b6.setOnAction(new EventHandler<ActionEvent>() {
@@ -303,6 +313,8 @@ public class WareHouse  {
                 if(Menu.a6==1) b6.setText("level1");
                 if(Menu.a6==2) b6.setText("level2");
                 if(Menu.a6==3) b6.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b7.setOnAction(new EventHandler<ActionEvent>() {
@@ -312,6 +324,26 @@ public class WareHouse  {
                 if(Menu.a7==1) b7.setText("level1");
                 if(Menu.a7==2) b7.setText("level2");
                 if(Menu.a7==3) b7.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
+            }
+        });
+        Button b8=new Button();
+        b8.setLayoutX(900);
+        b8.setLayoutY(200);
+        b8.setText("Level 0");
+        b8.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(Menu.a8<3) Menu.a8++;
+                if(Menu.a8==1){b8.setText("level1");
+                Manager.getManager().wareHouse.setAvailableCapacity(300);}
+                if(Menu.a8==2) {b8.setText("level2");
+                    Manager.getManager().wareHouse.setAvailableCapacity(400);}
+                if(Menu.a8==3) {b8.setText("level3");
+                    Manager.getManager().wareHouse.setAvailableCapacity(500);}
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         LoadPhotos.getLP().imageView6.setOnMouseClicked(new EventHandler() {
@@ -1285,6 +1317,7 @@ if(a%2==0) Main.Pause(true);
         MainView.pane.getChildren().add(b5);
         MainView.pane.getChildren().add(b6);
         MainView.pane.getChildren().add(b7);
+        MainView.pane.getChildren().add(b8);
         MainView.pane.getChildren().add(EXIT);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);

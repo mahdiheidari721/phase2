@@ -3,9 +3,9 @@ package Logic;
 import java.util.ArrayList;
 public class WareHouse {
     int Level;
-    static final int Capacity = 300;
-    int AllCapacity=300;
-    int AvailableCapacity=300;
+    static final int Capacity = 200;
+    int AllCapacity=200;
+    int AvailableCapacity=200;
   public  ArrayList<Product> products = new ArrayList<>();
   public  ArrayList<Animal> animals = new ArrayList<>();
 

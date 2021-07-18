@@ -34,6 +34,7 @@ static int a1=0;
     static int a5=0;
     static int a6=0;
     static int a7=0;
+    static int a8=0;
     @FXML
     private Label play;
 
@@ -87,6 +88,7 @@ Button b1=new Button();
         Button b5=new Button();
         Button b6=new Button();
         Button b7=new Button();
+
         Button EXIT=new Button();
         Text Tasks=new Text();
         Tasks.setLayoutX(600);
@@ -115,6 +117,25 @@ Button b1=new Button();
         b6.setLayoutY(146);
         b7.setLayoutX(950);
         b7.setLayoutY(473);
+        Button b8=new Button();
+        b8.setLayoutX(900);
+        b8.setLayoutY(200);
+        b8.setText("Level 0");
+        b8.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(a8<3) a8++;
+                if(a8==1){b8.setText("level1");
+                    Manager.getManager().wareHouse.setAvailableCapacity(300);}
+                if(a8==2) {b8.setText("level2");
+                    Manager.getManager().wareHouse.setAvailableCapacity(400);
+                  }
+                if(a8==3) {b8.setText("level3");
+                    Manager.getManager().wareHouse.setAvailableCapacity(500);}
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
+            }
+        });
         EXIT.setText("EXIT");
         EXIT.setLayoutX(1000);
         EXIT.setLayoutY(50);
@@ -144,6 +165,8 @@ Button b1=new Button();
                 if(a1==1) b1.setText("level1");
                 if(a1==2) b1.setText("level2");
                 if(a1==3) b1.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b2.setOnAction(new EventHandler<ActionEvent>() {
@@ -153,6 +176,8 @@ Button b1=new Button();
                 if(a2==1) b2.setText("level1");
                 if(a2==2) b2.setText("level2");
                 if(a2==3) b2.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b3.setOnAction(new EventHandler<ActionEvent>() {
@@ -162,6 +187,8 @@ Button b1=new Button();
                 if(a3==1) b3.setText("level1");
                 if(a3==2) b3.setText("level2");
                 if(a3==3) b3.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b4.setOnAction(new EventHandler<ActionEvent>() {
@@ -171,6 +198,8 @@ Button b1=new Button();
                 if(a4==1) b4.setText("level1");
                 if(a4==2) b4.setText("level2");
                 if(a4==3) b4.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b5.setOnAction(new EventHandler<ActionEvent>() {
@@ -180,6 +209,8 @@ Button b1=new Button();
                 if(a5==1) b5.setText("level1");
                 if(a5==2) b5.setText("level2");
                 if(a5==3) b5.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b6.setOnAction(new EventHandler<ActionEvent>() {
@@ -189,6 +220,8 @@ Button b1=new Button();
                 if(a6==1) b6.setText("level1");
                 if(a6==2) b6.setText("level2");
                 if(a6==3) b6.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         b7.setOnAction(new EventHandler<ActionEvent>() {
@@ -198,6 +231,8 @@ Button b1=new Button();
                 if(a7==1) b7.setText("level1");
                 if(a7==2) b7.setText("level2");
                 if(a7==3) b7.setText("level3");
+                Manager.getManager().bank.setCoin(  Manager.getManager().bank.getCoin()-200);
+                text.setText(String.valueOf(Manager.getManager().bank.getCoin()));
             }
         });
         LoadPhotos.getLP().imageView6.setOnMouseClicked(new EventHandler() {
@@ -1173,6 +1208,7 @@ Button b1=new Button();
         MainView.pane.getChildren().add(b5);
         MainView.pane.getChildren().add(b6);
         MainView.pane.getChildren().add(b7);
+        MainView.pane.getChildren().add(b8);
         MainView.pane.getChildren().add(EXIT);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView);
         MainView.pane.getChildren().add(LoadPhotos.getLP().imageView2);

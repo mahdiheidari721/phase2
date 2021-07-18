@@ -23,6 +23,7 @@ import javafx.scene.media.MediaView;
 import java.io.File;
 
 public class Main extends Application implements EventHandler<ActionEvent>{
+
     static int LEVEL=1;
             static int NumberofEggs=0;
     static int CURRENTLEVEL=1;
