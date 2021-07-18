@@ -42,13 +42,7 @@ public class Login {
      {
          wrongLogin.setText("Your password or your username is correct");
          MainView.getMV().setScene("Menu.fxml");
-//         String path = "D:\\images\\MainMenu.mp3";
-//         Media media = new Media(new File(path).toURI().toString());
-//         MediaPlayer mediaPlayer = new MediaPlayer(media);
-//         mediaPlayer.setAutoPlay(true);
-//         mediaPlayer.setCycleCount(-1);
-//         MediaView mediaView = new MediaView(mediaPlayer);
-//         MainView.pane.getChildren().add(mediaView);
+
          Scene scene =new Scene(MainView.pane);
          MainView.getMV().getMainStage().setScene(scene);
      }

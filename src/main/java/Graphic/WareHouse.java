@@ -229,15 +229,15 @@ public class WareHouse  {
         b5.setText("level 0");
         b6.setText("level 0");
         b7.setText("level 0");
-        EXIT.setText("EXIT");
+        EXIT.setText("MENU");
         EXIT.setLayoutX(1000);
         EXIT.setLayoutY(50);
         EXIT.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    DataBase.write();
-                    MainView.getMV().setScene("Bye.fxml");
+                    Main.Pause(true);
+                    MainView.getMV().setScene("Menu.fxml");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -246,7 +246,10 @@ public class WareHouse  {
                 if(Setting.MUSIC==3){ Setting.mediaPlayer3.stop();}
                 if(Setting.MUSIC==4){ Setting.mediaPlayer4.stop();}
                 if(Setting.MUSIC==5){ Setting.mediaPlayer5.stop();}
-
+                Main.mediaPlayer.setAutoPlay(true);
+                Main.mediaPlayer.setVolume(0.5);
+                Main.mediaPlayer.play();
+                Main.mediaPlayer.setCycleCount(-1);
                 Scene scene =new Scene(MainView.pane);
                 MainView.getMV().getMainStage().setScene(scene);
             }
@@ -1343,27 +1346,27 @@ if(a%2==0) Main.Pause(true);
         if(Setting.MUSIC==1){Setting.mediaPlayer1.setAutoPlay(true);
             Setting.mediaPlayer1.setVolume(0.5);
             Setting.mediaPlayer1.setCycleCount(-1);
-
+            Setting.mediaPlayer1.play();
             if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView1);}
         if(Setting.MUSIC==2){Setting.mediaPlayer2.setAutoPlay(true);
             Setting.mediaPlayer2.setVolume(0.5);
             Setting.mediaPlayer2.setCycleCount(-1);
-
+            Setting.mediaPlayer2.play();
             if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView2);}
         if(Setting.MUSIC==3){Setting.mediaPlayer3.setAutoPlay(true);
             Setting.mediaPlayer3.setVolume(0.5);
             Setting.mediaPlayer3.setCycleCount(-1);
-
+            Setting.mediaPlayer3.play();
             if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView3);}
         if(Setting.MUSIC==4){Setting.mediaPlayer4.setAutoPlay(true);
             Setting.mediaPlayer4.setVolume(0.5);
             Setting.mediaPlayer4.setCycleCount(-1);
-
+            Setting.mediaPlayer4.play();
             if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView4);}
         if(Setting.MUSIC==5){Setting.mediaPlayer5.setAutoPlay(true);
             Setting.mediaPlayer5.setVolume(0.5);
             Setting.mediaPlayer5.setCycleCount(-1);
-
+            Setting.mediaPlayer5.play();
             if(Menu.t==1)   MainView.pane.getChildren().add(Setting.mediaView5);}
 
         if(AnimalAnimation.AnimalAn.size()>0){
@@ -1499,7 +1502,7 @@ if(a%2==0) Main.Pause(true);
                                     if(Setting.MUSIC==3){Setting.mediaPlayer3.stop();}
                                     if(Setting.MUSIC==4){Setting.mediaPlayer4.stop();}
                                     if(Setting.MUSIC==5){Setting.mediaPlayer5.stop();}
-                                    Main.LEVEL++;
+                                    if(Main.LEVEL==Main.CURRENTLEVEL) Main.LEVEL++;
                                     Scene scene =new Scene(MainView.pane);
                                     MainView.getMV().getMainStage().setScene(scene);
                                 }
